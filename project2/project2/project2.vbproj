@@ -49,10 +49,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -79,6 +84,30 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mahasiswa.Designer.vb">
+      <DependentUpon>mahasiswa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mahasiswa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mata kuliah.Designer.vb">
+      <DependentUpon>mata kuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mata kuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,16 +123,55 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="nilai.Designer.vb">
+      <DependentUpon>nilai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nilai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="perserta matakuliah.Designer.vb">
+      <DependentUpon>perserta matakuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="perserta matakuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="universitas_bersamaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>universitas_bersamaDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mahasiswa.resx">
+      <DependentUpon>mahasiswa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mata kuliah.resx">
+      <DependentUpon>mata kuliah.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="nilai.resx">
+      <DependentUpon>nilai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="perserta matakuliah.resx">
+      <DependentUpon>perserta matakuliah.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -112,6 +180,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="universitas_bersamaDataSet.xsc">
+      <DependentUpon>universitas_bersamaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="universitas_bersamaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>universitas_bersamaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="universitas_bersamaDataSet.xss">
+      <DependentUpon>universitas_bersamaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
