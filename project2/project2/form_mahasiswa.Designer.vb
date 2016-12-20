@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class mahasiswa
+Partial Class form_mahasiswa
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class mahasiswa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mahasiswa))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_mahasiswa))
         Me.Universitas_bersamaDataSet = New project2.universitas_bersamaDataSet()
         Me.MahasiswaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MahasiswaTableAdapter = New project2.universitas_bersamaDataSetTableAdapters.mahasiswaTableAdapter()

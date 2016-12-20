@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        mahasiswa.ShowDialog()
+        form_mahasiswa.ShowDialog()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -37,6 +37,6 @@
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        nilai.ShowDialog()
+        form_nilai.ShowDialog()
     End Sub
 End Class

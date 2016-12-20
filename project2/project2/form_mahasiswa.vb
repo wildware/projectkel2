@@ -1,4 +1,4 @@
-﻿Public Class mahasiswa
+﻿Public Class form_mahasiswa
 
     Private Sub MahasiswaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaBindingNavigatorSaveItem.Click
         Me.Validate()
