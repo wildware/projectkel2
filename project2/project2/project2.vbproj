@@ -83,6 +83,18 @@
     <Compile Include="form_dosen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="form_informansi.Designer.vb">
+      <DependentUpon>form_informansi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_informansi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_mahasiswa.Designer.vb">
+      <DependentUpon>form_mahasiswa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_mahasiswa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="menu_awal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
   <ItemGroup>
     <EmbeddedResource Include="form_dosen.resx">
       <DependentUpon>form_dosen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_informansi.resx">
+      <DependentUpon>form_informansi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_mahasiswa.resx">
+      <DependentUpon>form_mahasiswa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_awal.resx">
       <DependentUpon>menu_awal.vb</DependentUpon>

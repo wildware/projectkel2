@@ -27,4 +27,12 @@
     Private Sub DosenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenToolStripMenuItem.Click
         form_dosen.ShowDialog()
     End Sub
+
+    Private Sub MahasiswaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaToolStripMenuItem.Click
+        form_mahasiswa.ShowDialog()
+    End Sub
+
+    Private Sub InformasiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InformasiToolStripMenuItem.Click
+        form_informansi.ShowDialog()
+    End Sub
 End Class
