@@ -27,14 +27,20 @@ Partial Class menu_awal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MasterDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.but_exit = New System.Windows.Forms.Button()
         Me.But_ref = New System.Windows.Forms.Button()
         Me.but_log = New System.Windows.Forms.Button()
         Me.box_pass = New System.Windows.Forms.TextBox()
         Me.box_user = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.DosenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InformasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MahasiswaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MataKuliahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NilaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PesertaMKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -43,7 +49,7 @@ Partial Class menu_awal
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(64, 45)
+        Me.Label1.Location = New System.Drawing.Point(37, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(385, 29)
         Me.Label1.TabIndex = 0
@@ -54,13 +60,14 @@ Partial Class menu_awal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterDataToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(507, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(461, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         Me.MenuStrip1.Visible = False
         '
         'MasterDataToolStripMenuItem
         '
+        Me.MasterDataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DosenToolStripMenuItem, Me.InformasiToolStripMenuItem, Me.MahasiswaToolStripMenuItem, Me.MataKuliahToolStripMenuItem, Me.NilaiToolStripMenuItem, Me.PesertaMKToolStripMenuItem})
         Me.MasterDataToolStripMenuItem.Name = "MasterDataToolStripMenuItem"
         Me.MasterDataToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
         Me.MasterDataToolStripMenuItem.Text = "Master Data"
@@ -74,12 +81,30 @@ Partial Class menu_awal
         Me.GroupBox1.Controls.Add(Me.but_log)
         Me.GroupBox1.Controls.Add(Me.box_pass)
         Me.GroupBox1.Controls.Add(Me.box_user)
-        Me.GroupBox1.Location = New System.Drawing.Point(139, 96)
+        Me.GroupBox1.Location = New System.Drawing.Point(112, 78)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(235, 182)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(35, 73)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Password"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(35, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Username"
         '
         'but_exit
         '
@@ -123,32 +148,50 @@ Partial Class menu_awal
         Me.box_user.Size = New System.Drawing.Size(162, 20)
         Me.box_user.TabIndex = 0
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(35, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Username"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(35, 73)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Password"
-        '
         'Timer1
         '
+        '
+        'DosenToolStripMenuItem
+        '
+        Me.DosenToolStripMenuItem.Name = "DosenToolStripMenuItem"
+        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DosenToolStripMenuItem.Text = "dosen"
+        '
+        'InformasiToolStripMenuItem
+        '
+        Me.InformasiToolStripMenuItem.Name = "InformasiToolStripMenuItem"
+        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InformasiToolStripMenuItem.Text = "informasi"
+        '
+        'MahasiswaToolStripMenuItem
+        '
+        Me.MahasiswaToolStripMenuItem.Name = "MahasiswaToolStripMenuItem"
+        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MahasiswaToolStripMenuItem.Text = "mahasiswa"
+        '
+        'MataKuliahToolStripMenuItem
+        '
+        Me.MataKuliahToolStripMenuItem.Name = "MataKuliahToolStripMenuItem"
+        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MataKuliahToolStripMenuItem.Text = "mata kuliah"
+        '
+        'NilaiToolStripMenuItem
+        '
+        Me.NilaiToolStripMenuItem.Name = "NilaiToolStripMenuItem"
+        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NilaiToolStripMenuItem.Text = "nilai"
+        '
+        'PesertaMKToolStripMenuItem
+        '
+        Me.PesertaMKToolStripMenuItem.Name = "PesertaMKToolStripMenuItem"
+        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PesertaMKToolStripMenuItem.Text = "peserta MK"
         '
         'menu_awal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(507, 323)
+        Me.ClientSize = New System.Drawing.Size(461, 323)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -175,5 +218,11 @@ Partial Class menu_awal
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents DosenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents InformasiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MahasiswaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MataKuliahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NilaiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PesertaMKToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
