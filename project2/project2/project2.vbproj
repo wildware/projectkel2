@@ -77,22 +77,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="form_dosen.Designer.vb">
-      <DependentUpon>form_dosen.vb</DependentUpon>
+    <Compile Include="Form_dosen.Designer.vb">
+      <DependentUpon>Form_dosen.vb</DependentUpon>
     </Compile>
-    <Compile Include="form_dosen.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form_informansi.Designer.vb">
-      <DependentUpon>form_informansi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="form_informansi.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form_mahasiswa.Designer.vb">
-      <DependentUpon>form_mahasiswa.vb</DependentUpon>
-    </Compile>
-    <Compile Include="form_mahasiswa.vb">
+    <Compile Include="Form_dosen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="menu_awal.vb">
@@ -117,21 +105,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="universitas_bersamaDataSet.Designer.vb">
+    <Compile Include="universitas_informatikaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>universitas_bersamaDataSet.xsd</DependentUpon>
+      <DependentUpon>universitas_informatikaDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="form_dosen.resx">
-      <DependentUpon>form_dosen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form_informansi.resx">
-      <DependentUpon>form_informansi.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form_mahasiswa.resx">
-      <DependentUpon>form_mahasiswa.vb</DependentUpon>
+    <EmbeddedResource Include="Form_dosen.resx">
+      <DependentUpon>Form_dosen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_awal.resx">
       <DependentUpon>menu_awal.vb</DependentUpon>
@@ -154,16 +136,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="universitas_bersamaDataSet.xsc">
-      <DependentUpon>universitas_bersamaDataSet.xsd</DependentUpon>
+    <None Include="universitas_informatikaDataSet.xsc">
+      <DependentUpon>universitas_informatikaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="universitas_bersamaDataSet.xsd">
+    <None Include="universitas_informatikaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>universitas_bersamaDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>universitas_informatikaDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="universitas_bersamaDataSet.xss">
-      <DependentUpon>universitas_bersamaDataSet.xsd</DependentUpon>
+    <None Include="universitas_informatikaDataSet.xss">
+      <DependentUpon>universitas_informatikaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

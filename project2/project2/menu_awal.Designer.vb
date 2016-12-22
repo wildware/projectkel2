@@ -49,11 +49,11 @@ Partial Class menu_awal
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(37, 33)
+        Me.Label1.Location = New System.Drawing.Point(12, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(385, 29)
+        Me.Label1.Size = New System.Drawing.Size(437, 29)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "DATA UNIVERSITAS BERSAMA"
+        Me.Label1.Text = "DATA UNIVERSITAS INFORMATIKA"
         '
         'MenuStrip1
         '
@@ -75,19 +75,19 @@ Partial Class menu_awal
         'DosenToolStripMenuItem
         '
         Me.DosenToolStripMenuItem.Name = "DosenToolStripMenuItem"
-        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.DosenToolStripMenuItem.Text = "dosen"
         '
         'InformasiToolStripMenuItem
         '
         Me.InformasiToolStripMenuItem.Name = "InformasiToolStripMenuItem"
-        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.InformasiToolStripMenuItem.Text = "informasi"
         '
         'MahasiswaToolStripMenuItem
         '
         Me.MahasiswaToolStripMenuItem.Name = "MahasiswaToolStripMenuItem"
-        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.MahasiswaToolStripMenuItem.Text = "mahasiswa"
         '
         'MataKuliahToolStripMenuItem

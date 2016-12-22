@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("universitas_bersamaDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("universitas_informatikaDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class universitas_bersamaDataSet
+Partial Public Class universitas_informatikaDataSet
     Inherits Global.System.Data.DataSet
     
     Private tabledosen As dosenDataTable
@@ -36,20 +36,6 @@ Partial Public Class universitas_bersamaDataSet
     Private tablenilai As nilaiDataTable
     
     Private tablepeserta_mk As peserta_mkDataTable
-    
-    Private relationfk_INFORMASI_DOSEN1 As Global.System.Data.DataRelation
-    
-    Private relationfk_INFORMASI_MATA_KULIAH1 As Global.System.Data.DataRelation
-    
-    Private relationfk_MATA_KULIAH_DOSEN1 As Global.System.Data.DataRelation
-    
-    Private relationfk_NILAI_PESERTA_MK1 As Global.System.Data.DataRelation
-    
-    Private relationfk_PESERTA_MK_DOSEN1 As Global.System.Data.DataRelation
-    
-    Private relationfk_PESERTA_MK_MAHASISWA1 As Global.System.Data.DataRelation
-    
-    Private relationfk_PESERTA_MK_MATA_KULIAH1 As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -95,8 +81,8 @@ Partial Public Class universitas_bersamaDataSet
             If (Not (ds.Tables("nilai")) Is Nothing) Then
                 MyBase.Tables.Add(New nilaiDataTable(ds.Tables("nilai")))
             End If
-            If (Not (ds.Tables("peserta mk")) Is Nothing) Then
-                MyBase.Tables.Add(New peserta_mkDataTable(ds.Tables("peserta mk")))
+            If (Not (ds.Tables("peserta_mk")) Is Nothing) Then
+                MyBase.Tables.Add(New peserta_mkDataTable(ds.Tables("peserta_mk")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -217,7 +203,7 @@ Partial Public Class universitas_bersamaDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As universitas_bersamaDataSet = CType(MyBase.Clone,universitas_bersamaDataSet)
+        Dim cln As universitas_informatikaDataSet = CType(MyBase.Clone,universitas_informatikaDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -257,8 +243,8 @@ Partial Public Class universitas_bersamaDataSet
             If (Not (ds.Tables("nilai")) Is Nothing) Then
                 MyBase.Tables.Add(New nilaiDataTable(ds.Tables("nilai")))
             End If
-            If (Not (ds.Tables("peserta mk")) Is Nothing) Then
-                MyBase.Tables.Add(New peserta_mkDataTable(ds.Tables("peserta mk")))
+            If (Not (ds.Tables("peserta_mk")) Is Nothing) Then
+                MyBase.Tables.Add(New peserta_mkDataTable(ds.Tables("peserta_mk")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -322,27 +308,20 @@ Partial Public Class universitas_bersamaDataSet
                 Me.tablenilai.InitVars
             End If
         End If
-        Me.tablepeserta_mk = CType(MyBase.Tables("peserta mk"),peserta_mkDataTable)
+        Me.tablepeserta_mk = CType(MyBase.Tables("peserta_mk"),peserta_mkDataTable)
         If (initTable = true) Then
             If (Not (Me.tablepeserta_mk) Is Nothing) Then
                 Me.tablepeserta_mk.InitVars
             End If
         End If
-        Me.relationfk_INFORMASI_DOSEN1 = Me.Relations("fk_INFORMASI_DOSEN1")
-        Me.relationfk_INFORMASI_MATA_KULIAH1 = Me.Relations("fk_INFORMASI_MATA_KULIAH1")
-        Me.relationfk_MATA_KULIAH_DOSEN1 = Me.Relations("fk_MATA_KULIAH_DOSEN1")
-        Me.relationfk_NILAI_PESERTA_MK1 = Me.Relations("fk_NILAI_PESERTA MK1")
-        Me.relationfk_PESERTA_MK_DOSEN1 = Me.Relations("fk_PESERTA MK_DOSEN1")
-        Me.relationfk_PESERTA_MK_MAHASISWA1 = Me.Relations("fk_PESERTA MK_MAHASISWA1")
-        Me.relationfk_PESERTA_MK_MATA_KULIAH1 = Me.Relations("fk_PESERTA MK_MATA_KULIAH1")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "universitas_bersamaDataSet"
+        Me.DataSetName = "universitas_informatikaDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/universitas_bersamaDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/universitas_informatikaDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tabledosen = New dosenDataTable()
@@ -357,20 +336,6 @@ Partial Public Class universitas_bersamaDataSet
         MyBase.Tables.Add(Me.tablenilai)
         Me.tablepeserta_mk = New peserta_mkDataTable()
         MyBase.Tables.Add(Me.tablepeserta_mk)
-        Me.relationfk_INFORMASI_DOSEN1 = New Global.System.Data.DataRelation("fk_INFORMASI_DOSEN1", New Global.System.Data.DataColumn() {Me.tabledosen.id_dosenColumn}, New Global.System.Data.DataColumn() {Me.tableinformasi.DOSEN_id_dosenColumn}, false)
-        Me.Relations.Add(Me.relationfk_INFORMASI_DOSEN1)
-        Me.relationfk_INFORMASI_MATA_KULIAH1 = New Global.System.Data.DataRelation("fk_INFORMASI_MATA_KULIAH1", New Global.System.Data.DataColumn() {Me.tablemata_kuliah.id_matakuliahColumn}, New Global.System.Data.DataColumn() {Me.tableinformasi.MATA_KULIAH_id_matakuliahColumn}, false)
-        Me.Relations.Add(Me.relationfk_INFORMASI_MATA_KULIAH1)
-        Me.relationfk_MATA_KULIAH_DOSEN1 = New Global.System.Data.DataRelation("fk_MATA_KULIAH_DOSEN1", New Global.System.Data.DataColumn() {Me.tabledosen.id_dosenColumn}, New Global.System.Data.DataColumn() {Me.tablemata_kuliah.DOSEN_id_dosenColumn}, false)
-        Me.Relations.Add(Me.relationfk_MATA_KULIAH_DOSEN1)
-        Me.relationfk_NILAI_PESERTA_MK1 = New Global.System.Data.DataRelation("fk_NILAI_PESERTA MK1", New Global.System.Data.DataColumn() {Me.tablepeserta_mk.id_pesertaColumn}, New Global.System.Data.DataColumn() {Me.tablenilai.PESERTA_MK_id_pesertaColumn}, false)
-        Me.Relations.Add(Me.relationfk_NILAI_PESERTA_MK1)
-        Me.relationfk_PESERTA_MK_DOSEN1 = New Global.System.Data.DataRelation("fk_PESERTA MK_DOSEN1", New Global.System.Data.DataColumn() {Me.tabledosen.id_dosenColumn}, New Global.System.Data.DataColumn() {Me.tablepeserta_mk.DOSEN_id_dosenColumn}, false)
-        Me.Relations.Add(Me.relationfk_PESERTA_MK_DOSEN1)
-        Me.relationfk_PESERTA_MK_MAHASISWA1 = New Global.System.Data.DataRelation("fk_PESERTA MK_MAHASISWA1", New Global.System.Data.DataColumn() {Me.tablemahasiswa.id_MAHASISWAColumn}, New Global.System.Data.DataColumn() {Me.tablepeserta_mk.MAHASISWA_id_MAHASISWAColumn}, false)
-        Me.Relations.Add(Me.relationfk_PESERTA_MK_MAHASISWA1)
-        Me.relationfk_PESERTA_MK_MATA_KULIAH1 = New Global.System.Data.DataRelation("fk_PESERTA MK_MATA_KULIAH1", New Global.System.Data.DataColumn() {Me.tablemata_kuliah.id_matakuliahColumn, Me.tablemata_kuliah.DOSEN_id_dosenColumn}, New Global.System.Data.DataColumn() {Me.tablepeserta_mk.MATA_KULIAH_id_matakuliahColumn, Me.tablepeserta_mk.MATA_KULIAH_DOSEN_id_dosenColumn}, false)
-        Me.Relations.Add(Me.relationfk_PESERTA_MK_MATA_KULIAH1)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -420,7 +385,7 @@ Partial Public Class universitas_bersamaDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+        Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -499,9 +464,9 @@ Partial Public Class universitas_bersamaDataSet
         
         Private columnemail_dosen As Global.System.Data.DataColumn
         
-        Private columnUserName As Global.System.Data.DataColumn
+        Private columnUser_name As Global.System.Data.DataColumn
         
-        Private columnpasword As Global.System.Data.DataColumn
+        Private columnpassword As Global.System.Data.DataColumn
         
         Private columnlink_fb As Global.System.Data.DataColumn
         
@@ -568,17 +533,17 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property UserNameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property User_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUserName
+                Return Me.columnUser_name
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property paswordColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property passwordColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnpasword
+                Return Me.columnpassword
             End Get
         End Property
         
@@ -635,9 +600,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AdddosenRow(ByVal id_dosen As Integer, ByVal nama_dosen As String, ByVal email_dosen As String, ByVal UserName As String, ByVal pasword As String, ByVal link_fb As String, ByVal wibsite As String) As dosenRow
+        Public Overloads Function AdddosenRow(ByVal id_dosen As Integer, ByVal nama_dosen As String, ByVal email_dosen As String, ByVal User_name As String, ByVal password As String, ByVal link_fb As String, ByVal wibsite As String) As dosenRow
             Dim rowdosenRow As dosenRow = CType(Me.NewRow,dosenRow)
-            Dim columnValuesArray() As Object = New Object() {id_dosen, nama_dosen, email_dosen, UserName, pasword, link_fb, wibsite}
+            Dim columnValuesArray() As Object = New Object() {id_dosen, nama_dosen, email_dosen, User_name, password, link_fb, wibsite}
             rowdosenRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdosenRow)
             Return rowdosenRow
@@ -669,8 +634,8 @@ Partial Public Class universitas_bersamaDataSet
             Me.columnid_dosen = MyBase.Columns("id_dosen")
             Me.columnnama_dosen = MyBase.Columns("nama_dosen")
             Me.columnemail_dosen = MyBase.Columns("email_dosen")
-            Me.columnUserName = MyBase.Columns("UserName")
-            Me.columnpasword = MyBase.Columns("pasword")
+            Me.columnUser_name = MyBase.Columns("User_name")
+            Me.columnpassword = MyBase.Columns("password")
             Me.columnlink_fb = MyBase.Columns("link_fb")
             Me.columnwibsite = MyBase.Columns("wibsite")
         End Sub
@@ -684,10 +649,10 @@ Partial Public Class universitas_bersamaDataSet
             MyBase.Columns.Add(Me.columnnama_dosen)
             Me.columnemail_dosen = New Global.System.Data.DataColumn("email_dosen", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemail_dosen)
-            Me.columnUserName = New Global.System.Data.DataColumn("UserName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUserName)
-            Me.columnpasword = New Global.System.Data.DataColumn("pasword", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnpasword)
+            Me.columnUser_name = New Global.System.Data.DataColumn("User_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUser_name)
+            Me.columnpassword = New Global.System.Data.DataColumn("password", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpassword)
             Me.columnlink_fb = New Global.System.Data.DataColumn("link_fb", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnlink_fb)
             Me.columnwibsite = New Global.System.Data.DataColumn("wibsite", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -697,8 +662,8 @@ Partial Public Class universitas_bersamaDataSet
             Me.columnid_dosen.Unique = true
             Me.columnnama_dosen.MaxLength = 45
             Me.columnemail_dosen.MaxLength = 45
-            Me.columnUserName.MaxLength = 45
-            Me.columnpasword.MaxLength = 45
+            Me.columnUser_name.MaxLength = 45
+            Me.columnpassword.MaxLength = 45
             Me.columnlink_fb.MaxLength = 45
             Me.columnwibsite.MaxLength = 45
         End Sub
@@ -768,7 +733,7 @@ Partial Public Class universitas_bersamaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+            Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -844,6 +809,8 @@ Partial Public Class universitas_bersamaDataSet
         
         Private columnMATA_KULIAH_id_matakuliah As Global.System.Data.DataColumn
         
+        Private columnMATA_KULIAH_DOSEN_id_dosen As Global.System.Data.DataColumn
+        
         Private columnjudul As Global.System.Data.DataColumn
         
         Private columninfo As Global.System.Data.DataColumn
@@ -908,6 +875,14 @@ Partial Public Class universitas_bersamaDataSet
         Public ReadOnly Property MATA_KULIAH_id_matakuliahColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnMATA_KULIAH_id_matakuliah
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MATA_KULIAH_DOSEN_id_dosenColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMATA_KULIAH_DOSEN_id_dosen
             End Get
         End Property
         
@@ -980,15 +955,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddinformasiRow(ByVal id_informasi As Integer, ByVal parentdosenRowByfk_INFORMASI_DOSEN1 As dosenRow, ByVal parentmata_kuliahRowByfk_INFORMASI_MATA_KULIAH1 As mata_kuliahRow, ByVal judul As String, ByVal info As String, ByVal tanggal As String, ByVal hari As String) As informasiRow
+        Public Overloads Function AddinformasiRow(ByVal id_informasi As Integer, ByVal DOSEN_id_dosen As Integer, ByVal MATA_KULIAH_id_matakuliah As Integer, ByVal MATA_KULIAH_DOSEN_id_dosen As Integer, ByVal judul As String, ByVal info As String, ByVal tanggal As String, ByVal hari As String) As informasiRow
             Dim rowinformasiRow As informasiRow = CType(Me.NewRow,informasiRow)
-            Dim columnValuesArray() As Object = New Object() {id_informasi, Nothing, Nothing, judul, info, tanggal, hari}
-            If (Not (parentdosenRowByfk_INFORMASI_DOSEN1) Is Nothing) Then
-                columnValuesArray(1) = parentdosenRowByfk_INFORMASI_DOSEN1(0)
-            End If
-            If (Not (parentmata_kuliahRowByfk_INFORMASI_MATA_KULIAH1) Is Nothing) Then
-                columnValuesArray(2) = parentmata_kuliahRowByfk_INFORMASI_MATA_KULIAH1(0)
-            End If
+            Dim columnValuesArray() As Object = New Object() {id_informasi, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah, MATA_KULIAH_DOSEN_id_dosen, judul, info, tanggal, hari}
             rowinformasiRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowinformasiRow)
             Return rowinformasiRow
@@ -996,8 +965,8 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_informasiDOSEN_id_dosenMATA_KULIAH_id_matakuliah(ByVal id_informasi As Integer, ByVal DOSEN_id_dosen As Integer, ByVal MATA_KULIAH_id_matakuliah As Integer) As informasiRow
-            Return CType(Me.Rows.Find(New Object() {id_informasi, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah}),informasiRow)
+        Public Function FindByid_informasiDOSEN_id_dosenMATA_KULIAH_id_matakuliahMATA_KULIAH_DOSEN_id_dosen(ByVal id_informasi As Integer, ByVal DOSEN_id_dosen As Integer, ByVal MATA_KULIAH_id_matakuliah As Integer, ByVal MATA_KULIAH_DOSEN_id_dosen As Integer) As informasiRow
+            Return CType(Me.Rows.Find(New Object() {id_informasi, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah, MATA_KULIAH_DOSEN_id_dosen}),informasiRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1020,6 +989,7 @@ Partial Public Class universitas_bersamaDataSet
             Me.columnid_informasi = MyBase.Columns("id_informasi")
             Me.columnDOSEN_id_dosen = MyBase.Columns("DOSEN_id_dosen")
             Me.columnMATA_KULIAH_id_matakuliah = MyBase.Columns("MATA_KULIAH_id_matakuliah")
+            Me.columnMATA_KULIAH_DOSEN_id_dosen = MyBase.Columns("MATA_KULIAH_DOSEN_id_dosen")
             Me.columnjudul = MyBase.Columns("judul")
             Me.columninfo = MyBase.Columns("info")
             Me.columntanggal = MyBase.Columns("tanggal")
@@ -1035,6 +1005,8 @@ Partial Public Class universitas_bersamaDataSet
             MyBase.Columns.Add(Me.columnDOSEN_id_dosen)
             Me.columnMATA_KULIAH_id_matakuliah = New Global.System.Data.DataColumn("MATA_KULIAH_id_matakuliah", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMATA_KULIAH_id_matakuliah)
+            Me.columnMATA_KULIAH_DOSEN_id_dosen = New Global.System.Data.DataColumn("MATA_KULIAH_DOSEN_id_dosen", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMATA_KULIAH_DOSEN_id_dosen)
             Me.columnjudul = New Global.System.Data.DataColumn("judul", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnjudul)
             Me.columninfo = New Global.System.Data.DataColumn("info", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1043,10 +1015,11 @@ Partial Public Class universitas_bersamaDataSet
             MyBase.Columns.Add(Me.columntanggal)
             Me.columnhari = New Global.System.Data.DataColumn("hari", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnhari)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_informasi, Me.columnDOSEN_id_dosen, Me.columnMATA_KULIAH_id_matakuliah}, true))
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_informasi, Me.columnDOSEN_id_dosen, Me.columnMATA_KULIAH_id_matakuliah, Me.columnMATA_KULIAH_DOSEN_id_dosen}, true))
             Me.columnid_informasi.AllowDBNull = false
             Me.columnDOSEN_id_dosen.AllowDBNull = false
             Me.columnMATA_KULIAH_id_matakuliah.AllowDBNull = false
+            Me.columnMATA_KULIAH_DOSEN_id_dosen.AllowDBNull = false
             Me.columnjudul.MaxLength = 45
             Me.columninfo.MaxLength = 45
             Me.columntanggal.MaxLength = 45
@@ -1118,7 +1091,7 @@ Partial Public Class universitas_bersamaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+            Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1188,15 +1161,15 @@ Partial Public Class universitas_bersamaDataSet
     Partial Public Class mahasiswaDataTable
         Inherits Global.System.Data.TypedTableBase(Of mahasiswaRow)
         
-        Private columnid_MAHASISWA As Global.System.Data.DataColumn
+        Private columnid_mahasiswa As Global.System.Data.DataColumn
         
         Private columnusername As Global.System.Data.DataColumn
         
-        Private columnpasword As Global.System.Data.DataColumn
+        Private columnpassword As Global.System.Data.DataColumn
         
-        Private columnnama_mhs As Global.System.Data.DataColumn
+        Private columnnama_mahasiswa As Global.System.Data.DataColumn
         
-        Private columnnim_mhs As Global.System.Data.DataColumn
+        Private columnnim_mahasiswa As Global.System.Data.DataColumn
         
         Private columntgl_lahir_mhs As Global.System.Data.DataColumn
         
@@ -1204,7 +1177,7 @@ Partial Public Class universitas_bersamaDataSet
         
         Private columnalamat_mhs As Global.System.Data.DataColumn
         
-        Private columnno_telp As Global.System.Data.DataColumn
+        Private columnnotelp_mhs As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1243,9 +1216,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property id_MAHASISWAColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property id_mahasiswaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnid_MAHASISWA
+                Return Me.columnid_mahasiswa
             End Get
         End Property
         
@@ -1259,25 +1232,25 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property paswordColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property passwordColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnpasword
+                Return Me.columnpassword
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property nama_mhsColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property nama_mahasiswaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnnama_mhs
+                Return Me.columnnama_mahasiswa
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property nim_mhsColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property nim_mahasiswaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnnim_mhs
+                Return Me.columnnim_mahasiswa
             End Get
         End Property
         
@@ -1307,9 +1280,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property no_telpColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property notelp_mhsColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnno_telp
+                Return Me.columnnotelp_mhs
             End Get
         End Property
         
@@ -1350,9 +1323,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddmahasiswaRow(ByVal id_MAHASISWA As Integer, ByVal username As String, ByVal pasword As String, ByVal nama_mhs As String, ByVal nim_mhs As String, ByVal tgl_lahir_mhs As String, ByVal email_mhs As String, ByVal alamat_mhs As String, ByVal no_telp As String) As mahasiswaRow
+        Public Overloads Function AddmahasiswaRow(ByVal id_mahasiswa As Integer, ByVal username As String, ByVal password As String, ByVal nama_mahasiswa As String, ByVal nim_mahasiswa As String, ByVal tgl_lahir_mhs As String, ByVal email_mhs As String, ByVal alamat_mhs As String, ByVal notelp_mhs As String) As mahasiswaRow
             Dim rowmahasiswaRow As mahasiswaRow = CType(Me.NewRow,mahasiswaRow)
-            Dim columnValuesArray() As Object = New Object() {id_MAHASISWA, username, pasword, nama_mhs, nim_mhs, tgl_lahir_mhs, email_mhs, alamat_mhs, no_telp}
+            Dim columnValuesArray() As Object = New Object() {id_mahasiswa, username, password, nama_mahasiswa, nim_mahasiswa, tgl_lahir_mhs, email_mhs, alamat_mhs, notelp_mhs}
             rowmahasiswaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmahasiswaRow)
             Return rowmahasiswaRow
@@ -1360,8 +1333,8 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_MAHASISWA(ByVal id_MAHASISWA As Integer) As mahasiswaRow
-            Return CType(Me.Rows.Find(New Object() {id_MAHASISWA}),mahasiswaRow)
+        Public Function FindByid_mahasiswa(ByVal id_mahasiswa As Integer) As mahasiswaRow
+            Return CType(Me.Rows.Find(New Object() {id_mahasiswa}),mahasiswaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1381,49 +1354,49 @@ Partial Public Class universitas_bersamaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnid_MAHASISWA = MyBase.Columns("id MAHASISWA")
+            Me.columnid_mahasiswa = MyBase.Columns("id_mahasiswa")
             Me.columnusername = MyBase.Columns("username")
-            Me.columnpasword = MyBase.Columns("pasword")
-            Me.columnnama_mhs = MyBase.Columns("nama_mhs")
-            Me.columnnim_mhs = MyBase.Columns("nim_mhs")
+            Me.columnpassword = MyBase.Columns("password")
+            Me.columnnama_mahasiswa = MyBase.Columns("nama_mahasiswa")
+            Me.columnnim_mahasiswa = MyBase.Columns("nim_mahasiswa")
             Me.columntgl_lahir_mhs = MyBase.Columns("tgl_lahir_mhs")
             Me.columnemail_mhs = MyBase.Columns("email_mhs")
             Me.columnalamat_mhs = MyBase.Columns("alamat_mhs")
-            Me.columnno_telp = MyBase.Columns("no_telp")
+            Me.columnnotelp_mhs = MyBase.Columns("notelp_mhs")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnid_MAHASISWA = New Global.System.Data.DataColumn("id MAHASISWA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_MAHASISWA)
+            Me.columnid_mahasiswa = New Global.System.Data.DataColumn("id_mahasiswa", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_mahasiswa)
             Me.columnusername = New Global.System.Data.DataColumn("username", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnusername)
-            Me.columnpasword = New Global.System.Data.DataColumn("pasword", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnpasword)
-            Me.columnnama_mhs = New Global.System.Data.DataColumn("nama_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnama_mhs)
-            Me.columnnim_mhs = New Global.System.Data.DataColumn("nim_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnim_mhs)
+            Me.columnpassword = New Global.System.Data.DataColumn("password", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpassword)
+            Me.columnnama_mahasiswa = New Global.System.Data.DataColumn("nama_mahasiswa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnama_mahasiswa)
+            Me.columnnim_mahasiswa = New Global.System.Data.DataColumn("nim_mahasiswa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnim_mahasiswa)
             Me.columntgl_lahir_mhs = New Global.System.Data.DataColumn("tgl_lahir_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntgl_lahir_mhs)
             Me.columnemail_mhs = New Global.System.Data.DataColumn("email_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemail_mhs)
             Me.columnalamat_mhs = New Global.System.Data.DataColumn("alamat_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnalamat_mhs)
-            Me.columnno_telp = New Global.System.Data.DataColumn("no_telp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnno_telp)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_MAHASISWA}, true))
-            Me.columnid_MAHASISWA.AllowDBNull = false
-            Me.columnid_MAHASISWA.Unique = true
+            Me.columnnotelp_mhs = New Global.System.Data.DataColumn("notelp_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnotelp_mhs)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_mahasiswa}, true))
+            Me.columnid_mahasiswa.AllowDBNull = false
+            Me.columnid_mahasiswa.Unique = true
             Me.columnusername.MaxLength = 45
-            Me.columnpasword.MaxLength = 45
-            Me.columnnama_mhs.MaxLength = 45
-            Me.columnnim_mhs.MaxLength = 45
+            Me.columnpassword.MaxLength = 45
+            Me.columnnama_mahasiswa.MaxLength = 45
+            Me.columnnim_mahasiswa.MaxLength = 45
             Me.columntgl_lahir_mhs.MaxLength = 45
             Me.columnemail_mhs.MaxLength = 45
             Me.columnalamat_mhs.MaxLength = 45
-            Me.columnno_telp.MaxLength = 45
+            Me.columnnotelp_mhs.MaxLength = 45
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1491,7 +1464,7 @@ Partial Public Class universitas_bersamaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+            Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1565,9 +1538,9 @@ Partial Public Class universitas_bersamaDataSet
         
         Private columnDOSEN_id_dosen As Global.System.Data.DataColumn
         
-        Private columnMATA_KULIAH As Global.System.Data.DataColumn
-        
         Private columnsks As Global.System.Data.DataColumn
+        
+        Private columnMATA_KULIAH As Global.System.Data.DataColumn
         
         Private columnkode As Global.System.Data.DataColumn
         
@@ -1624,17 +1597,17 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property MATA_KULIAHColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property sksColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMATA_KULIAH
+                Return Me.columnsks
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property sksColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property MATA_KULIAHColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnsks
+                Return Me.columnMATA_KULIAH
             End Get
         End Property
         
@@ -1683,12 +1656,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addmata_kuliahRow(ByVal id_matakuliah As Integer, ByVal parentdosenRowByfk_MATA_KULIAH_DOSEN1 As dosenRow, ByVal MATA_KULIAH As String, ByVal sks As String, ByVal kode As String) As mata_kuliahRow
+        Public Overloads Function Addmata_kuliahRow(ByVal id_matakuliah As Integer, ByVal DOSEN_id_dosen As Integer, ByVal sks As String, ByVal MATA_KULIAH As String, ByVal kode As String) As mata_kuliahRow
             Dim rowmata_kuliahRow As mata_kuliahRow = CType(Me.NewRow,mata_kuliahRow)
-            Dim columnValuesArray() As Object = New Object() {id_matakuliah, Nothing, MATA_KULIAH, sks, kode}
-            If (Not (parentdosenRowByfk_MATA_KULIAH_DOSEN1) Is Nothing) Then
-                columnValuesArray(1) = parentdosenRowByfk_MATA_KULIAH_DOSEN1(0)
-            End If
+            Dim columnValuesArray() As Object = New Object() {id_matakuliah, DOSEN_id_dosen, sks, MATA_KULIAH, kode}
             rowmata_kuliahRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmata_kuliahRow)
             Return rowmata_kuliahRow
@@ -1719,8 +1689,8 @@ Partial Public Class universitas_bersamaDataSet
         Friend Sub InitVars()
             Me.columnid_matakuliah = MyBase.Columns("id_matakuliah")
             Me.columnDOSEN_id_dosen = MyBase.Columns("DOSEN_id_dosen")
-            Me.columnMATA_KULIAH = MyBase.Columns("MATA_KULIAH")
             Me.columnsks = MyBase.Columns("sks")
+            Me.columnMATA_KULIAH = MyBase.Columns("MATA_KULIAH")
             Me.columnkode = MyBase.Columns("kode")
         End Sub
         
@@ -1731,17 +1701,17 @@ Partial Public Class universitas_bersamaDataSet
             MyBase.Columns.Add(Me.columnid_matakuliah)
             Me.columnDOSEN_id_dosen = New Global.System.Data.DataColumn("DOSEN_id_dosen", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDOSEN_id_dosen)
-            Me.columnMATA_KULIAH = New Global.System.Data.DataColumn("MATA_KULIAH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMATA_KULIAH)
             Me.columnsks = New Global.System.Data.DataColumn("sks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsks)
+            Me.columnMATA_KULIAH = New Global.System.Data.DataColumn("MATA_KULIAH", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMATA_KULIAH)
             Me.columnkode = New Global.System.Data.DataColumn("kode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkode)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_matakuliah, Me.columnDOSEN_id_dosen}, true))
             Me.columnid_matakuliah.AllowDBNull = false
             Me.columnDOSEN_id_dosen.AllowDBNull = false
-            Me.columnMATA_KULIAH.MaxLength = 45
             Me.columnsks.MaxLength = 45
+            Me.columnMATA_KULIAH.MaxLength = 45
             Me.columnkode.MaxLength = 45
         End Sub
         
@@ -1810,7 +1780,7 @@ Partial Public Class universitas_bersamaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+            Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1882,7 +1852,7 @@ Partial Public Class universitas_bersamaDataSet
         
         Private columnid_nilai As Global.System.Data.DataColumn
         
-        Private columnPESERTA_MK_id_peserta As Global.System.Data.DataColumn
+        Private columnPERSERTA_MK_id_peserta As Global.System.Data.DataColumn
         
         Private columntugas As Global.System.Data.DataColumn
         
@@ -1935,9 +1905,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property PESERTA_MK_id_pesertaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PERSERTA_MK_id_pesertaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnPESERTA_MK_id_peserta
+                Return Me.columnPERSERTA_MK_id_peserta
             End Get
         End Property
         
@@ -2002,12 +1972,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddnilaiRow(ByVal id_nilai As Integer, ByVal parentpeserta_mkRowByfk_NILAI_PESERTA_MK1 As peserta_mkRow, ByVal tugas As String, ByVal uts As String, ByVal uas As String) As nilaiRow
+        Public Overloads Function AddnilaiRow(ByVal id_nilai As Integer, ByVal PERSERTA_MK_id_peserta As Integer, ByVal tugas As String, ByVal uts As String, ByVal uas As String) As nilaiRow
             Dim rownilaiRow As nilaiRow = CType(Me.NewRow,nilaiRow)
-            Dim columnValuesArray() As Object = New Object() {id_nilai, Nothing, tugas, uts, uas}
-            If (Not (parentpeserta_mkRowByfk_NILAI_PESERTA_MK1) Is Nothing) Then
-                columnValuesArray(1) = parentpeserta_mkRowByfk_NILAI_PESERTA_MK1(0)
-            End If
+            Dim columnValuesArray() As Object = New Object() {id_nilai, PERSERTA_MK_id_peserta, tugas, uts, uas}
             rownilaiRow.ItemArray = columnValuesArray
             Me.Rows.Add(rownilaiRow)
             Return rownilaiRow
@@ -2015,8 +1982,8 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_nilaiPESERTA_MK_id_peserta(ByVal id_nilai As Integer, ByVal PESERTA_MK_id_peserta As Integer) As nilaiRow
-            Return CType(Me.Rows.Find(New Object() {id_nilai, PESERTA_MK_id_peserta}),nilaiRow)
+        Public Function FindByid_nilaiPERSERTA_MK_id_peserta(ByVal id_nilai As Integer, ByVal PERSERTA_MK_id_peserta As Integer) As nilaiRow
+            Return CType(Me.Rows.Find(New Object() {id_nilai, PERSERTA_MK_id_peserta}),nilaiRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2037,7 +2004,7 @@ Partial Public Class universitas_bersamaDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnid_nilai = MyBase.Columns("id_nilai")
-            Me.columnPESERTA_MK_id_peserta = MyBase.Columns("PESERTA MK_id_peserta")
+            Me.columnPERSERTA_MK_id_peserta = MyBase.Columns("PERSERTA_MK_id_peserta")
             Me.columntugas = MyBase.Columns("tugas")
             Me.columnuts = MyBase.Columns("uts")
             Me.columnuas = MyBase.Columns("uas")
@@ -2048,20 +2015,20 @@ Partial Public Class universitas_bersamaDataSet
         Private Sub InitClass()
             Me.columnid_nilai = New Global.System.Data.DataColumn("id_nilai", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_nilai)
-            Me.columnPESERTA_MK_id_peserta = New Global.System.Data.DataColumn("PESERTA MK_id_peserta", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPESERTA_MK_id_peserta)
+            Me.columnPERSERTA_MK_id_peserta = New Global.System.Data.DataColumn("PERSERTA_MK_id_peserta", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPERSERTA_MK_id_peserta)
             Me.columntugas = New Global.System.Data.DataColumn("tugas", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntugas)
             Me.columnuts = New Global.System.Data.DataColumn("uts", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnuts)
             Me.columnuas = New Global.System.Data.DataColumn("uas", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnuas)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_nilai, Me.columnPESERTA_MK_id_peserta}, true))
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_nilai, Me.columnPERSERTA_MK_id_peserta}, true))
             Me.columnid_nilai.AllowDBNull = false
-            Me.columnPESERTA_MK_id_peserta.AllowDBNull = false
-            Me.columntugas.MaxLength = 45
-            Me.columnuts.MaxLength = 45
-            Me.columnuas.MaxLength = 45
+            Me.columnPERSERTA_MK_id_peserta.AllowDBNull = false
+            Me.columntugas.MaxLength = 22
+            Me.columnuts.MaxLength = 22
+            Me.columnuas.MaxLength = 22
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2129,7 +2096,7 @@ Partial Public Class universitas_bersamaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+            Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2199,21 +2166,21 @@ Partial Public Class universitas_bersamaDataSet
     Partial Public Class peserta_mkDataTable
         Inherits Global.System.Data.TypedTableBase(Of peserta_mkRow)
         
-        Private columnid_peserta As Global.System.Data.DataColumn
+        Private columnid_perserta As Global.System.Data.DataColumn
         
-        Private columnMAHASISWA_id_MAHASISWA As Global.System.Data.DataColumn
+        Private columnMAHASISWA_id_mahasiswa As Global.System.Data.DataColumn
+        
+        Private columnDOSEN_id_dosen As Global.System.Data.DataColumn
         
         Private columnMATA_KULIAH_id_matakuliah As Global.System.Data.DataColumn
         
-        Private columnMATA_KULIAH_DOSEN_id_dosen As Global.System.Data.DataColumn
-        
-        Private columnDOSEN_id_dosen As Global.System.Data.DataColumn
+        Private columnNILAI_id_nilai As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "peserta mk"
+            Me.TableName = "peserta_mk"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -2246,17 +2213,25 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property id_pesertaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property id_persertaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnid_peserta
+                Return Me.columnid_perserta
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property MAHASISWA_id_MAHASISWAColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property MAHASISWA_id_mahasiswaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMAHASISWA_id_MAHASISWA
+                Return Me.columnMAHASISWA_id_mahasiswa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DOSEN_id_dosenColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDOSEN_id_dosen
             End Get
         End Property
         
@@ -2270,17 +2245,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property MATA_KULIAH_DOSEN_id_dosenColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property NILAI_id_nilaiColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMATA_KULIAH_DOSEN_id_dosen
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property DOSEN_id_dosenColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnDOSEN_id_dosen
+                Return Me.columnNILAI_id_nilai
             End Get
         End Property
         
@@ -2321,15 +2288,9 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addpeserta_mkRow(ByVal id_peserta As Integer, ByVal parentmahasiswaRowByfk_PESERTA_MK_MAHASISWA1 As mahasiswaRow, ByVal MATA_KULIAH_id_matakuliah As Integer, ByVal MATA_KULIAH_DOSEN_id_dosen As Integer, ByVal parentdosenRowByfk_PESERTA_MK_DOSEN1 As dosenRow) As peserta_mkRow
+        Public Overloads Function Addpeserta_mkRow(ByVal id_perserta As Integer, ByVal MAHASISWA_id_mahasiswa As Integer, ByVal DOSEN_id_dosen As Integer, ByVal MATA_KULIAH_id_matakuliah As Integer, ByVal NILAI_id_nilai As Integer) As peserta_mkRow
             Dim rowpeserta_mkRow As peserta_mkRow = CType(Me.NewRow,peserta_mkRow)
-            Dim columnValuesArray() As Object = New Object() {id_peserta, Nothing, MATA_KULIAH_id_matakuliah, MATA_KULIAH_DOSEN_id_dosen, Nothing}
-            If (Not (parentmahasiswaRowByfk_PESERTA_MK_MAHASISWA1) Is Nothing) Then
-                columnValuesArray(1) = parentmahasiswaRowByfk_PESERTA_MK_MAHASISWA1(0)
-            End If
-            If (Not (parentdosenRowByfk_PESERTA_MK_DOSEN1) Is Nothing) Then
-                columnValuesArray(4) = parentdosenRowByfk_PESERTA_MK_DOSEN1(0)
-            End If
+            Dim columnValuesArray() As Object = New Object() {id_perserta, MAHASISWA_id_mahasiswa, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah, NILAI_id_nilai}
             rowpeserta_mkRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowpeserta_mkRow)
             Return rowpeserta_mkRow
@@ -2337,8 +2298,8 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByid_pesertaMAHASISWA_id_MAHASISWAMATA_KULIAH_id_matakuliahMATA_KULIAH_DOSEN_id_dosenDOSEN_id_dosen(ByVal id_peserta As Integer, ByVal MAHASISWA_id_MAHASISWA As Integer, ByVal MATA_KULIAH_id_matakuliah As Integer, ByVal MATA_KULIAH_DOSEN_id_dosen As Integer, ByVal DOSEN_id_dosen As Integer) As peserta_mkRow
-            Return CType(Me.Rows.Find(New Object() {id_peserta, MAHASISWA_id_MAHASISWA, MATA_KULIAH_id_matakuliah, MATA_KULIAH_DOSEN_id_dosen, DOSEN_id_dosen}),peserta_mkRow)
+        Public Function FindByid_persertaMAHASISWA_id_mahasiswaDOSEN_id_dosenMATA_KULIAH_id_matakuliahNILAI_id_nilai(ByVal id_perserta As Integer, ByVal MAHASISWA_id_mahasiswa As Integer, ByVal DOSEN_id_dosen As Integer, ByVal MATA_KULIAH_id_matakuliah As Integer, ByVal NILAI_id_nilai As Integer) As peserta_mkRow
+            Return CType(Me.Rows.Find(New Object() {id_perserta, MAHASISWA_id_mahasiswa, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah, NILAI_id_nilai}),peserta_mkRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2358,32 +2319,32 @@ Partial Public Class universitas_bersamaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnid_peserta = MyBase.Columns("id_peserta")
-            Me.columnMAHASISWA_id_MAHASISWA = MyBase.Columns("MAHASISWA_id MAHASISWA")
-            Me.columnMATA_KULIAH_id_matakuliah = MyBase.Columns("MATA_KULIAH_id_matakuliah")
-            Me.columnMATA_KULIAH_DOSEN_id_dosen = MyBase.Columns("MATA_KULIAH_DOSEN_id_dosen")
+            Me.columnid_perserta = MyBase.Columns("id_perserta")
+            Me.columnMAHASISWA_id_mahasiswa = MyBase.Columns("MAHASISWA_id_mahasiswa")
             Me.columnDOSEN_id_dosen = MyBase.Columns("DOSEN_id_dosen")
+            Me.columnMATA_KULIAH_id_matakuliah = MyBase.Columns("MATA_KULIAH_id_matakuliah")
+            Me.columnNILAI_id_nilai = MyBase.Columns("NILAI_id_nilai")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnid_peserta = New Global.System.Data.DataColumn("id_peserta", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_peserta)
-            Me.columnMAHASISWA_id_MAHASISWA = New Global.System.Data.DataColumn("MAHASISWA_id MAHASISWA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMAHASISWA_id_MAHASISWA)
-            Me.columnMATA_KULIAH_id_matakuliah = New Global.System.Data.DataColumn("MATA_KULIAH_id_matakuliah", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMATA_KULIAH_id_matakuliah)
-            Me.columnMATA_KULIAH_DOSEN_id_dosen = New Global.System.Data.DataColumn("MATA_KULIAH_DOSEN_id_dosen", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMATA_KULIAH_DOSEN_id_dosen)
+            Me.columnid_perserta = New Global.System.Data.DataColumn("id_perserta", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_perserta)
+            Me.columnMAHASISWA_id_mahasiswa = New Global.System.Data.DataColumn("MAHASISWA_id_mahasiswa", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMAHASISWA_id_mahasiswa)
             Me.columnDOSEN_id_dosen = New Global.System.Data.DataColumn("DOSEN_id_dosen", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDOSEN_id_dosen)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_peserta, Me.columnMAHASISWA_id_MAHASISWA, Me.columnMATA_KULIAH_id_matakuliah, Me.columnMATA_KULIAH_DOSEN_id_dosen, Me.columnDOSEN_id_dosen}, true))
-            Me.columnid_peserta.AllowDBNull = false
-            Me.columnMAHASISWA_id_MAHASISWA.AllowDBNull = false
-            Me.columnMATA_KULIAH_id_matakuliah.AllowDBNull = false
-            Me.columnMATA_KULIAH_DOSEN_id_dosen.AllowDBNull = false
+            Me.columnMATA_KULIAH_id_matakuliah = New Global.System.Data.DataColumn("MATA_KULIAH_id_matakuliah", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMATA_KULIAH_id_matakuliah)
+            Me.columnNILAI_id_nilai = New Global.System.Data.DataColumn("NILAI_id_nilai", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNILAI_id_nilai)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_perserta, Me.columnMAHASISWA_id_mahasiswa, Me.columnDOSEN_id_dosen, Me.columnMATA_KULIAH_id_matakuliah, Me.columnNILAI_id_nilai}, true))
+            Me.columnid_perserta.AllowDBNull = false
+            Me.columnMAHASISWA_id_mahasiswa.AllowDBNull = false
             Me.columnDOSEN_id_dosen.AllowDBNull = false
+            Me.columnMATA_KULIAH_id_matakuliah.AllowDBNull = false
+            Me.columnNILAI_id_nilai.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2451,7 +2412,7 @@ Partial Public Class universitas_bersamaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As universitas_bersamaDataSet = New universitas_bersamaDataSet()
+            Dim ds As universitas_informatikaDataSet = New universitas_informatikaDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2571,31 +2532,31 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property UserName() As String
+        Public Property User_name() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabledosen.UserNameColumn),String)
+                    Return CType(Me(Me.tabledosen.User_nameColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'UserName' in table 'dosen' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'User_name' in table 'dosen' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabledosen.UserNameColumn) = value
+                Me(Me.tabledosen.User_nameColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property pasword() As String
+        Public Property password() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabledosen.paswordColumn),String)
+                    Return CType(Me(Me.tabledosen.passwordColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'pasword' in table 'dosen' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'password' in table 'dosen' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabledosen.paswordColumn) = value
+                Me(Me.tabledosen.passwordColumn) = value
             End Set
         End Property
         
@@ -2655,26 +2616,26 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsUserNameNull() As Boolean
-            Return Me.IsNull(Me.tabledosen.UserNameColumn)
+        Public Function IsUser_nameNull() As Boolean
+            Return Me.IsNull(Me.tabledosen.User_nameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetUserNameNull()
-            Me(Me.tabledosen.UserNameColumn) = Global.System.Convert.DBNull
+        Public Sub SetUser_nameNull()
+            Me(Me.tabledosen.User_nameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IspaswordNull() As Boolean
-            Return Me.IsNull(Me.tabledosen.paswordColumn)
+        Public Function IspasswordNull() As Boolean
+            Return Me.IsNull(Me.tabledosen.passwordColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetpaswordNull()
-            Me(Me.tabledosen.paswordColumn) = Global.System.Convert.DBNull
+        Public Sub SetpasswordNull()
+            Me(Me.tabledosen.passwordColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2700,36 +2661,6 @@ Partial Public Class universitas_bersamaDataSet
         Public Sub SetwibsiteNull()
             Me(Me.tabledosen.wibsiteColumn) = Global.System.Convert.DBNull
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetinformasiRows() As informasiRow()
-            If (Me.Table.ChildRelations("fk_INFORMASI_DOSEN1") Is Nothing) Then
-                Return New informasiRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_INFORMASI_DOSEN1")),informasiRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Getmata_kuliahRows() As mata_kuliahRow()
-            If (Me.Table.ChildRelations("fk_MATA_KULIAH_DOSEN1") Is Nothing) Then
-                Return New mata_kuliahRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_MATA_KULIAH_DOSEN1")),mata_kuliahRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Getpeserta_mkRows() As peserta_mkRow()
-            If (Me.Table.ChildRelations("fk_PESERTA MK_DOSEN1") Is Nothing) Then
-                Return New peserta_mkRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_PESERTA MK_DOSEN1")),peserta_mkRow())
-            End If
-        End Function
     End Class
     
     '''<summary>
@@ -2777,6 +2708,17 @@ Partial Public Class universitas_bersamaDataSet
             End Get
             Set
                 Me(Me.tableinformasi.MATA_KULIAH_id_matakuliahColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MATA_KULIAH_DOSEN_id_dosen() As Integer
+            Get
+                Return CType(Me(Me.tableinformasi.MATA_KULIAH_DOSEN_id_dosenColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableinformasi.MATA_KULIAH_DOSEN_id_dosenColumn) = value
             End Set
         End Property
         
@@ -2837,28 +2779,6 @@ Partial Public Class universitas_bersamaDataSet
             End Get
             Set
                 Me(Me.tableinformasi.hariColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property dosenRow() As dosenRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_INFORMASI_DOSEN1")),dosenRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_INFORMASI_DOSEN1"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property mata_kuliahRow() As mata_kuliahRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_INFORMASI_MATA_KULIAH1")),mata_kuliahRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_INFORMASI_MATA_KULIAH1"))
             End Set
         End Property
         
@@ -2928,12 +2848,12 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property id_MAHASISWA() As Integer
+        Public Property id_mahasiswa() As Integer
             Get
-                Return CType(Me(Me.tablemahasiswa.id_MAHASISWAColumn),Integer)
+                Return CType(Me(Me.tablemahasiswa.id_mahasiswaColumn),Integer)
             End Get
             Set
-                Me(Me.tablemahasiswa.id_MAHASISWAColumn) = value
+                Me(Me.tablemahasiswa.id_mahasiswaColumn) = value
             End Set
         End Property
         
@@ -2954,46 +2874,46 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property pasword() As String
+        Public Property password() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemahasiswa.paswordColumn),String)
+                    Return CType(Me(Me.tablemahasiswa.passwordColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'pasword' in table 'mahasiswa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'password' in table 'mahasiswa' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemahasiswa.paswordColumn) = value
+                Me(Me.tablemahasiswa.passwordColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property nama_mhs() As String
+        Public Property nama_mahasiswa() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemahasiswa.nama_mhsColumn),String)
+                    Return CType(Me(Me.tablemahasiswa.nama_mahasiswaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'nama_mhs' in table 'mahasiswa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nama_mahasiswa' in table 'mahasiswa' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemahasiswa.nama_mhsColumn) = value
+                Me(Me.tablemahasiswa.nama_mahasiswaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property nim_mhs() As String
+        Public Property nim_mahasiswa() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemahasiswa.nim_mhsColumn),String)
+                    Return CType(Me(Me.tablemahasiswa.nim_mahasiswaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'nim_mhs' in table 'mahasiswa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nim_mahasiswa' in table 'mahasiswa' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemahasiswa.nim_mhsColumn) = value
+                Me(Me.tablemahasiswa.nim_mahasiswaColumn) = value
             End Set
         End Property
         
@@ -3044,16 +2964,16 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property no_telp() As String
+        Public Property notelp_mhs() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablemahasiswa.no_telpColumn),String)
+                    Return CType(Me(Me.tablemahasiswa.notelp_mhsColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'no_telp' in table 'mahasiswa' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'notelp_mhs' in table 'mahasiswa' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemahasiswa.no_telpColumn) = value
+                Me(Me.tablemahasiswa.notelp_mhsColumn) = value
             End Set
         End Property
         
@@ -3071,38 +2991,38 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IspaswordNull() As Boolean
-            Return Me.IsNull(Me.tablemahasiswa.paswordColumn)
+        Public Function IspasswordNull() As Boolean
+            Return Me.IsNull(Me.tablemahasiswa.passwordColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetpaswordNull()
-            Me(Me.tablemahasiswa.paswordColumn) = Global.System.Convert.DBNull
+        Public Sub SetpasswordNull()
+            Me(Me.tablemahasiswa.passwordColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isnama_mhsNull() As Boolean
-            Return Me.IsNull(Me.tablemahasiswa.nama_mhsColumn)
+        Public Function Isnama_mahasiswaNull() As Boolean
+            Return Me.IsNull(Me.tablemahasiswa.nama_mahasiswaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setnama_mhsNull()
-            Me(Me.tablemahasiswa.nama_mhsColumn) = Global.System.Convert.DBNull
+        Public Sub Setnama_mahasiswaNull()
+            Me(Me.tablemahasiswa.nama_mahasiswaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isnim_mhsNull() As Boolean
-            Return Me.IsNull(Me.tablemahasiswa.nim_mhsColumn)
+        Public Function Isnim_mahasiswaNull() As Boolean
+            Return Me.IsNull(Me.tablemahasiswa.nim_mahasiswaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setnim_mhsNull()
-            Me(Me.tablemahasiswa.nim_mhsColumn) = Global.System.Convert.DBNull
+        Public Sub Setnim_mahasiswaNull()
+            Me(Me.tablemahasiswa.nim_mahasiswaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3143,25 +3063,15 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isno_telpNull() As Boolean
-            Return Me.IsNull(Me.tablemahasiswa.no_telpColumn)
+        Public Function Isnotelp_mhsNull() As Boolean
+            Return Me.IsNull(Me.tablemahasiswa.notelp_mhsColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setno_telpNull()
-            Me(Me.tablemahasiswa.no_telpColumn) = Global.System.Convert.DBNull
+        Public Sub Setnotelp_mhsNull()
+            Me(Me.tablemahasiswa.notelp_mhsColumn) = Global.System.Convert.DBNull
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Getpeserta_mkRows() As peserta_mkRow()
-            If (Me.Table.ChildRelations("fk_PESERTA MK_MAHASISWA1") Is Nothing) Then
-                Return New peserta_mkRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_PESERTA MK_MAHASISWA1")),peserta_mkRow())
-            End If
-        End Function
     End Class
     
     '''<summary>
@@ -3203,21 +3113,6 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property MATA_KULIAH() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablemata_kuliah.MATA_KULIAHColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'MATA_KULIAH' in table 'mata_kuliah' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablemata_kuliah.MATA_KULIAHColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property sks() As String
             Get
                 Try 
@@ -3228,6 +3123,21 @@ Partial Public Class universitas_bersamaDataSet
             End Get
             Set
                 Me(Me.tablemata_kuliah.sksColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MATA_KULIAH() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemata_kuliah.MATA_KULIAHColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'MATA_KULIAH' in table 'mata_kuliah' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemata_kuliah.MATA_KULIAHColumn) = value
             End Set
         End Property
         
@@ -3248,14 +3158,15 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property dosenRow() As dosenRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_MATA_KULIAH_DOSEN1")),dosenRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_MATA_KULIAH_DOSEN1"))
-            End Set
-        End Property
+        Public Function IssksNull() As Boolean
+            Return Me.IsNull(Me.tablemata_kuliah.sksColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetsksNull()
+            Me(Me.tablemata_kuliah.sksColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -3271,18 +3182,6 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IssksNull() As Boolean
-            Return Me.IsNull(Me.tablemata_kuliah.sksColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetsksNull()
-            Me(Me.tablemata_kuliah.sksColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IskodeNull() As Boolean
             Return Me.IsNull(Me.tablemata_kuliah.kodeColumn)
         End Function
@@ -3292,26 +3191,6 @@ Partial Public Class universitas_bersamaDataSet
         Public Sub SetkodeNull()
             Me(Me.tablemata_kuliah.kodeColumn) = Global.System.Convert.DBNull
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetinformasiRows() As informasiRow()
-            If (Me.Table.ChildRelations("fk_INFORMASI_MATA_KULIAH1") Is Nothing) Then
-                Return New informasiRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_INFORMASI_MATA_KULIAH1")),informasiRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Getpeserta_mkRows() As peserta_mkRow()
-            If (Me.Table.ChildRelations("fk_PESERTA MK_MATA_KULIAH1") Is Nothing) Then
-                Return New peserta_mkRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_PESERTA MK_MATA_KULIAH1")),peserta_mkRow())
-            End If
-        End Function
     End Class
     
     '''<summary>
@@ -3342,12 +3221,12 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property PESERTA_MK_id_peserta() As Integer
+        Public Property PERSERTA_MK_id_peserta() As Integer
             Get
-                Return CType(Me(Me.tablenilai.PESERTA_MK_id_pesertaColumn),Integer)
+                Return CType(Me(Me.tablenilai.PERSERTA_MK_id_pesertaColumn),Integer)
             End Get
             Set
-                Me(Me.tablenilai.PESERTA_MK_id_pesertaColumn) = value
+                Me(Me.tablenilai.PERSERTA_MK_id_pesertaColumn) = value
             End Set
         End Property
         
@@ -3393,17 +3272,6 @@ Partial Public Class universitas_bersamaDataSet
             End Get
             Set
                 Me(Me.tablenilai.uasColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property peserta_mkRow() As peserta_mkRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_NILAI_PESERTA MK1")),peserta_mkRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_NILAI_PESERTA MK1"))
             End Set
         End Property
         
@@ -3461,45 +3329,23 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property id_peserta() As Integer
+        Public Property id_perserta() As Integer
             Get
-                Return CType(Me(Me.tablepeserta_mk.id_pesertaColumn),Integer)
+                Return CType(Me(Me.tablepeserta_mk.id_persertaColumn),Integer)
             End Get
             Set
-                Me(Me.tablepeserta_mk.id_pesertaColumn) = value
+                Me(Me.tablepeserta_mk.id_persertaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property MAHASISWA_id_MAHASISWA() As Integer
+        Public Property MAHASISWA_id_mahasiswa() As Integer
             Get
-                Return CType(Me(Me.tablepeserta_mk.MAHASISWA_id_MAHASISWAColumn),Integer)
+                Return CType(Me(Me.tablepeserta_mk.MAHASISWA_id_mahasiswaColumn),Integer)
             End Get
             Set
-                Me(Me.tablepeserta_mk.MAHASISWA_id_MAHASISWAColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property MATA_KULIAH_id_matakuliah() As Integer
-            Get
-                Return CType(Me(Me.tablepeserta_mk.MATA_KULIAH_id_matakuliahColumn),Integer)
-            End Get
-            Set
-                Me(Me.tablepeserta_mk.MATA_KULIAH_id_matakuliahColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property MATA_KULIAH_DOSEN_id_dosen() As Integer
-            Get
-                Return CType(Me(Me.tablepeserta_mk.MATA_KULIAH_DOSEN_id_dosenColumn),Integer)
-            End Get
-            Set
-                Me(Me.tablepeserta_mk.MATA_KULIAH_DOSEN_id_dosenColumn) = value
+                Me(Me.tablepeserta_mk.MAHASISWA_id_mahasiswaColumn) = value
             End Set
         End Property
         
@@ -3516,46 +3362,25 @@ Partial Public Class universitas_bersamaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property dosenRow() As dosenRow
+        Public Property MATA_KULIAH_id_matakuliah() As Integer
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_PESERTA MK_DOSEN1")),dosenRow)
+                Return CType(Me(Me.tablepeserta_mk.MATA_KULIAH_id_matakuliahColumn),Integer)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_PESERTA MK_DOSEN1"))
+                Me(Me.tablepeserta_mk.MATA_KULIAH_id_matakuliahColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property mahasiswaRow() As mahasiswaRow
+        Public Property NILAI_id_nilai() As Integer
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_PESERTA MK_MAHASISWA1")),mahasiswaRow)
+                Return CType(Me(Me.tablepeserta_mk.NILAI_id_nilaiColumn),Integer)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_PESERTA MK_MAHASISWA1"))
+                Me(Me.tablepeserta_mk.NILAI_id_nilaiColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property mata_kuliahRowParent() As mata_kuliahRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fk_PESERTA MK_MATA_KULIAH1")),mata_kuliahRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("fk_PESERTA MK_MATA_KULIAH1"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetnilaiRows() As nilaiRow()
-            If (Me.Table.ChildRelations("fk_NILAI_PESERTA MK1") Is Nothing) Then
-                Return New nilaiRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fk_NILAI_PESERTA MK1")),nilaiRow())
-            End If
-        End Function
     End Class
     
     '''<summary>
@@ -3775,7 +3600,7 @@ Partial Public Class universitas_bersamaDataSet
     End Class
 End Class
 
-Namespace universitas_bersamaDataSetTableAdapters
+Namespace universitas_informatikaDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -3907,8 +3732,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("id_dosen", "id_dosen")
             tableMapping.ColumnMappings.Add("nama_dosen", "nama_dosen")
             tableMapping.ColumnMappings.Add("email_dosen", "email_dosen")
-            tableMapping.ColumnMappings.Add("UserName", "UserName")
-            tableMapping.ColumnMappings.Add("pasword", "pasword")
+            tableMapping.ColumnMappings.Add("User_name", "User_name")
+            tableMapping.ColumnMappings.Add("password", "password")
             tableMapping.ColumnMappings.Add("link_fb", "link_fb")
             tableMapping.ColumnMappings.Add("wibsite", "wibsite")
             Me._adapter.TableMappings.Add(tableMapping)
@@ -3916,10 +3741,10 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `dosen` WHERE ((`id_dosen` = @p1) AND ((@p2 = 1 AND `nama_dosen` IS N"& _ 
                 "ULL) OR (`nama_dosen` = @p3)) AND ((@p4 = 1 AND `email_dosen` IS NULL) OR (`emai"& _ 
-                "l_dosen` = @p5)) AND ((@p6 = 1 AND `UserName` IS NULL) OR (`UserName` = @p7)) AN"& _ 
-                "D ((@p8 = 1 AND `pasword` IS NULL) OR (`pasword` = @p9)) AND ((@p10 = 1 AND `lin"& _ 
-                "k_fb` IS NULL) OR (`link_fb` = @p11)) AND ((@p12 = 1 AND `wibsite` IS NULL) OR ("& _ 
-                "`wibsite` = @p13)))"
+                "l_dosen` = @p5)) AND ((@p6 = 1 AND `User_name` IS NULL) OR (`User_name` = @p7)) "& _ 
+                "AND ((@p8 = 1 AND `password` IS NULL) OR (`password` = @p9)) AND ((@p10 = 1 AND "& _ 
+                "`link_fb` IS NULL) OR (`link_fb` = @p11)) AND ((@p12 = 1 AND `wibsite` IS NULL) "& _ 
+                "OR (`wibsite` = @p13)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -3968,7 +3793,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "UserName"
+            param.SourceColumn = "User_name"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -3977,7 +3802,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "UserName"
+            param.SourceColumn = "User_name"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -3985,7 +3810,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -3994,7 +3819,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -4033,8 +3858,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `dosen` (`id_dosen`, `nama_dosen`, `email_dosen`, `UserName`, `paswor"& _ 
-                "d`, `link_fb`, `wibsite`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `dosen` (`id_dosen`, `nama_dosen`, `email_dosen`, `User_name`, `passw"& _ 
+                "ord`, `link_fb`, `wibsite`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -4062,14 +3887,14 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "UserName"
+            param.SourceColumn = "User_name"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
@@ -4088,12 +3913,12 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `dosen` SET `id_dosen` = @p1, `nama_dosen` = @p2, `email_dosen` = @p3, `Us"& _ 
-                "erName` = @p4, `pasword` = @p5, `link_fb` = @p6, `wibsite` = @p7 WHERE ((`id_dos"& _ 
-                "en` = @p8) AND ((@p9 = 1 AND `nama_dosen` IS NULL) OR (`nama_dosen` = @p10)) AND"& _ 
-                " ((@p11 = 1 AND `email_dosen` IS NULL) OR (`email_dosen` = @p12)) AND ((@p13 = 1"& _ 
-                " AND `UserName` IS NULL) OR (`UserName` = @p14)) AND ((@p15 = 1 AND `pasword` IS"& _ 
-                " NULL) OR (`pasword` = @p16)) AND ((@p17 = 1 AND `link_fb` IS NULL) OR (`link_fb"& _ 
-                "` = @p18)) AND ((@p19 = 1 AND `wibsite` IS NULL) OR (`wibsite` = @p20)))"
+                "er_name` = @p4, `password` = @p5, `link_fb` = @p6, `wibsite` = @p7 WHERE ((`id_d"& _ 
+                "osen` = @p8) AND ((@p9 = 1 AND `nama_dosen` IS NULL) OR (`nama_dosen` = @p10)) A"& _ 
+                "ND ((@p11 = 1 AND `email_dosen` IS NULL) OR (`email_dosen` = @p12)) AND ((@p13 ="& _ 
+                " 1 AND `User_name` IS NULL) OR (`User_name` = @p14)) AND ((@p15 = 1 AND `passwor"& _ 
+                "d` IS NULL) OR (`password` = @p16)) AND ((@p17 = 1 AND `link_fb` IS NULL) OR (`l"& _ 
+                "ink_fb` = @p18)) AND ((@p19 = 1 AND `wibsite` IS NULL) OR (`wibsite` = @p20)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -4121,14 +3946,14 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "UserName"
+            param.SourceColumn = "User_name"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
@@ -4191,7 +4016,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "UserName"
+            param.SourceColumn = "User_name"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -4200,7 +4025,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "UserName"
+            param.SourceColumn = "User_name"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -4208,7 +4033,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -4217,7 +4042,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -4260,7 +4085,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_bersamaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4269,8 +4094,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `id_dosen`, `nama_dosen`, `email_dosen`, `UserName`, `pasword`, `link_fb`,"& _ 
-                " `wibsite` FROM `dosen`"
+            Me._commandCollection(0).CommandText = "SELECT `id_dosen`, `nama_dosen`, `email_dosen`, `User_name`, `password`, `link_fb"& _ 
+                "`, `wibsite` FROM `dosen`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4278,7 +4103,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_bersamaDataSet.dosenDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_informatikaDataSet.dosenDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4291,9 +4116,9 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As universitas_bersamaDataSet.dosenDataTable
+        Public Overloads Overridable Function GetData() As universitas_informatikaDataSet.dosenDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As universitas_bersamaDataSet.dosenDataTable = New universitas_bersamaDataSet.dosenDataTable()
+            Dim dataTable As universitas_informatikaDataSet.dosenDataTable = New universitas_informatikaDataSet.dosenDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4301,14 +4126,14 @@ Namespace universitas_bersamaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As universitas_bersamaDataSet.dosenDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As universitas_informatikaDataSet.dosenDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As universitas_bersamaDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As universitas_informatikaDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "dosen")
         End Function
         
@@ -4673,6 +4498,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("id_informasi", "id_informasi")
             tableMapping.ColumnMappings.Add("DOSEN_id_dosen", "DOSEN_id_dosen")
             tableMapping.ColumnMappings.Add("MATA_KULIAH_id_matakuliah", "MATA_KULIAH_id_matakuliah")
+            tableMapping.ColumnMappings.Add("MATA_KULIAH_DOSEN_id_dosen", "MATA_KULIAH_DOSEN_id_dosen")
             tableMapping.ColumnMappings.Add("judul", "judul")
             tableMapping.ColumnMappings.Add("info", "info")
             tableMapping.ColumnMappings.Add("tanggal", "tanggal")
@@ -4681,10 +4507,10 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `informasi` WHERE ((`id_informasi` = @p1) AND (`DOSEN_id_dosen` = @p2"& _ 
-                ") AND (`MATA_KULIAH_id_matakuliah` = @p3) AND ((@p4 = 1 AND `judul` IS NULL) OR "& _ 
-                "(`judul` = @p5)) AND ((@p6 = 1 AND `info` IS NULL) OR (`info` = @p7)) AND ((@p8 "& _ 
-                "= 1 AND `tanggal` IS NULL) OR (`tanggal` = @p9)) AND ((@p10 = 1 AND `hari` IS NU"& _ 
-                "LL) OR (`hari` = @p11)))"
+                ") AND (`MATA_KULIAH_id_matakuliah` = @p3) AND (`MATA_KULIAH_DOSEN_id_dosen` = @p"& _ 
+                "4) AND ((@p5 = 1 AND `judul` IS NULL) OR (`judul` = @p6)) AND ((@p7 = 1 AND `inf"& _ 
+                "o` IS NULL) OR (`info` = @p8)) AND ((@p9 = 1 AND `tanggal` IS NULL) OR (`tanggal"& _ 
+                "` = @p10)) AND ((@p11 = 1 AND `hari` IS NULL) OR (`hari` = @p12)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -4715,12 +4541,20 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "judul"
+            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.IsNullable = true
+            param.SourceColumn = "judul"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            param.SourceColumnNullMapping = true
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p6"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -4728,24 +4562,24 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p6"
+            param.ParameterName = "@p7"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
             param.SourceColumn = "info"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
-            Me._adapter.DeleteCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p7"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "info"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p8"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "info"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p9"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -4754,7 +4588,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p9"
+            param.ParameterName = "@p10"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -4762,7 +4596,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p10"
+            param.ParameterName = "@p11"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -4771,7 +4605,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p11"
+            param.ParameterName = "@p12"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -4781,8 +4615,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `informasi` (`id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_mataku"& _ 
-                "liah`, `judul`, `info`, `tanggal`, `hari`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6,"& _ 
-                " @p7)"
+                "liah`, `MATA_KULIAH_DOSEN_id_dosen`, `judul`, `info`, `tanggal`, `hari`) VALUES "& _ 
+                "(@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -4807,27 +4641,34 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "judul"
+            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "info"
+            param.SourceColumn = "judul"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "tanggal"
+            param.SourceColumn = "info"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "tanggal"
+            Me._adapter.InsertCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p8"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -4836,12 +4677,13 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `informasi` SET `id_informasi` = @p1, `DOSEN_id_dosen` = @p2, `MATA_KULIAH"& _ 
-                "_id_matakuliah` = @p3, `judul` = @p4, `info` = @p5, `tanggal` = @p6, `hari` = @p"& _ 
-                "7 WHERE ((`id_informasi` = @p8) AND (`DOSEN_id_dosen` = @p9) AND (`MATA_KULIAH_i"& _ 
-                "d_matakuliah` = @p10) AND ((@p11 = 1 AND `judul` IS NULL) OR (`judul` = @p12)) A"& _ 
-                "ND ((@p13 = 1 AND `info` IS NULL) OR (`info` = @p14)) AND ((@p15 = 1 AND `tangga"& _ 
-                "l` IS NULL) OR (`tanggal` = @p16)) AND ((@p17 = 1 AND `hari` IS NULL) OR (`hari`"& _ 
-                " = @p18)))"
+                "_id_matakuliah` = @p3, `MATA_KULIAH_DOSEN_id_dosen` = @p4, `judul` = @p5, `info`"& _ 
+                " = @p6, `tanggal` = @p7, `hari` = @p8 WHERE ((`id_informasi` = @p9) AND (`DOSEN_"& _ 
+                "id_dosen` = @p10) AND (`MATA_KULIAH_id_matakuliah` = @p11) AND (`MATA_KULIAH_DOS"& _ 
+                "EN_id_dosen` = @p12) AND ((@p13 = 1 AND `judul` IS NULL) OR (`judul` = @p14)) AN"& _ 
+                "D ((@p15 = 1 AND `info` IS NULL) OR (`info` = @p16)) AND ((@p17 = 1 AND `tanggal"& _ 
+                "` IS NULL) OR (`tanggal` = @p18)) AND ((@p19 = 1 AND `hari` IS NULL) OR (`hari` "& _ 
+                "= @p20)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -4866,34 +4708,41 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "judul"
+            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "info"
+            param.SourceColumn = "judul"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "tanggal"
+            param.SourceColumn = "info"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "hari"
+            param.SourceColumn = "tanggal"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p8"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "hari"
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p9"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -4901,7 +4750,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p9"
+            param.ParameterName = "@p10"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -4909,7 +4758,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p10"
+            param.ParameterName = "@p11"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -4917,20 +4766,11 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p11"
+            param.ParameterName = "@p12"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "judul"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            param.SourceColumnNullMapping = true
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p12"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "judul"
+            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -4938,7 +4778,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "info"
+            param.SourceColumn = "judul"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -4947,7 +4787,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "info"
+            param.SourceColumn = "judul"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -4955,7 +4795,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "tanggal"
+            param.SourceColumn = "info"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -4964,11 +4804,28 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "tanggal"
+            param.SourceColumn = "info"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p17"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.IsNullable = true
+            param.SourceColumn = "tanggal"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            param.SourceColumnNullMapping = true
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p18"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "tanggal"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p19"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -4977,7 +4834,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p18"
+            param.ParameterName = "@p20"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -4990,7 +4847,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_bersamaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4999,8 +4856,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_matakuliah`, `judul`, `i"& _ 
-                "nfo`, `tanggal`, `hari` FROM `informasi`"
+            Me._commandCollection(0).CommandText = "SELECT `id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_matakuliah`, `MATA_KULIA"& _ 
+                "H_DOSEN_id_dosen`, `judul`, `info`, `tanggal`, `hari` FROM `informasi`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5008,7 +4865,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_bersamaDataSet.informasiDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_informatikaDataSet.informasiDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5021,9 +4878,9 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As universitas_bersamaDataSet.informasiDataTable
+        Public Overloads Overridable Function GetData() As universitas_informatikaDataSet.informasiDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As universitas_bersamaDataSet.informasiDataTable = New universitas_bersamaDataSet.informasiDataTable()
+            Dim dataTable As universitas_informatikaDataSet.informasiDataTable = New universitas_informatikaDataSet.informasiDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5031,14 +4888,14 @@ Namespace universitas_bersamaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As universitas_bersamaDataSet.informasiDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As universitas_informatikaDataSet.informasiDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As universitas_bersamaDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As universitas_informatikaDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "informasi")
         End Function
         
@@ -5060,37 +4917,38 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p5 As String, ByVal p7 As String, ByVal p9 As String, ByVal p11 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As Integer, ByVal p6 As String, ByVal p8 As String, ByVal p10 As String, ByVal p12 As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(p2,Integer)
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(p3,Integer)
-            If (p5 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(p4,Integer)
+            If (p6 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(p5,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(p6,String)
             End If
-            If (p7 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            If (p8 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(p7,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(p8,String)
             End If
-            If (p9 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            If (p10 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(p9,String)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(p10,String)
             End If
-            If (p11 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            If (p12 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(p11,String)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(p12,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5111,15 +4969,11 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As Integer, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,Integer)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,Integer)
             Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3,Integer)
-            If (p4 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4,String)
-            End If
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4,Integer)
             If (p5 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
@@ -5134,6 +4988,11 @@ Namespace universitas_bersamaDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = CType(p7,String)
+            End If
+            If (p8 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(p8,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5154,15 +5013,27 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As Integer, ByVal p9 As Integer, ByVal p10 As Integer, ByVal p12 As String, ByVal p14 As String, ByVal p16 As String, ByVal p18 As String) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal p1 As Integer,  _
+                    ByVal p2 As Integer,  _
+                    ByVal p3 As Integer,  _
+                    ByVal p4 As Integer,  _
+                    ByVal p5 As String,  _
+                    ByVal p6 As String,  _
+                    ByVal p7 As String,  _
+                    ByVal p8 As String,  _
+                    ByVal p9 As Integer,  _
+                    ByVal p10 As Integer,  _
+                    ByVal p11 As Integer,  _
+                    ByVal p12 As Integer,  _
+                    ByVal p14 As String,  _
+                    ByVal p16 As String,  _
+                    ByVal p18 As String,  _
+                    ByVal p20 As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,Integer)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,Integer)
             Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,Integer)
-            If (p4 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4,String)
-            End If
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4,Integer)
             If (p5 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
@@ -5178,16 +5049,15 @@ Namespace universitas_bersamaDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,Integer)
+            If (p8 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,String)
+            End If
             Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,Integer)
             Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,Integer)
-            If (p12 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(p12,String)
-            End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(p11,Integer)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(p12,Integer)
             If (p14 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
@@ -5209,6 +5079,13 @@ Namespace universitas_bersamaDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(p18,String)
             End If
+            If (p20 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(p20,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5228,8 +5105,8 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As Integer, ByVal p9 As Integer, ByVal p10 As Integer, ByVal p12 As String, ByVal p14 As String, ByVal p16 As String, ByVal p18 As String) As Integer
-            Return Me.Update(p8, p9, p10, p4, p5, p6, p7, p8, p9, p10, p12, p14, p16, p18)
+        Public Overloads Overridable Function Update(ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String, ByVal p9 As Integer, ByVal p10 As Integer, ByVal p11 As Integer, ByVal p12 As Integer, ByVal p14 As String, ByVal p16 As String, ByVal p18 As String, ByVal p20 As String) As Integer
+            Return Me.Update(p9, p10, p11, p12, p5, p6, p7, p8, p9, p10, p11, p12, p14, p16, p18, p20)
         End Function
     End Class
     
@@ -5360,32 +5237,33 @@ Namespace universitas_bersamaDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "mahasiswa"
-            tableMapping.ColumnMappings.Add("id MAHASISWA", "id MAHASISWA")
+            tableMapping.ColumnMappings.Add("id_mahasiswa", "id_mahasiswa")
             tableMapping.ColumnMappings.Add("username", "username")
-            tableMapping.ColumnMappings.Add("pasword", "pasword")
-            tableMapping.ColumnMappings.Add("nama_mhs", "nama_mhs")
-            tableMapping.ColumnMappings.Add("nim_mhs", "nim_mhs")
+            tableMapping.ColumnMappings.Add("password", "password")
+            tableMapping.ColumnMappings.Add("nama_mahasiswa", "nama_mahasiswa")
+            tableMapping.ColumnMappings.Add("nim_mahasiswa", "nim_mahasiswa")
             tableMapping.ColumnMappings.Add("tgl_lahir_mhs", "tgl_lahir_mhs")
             tableMapping.ColumnMappings.Add("email_mhs", "email_mhs")
             tableMapping.ColumnMappings.Add("alamat_mhs", "alamat_mhs")
-            tableMapping.ColumnMappings.Add("no_telp", "no_telp")
+            tableMapping.ColumnMappings.Add("notelp_mhs", "notelp_mhs")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `mahasiswa` WHERE ((`id MAHASISWA` = @p1) AND ((@p2 = 1 AND `username"& _ 
-                "` IS NULL) OR (`username` = @p3)) AND ((@p4 = 1 AND `pasword` IS NULL) OR (`pasw"& _ 
-                "ord` = @p5)) AND ((@p6 = 1 AND `nama_mhs` IS NULL) OR (`nama_mhs` = @p7)) AND (("& _ 
-                "@p8 = 1 AND `nim_mhs` IS NULL) OR (`nim_mhs` = @p9)) AND ((@p10 = 1 AND `tgl_lah"& _ 
-                "ir_mhs` IS NULL) OR (`tgl_lahir_mhs` = @p11)) AND ((@p12 = 1 AND `email_mhs` IS "& _ 
-                "NULL) OR (`email_mhs` = @p13)) AND ((@p14 = 1 AND `alamat_mhs` IS NULL) OR (`ala"& _ 
-                "mat_mhs` = @p15)) AND ((@p16 = 1 AND `no_telp` IS NULL) OR (`no_telp` = @p17)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `mahasiswa` WHERE ((`id_mahasiswa` = @p1) AND ((@p2 = 1 AND `username"& _ 
+                "` IS NULL) OR (`username` = @p3)) AND ((@p4 = 1 AND `password` IS NULL) OR (`pas"& _ 
+                "sword` = @p5)) AND ((@p6 = 1 AND `nama_mahasiswa` IS NULL) OR (`nama_mahasiswa` "& _ 
+                "= @p7)) AND ((@p8 = 1 AND `nim_mahasiswa` IS NULL) OR (`nim_mahasiswa` = @p9)) A"& _ 
+                "ND ((@p10 = 1 AND `tgl_lahir_mhs` IS NULL) OR (`tgl_lahir_mhs` = @p11)) AND ((@p"& _ 
+                "12 = 1 AND `email_mhs` IS NULL) OR (`email_mhs` = @p13)) AND ((@p14 = 1 AND `ala"& _ 
+                "mat_mhs` IS NULL) OR (`alamat_mhs` = @p15)) AND ((@p16 = 1 AND `notelp_mhs` IS N"& _ 
+                "ULL) OR (`notelp_mhs` = @p17)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id MAHASISWA"
+            param.SourceColumn = "id_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5410,7 +5288,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -5419,7 +5297,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5427,7 +5305,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "nama_mhs"
+            param.SourceColumn = "nama_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -5436,7 +5314,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nama_mhs"
+            param.SourceColumn = "nama_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5444,7 +5322,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "nim_mhs"
+            param.SourceColumn = "nim_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -5453,7 +5331,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nim_mhs"
+            param.SourceColumn = "nim_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5512,7 +5390,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "no_telp"
+            param.SourceColumn = "notelp_mhs"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -5521,21 +5399,21 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "no_telp"
+            param.SourceColumn = "notelp_mhs"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `mahasiswa` (`id MAHASISWA`, `username`, `pasword`, `nama_mhs`, `nim_"& _ 
-                "mhs`, `tgl_lahir_mhs`, `email_mhs`, `alamat_mhs`, `no_telp`) VALUES (@p1, @p2, @"& _ 
-                "p3, @p4, @p5, @p6, @p7, @p8, @p9)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `mahasiswa` (`id_mahasiswa`, `username`, `password`, `nama_mahasiswa`"& _ 
+                ", `nim_mahasiswa`, `tgl_lahir_mhs`, `email_mhs`, `alamat_mhs`, `notelp_mhs`) VAL"& _ 
+                "UES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id MAHASISWA"
+            param.SourceColumn = "id_mahasiswa"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p2"
@@ -5549,21 +5427,21 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nama_mhs"
+            param.SourceColumn = "nama_mahasiswa"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nim_mhs"
+            param.SourceColumn = "nim_mahasiswa"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
@@ -5591,27 +5469,27 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "no_telp"
+            param.SourceColumn = "notelp_mhs"
             Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `mahasiswa` SET `id MAHASISWA` = @p1, `username` = @p2, `pasword` = @p3, `"& _ 
-                "nama_mhs` = @p4, `nim_mhs` = @p5, `tgl_lahir_mhs` = @p6, `email_mhs` = @p7, `ala"& _ 
-                "mat_mhs` = @p8, `no_telp` = @p9 WHERE ((`id MAHASISWA` = @p10) AND ((@p11 = 1 AN"& _ 
-                "D `username` IS NULL) OR (`username` = @p12)) AND ((@p13 = 1 AND `pasword` IS NU"& _ 
-                "LL) OR (`pasword` = @p14)) AND ((@p15 = 1 AND `nama_mhs` IS NULL) OR (`nama_mhs`"& _ 
-                " = @p16)) AND ((@p17 = 1 AND `nim_mhs` IS NULL) OR (`nim_mhs` = @p18)) AND ((@p1"& _ 
-                "9 = 1 AND `tgl_lahir_mhs` IS NULL) OR (`tgl_lahir_mhs` = @p20)) AND ((@p21 = 1 A"& _ 
-                "ND `email_mhs` IS NULL) OR (`email_mhs` = @p22)) AND ((@p23 = 1 AND `alamat_mhs`"& _ 
-                " IS NULL) OR (`alamat_mhs` = @p24)) AND ((@p25 = 1 AND `no_telp` IS NULL) OR (`n"& _ 
-                "o_telp` = @p26)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `mahasiswa` SET `id_mahasiswa` = @p1, `username` = @p2, `password` = @p3, "& _ 
+                "`nama_mahasiswa` = @p4, `nim_mahasiswa` = @p5, `tgl_lahir_mhs` = @p6, `email_mhs"& _ 
+                "` = @p7, `alamat_mhs` = @p8, `notelp_mhs` = @p9 WHERE ((`id_mahasiswa` = @p10) A"& _ 
+                "ND ((@p11 = 1 AND `username` IS NULL) OR (`username` = @p12)) AND ((@p13 = 1 AND"& _ 
+                " `password` IS NULL) OR (`password` = @p14)) AND ((@p15 = 1 AND `nama_mahasiswa`"& _ 
+                " IS NULL) OR (`nama_mahasiswa` = @p16)) AND ((@p17 = 1 AND `nim_mahasiswa` IS NU"& _ 
+                "LL) OR (`nim_mahasiswa` = @p18)) AND ((@p19 = 1 AND `tgl_lahir_mhs` IS NULL) OR "& _ 
+                "(`tgl_lahir_mhs` = @p20)) AND ((@p21 = 1 AND `email_mhs` IS NULL) OR (`email_mhs"& _ 
+                "` = @p22)) AND ((@p23 = 1 AND `alamat_mhs` IS NULL) OR (`alamat_mhs` = @p24)) AN"& _ 
+                "D ((@p25 = 1 AND `notelp_mhs` IS NULL) OR (`notelp_mhs` = @p26)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id MAHASISWA"
+            param.SourceColumn = "id_mahasiswa"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p2"
@@ -5625,21 +5503,21 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nama_mhs"
+            param.SourceColumn = "nama_mahasiswa"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nim_mhs"
+            param.SourceColumn = "nim_mahasiswa"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
@@ -5667,14 +5545,14 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "no_telp"
+            param.SourceColumn = "notelp_mhs"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p10"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id MAHASISWA"
+            param.SourceColumn = "id_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5699,7 +5577,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -5708,7 +5586,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "pasword"
+            param.SourceColumn = "password"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5716,7 +5594,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "nama_mhs"
+            param.SourceColumn = "nama_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -5725,7 +5603,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nama_mhs"
+            param.SourceColumn = "nama_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5733,7 +5611,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "nim_mhs"
+            param.SourceColumn = "nim_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -5742,7 +5620,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "nim_mhs"
+            param.SourceColumn = "nim_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -5801,7 +5679,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "no_telp"
+            param.SourceColumn = "notelp_mhs"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -5810,7 +5688,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "no_telp"
+            param.SourceColumn = "notelp_mhs"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
         End Sub
@@ -5819,7 +5697,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_bersamaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5828,8 +5706,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `id MAHASISWA`, `username`, `pasword`, `nama_mhs`, `nim_mhs`, `tgl_lahir_m"& _ 
-                "hs`, `email_mhs`, `alamat_mhs`, `no_telp` FROM `mahasiswa`"
+            Me._commandCollection(0).CommandText = "SELECT `id_mahasiswa`, `username`, `password`, `nama_mahasiswa`, `nim_mahasiswa`,"& _ 
+                " `tgl_lahir_mhs`, `email_mhs`, `alamat_mhs`, `notelp_mhs` FROM `mahasiswa`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5837,7 +5715,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_bersamaDataSet.mahasiswaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_informatikaDataSet.mahasiswaDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5850,9 +5728,9 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As universitas_bersamaDataSet.mahasiswaDataTable
+        Public Overloads Overridable Function GetData() As universitas_informatikaDataSet.mahasiswaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As universitas_bersamaDataSet.mahasiswaDataTable = New universitas_bersamaDataSet.mahasiswaDataTable()
+            Dim dataTable As universitas_informatikaDataSet.mahasiswaDataTable = New universitas_informatikaDataSet.mahasiswaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5860,14 +5738,14 @@ Namespace universitas_bersamaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As universitas_bersamaDataSet.mahasiswaDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As universitas_informatikaDataSet.mahasiswaDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As universitas_bersamaDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As universitas_informatikaDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "mahasiswa")
         End Function
         
@@ -6314,15 +6192,15 @@ Namespace universitas_bersamaDataSetTableAdapters
             tableMapping.DataSetTable = "mata_kuliah"
             tableMapping.ColumnMappings.Add("id_matakuliah", "id_matakuliah")
             tableMapping.ColumnMappings.Add("DOSEN_id_dosen", "DOSEN_id_dosen")
-            tableMapping.ColumnMappings.Add("MATA_KULIAH", "MATA_KULIAH")
             tableMapping.ColumnMappings.Add("sks", "sks")
+            tableMapping.ColumnMappings.Add("MATA_KULIAH", "MATA_KULIAH")
             tableMapping.ColumnMappings.Add("kode", "kode")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `mata_kuliah` WHERE ((`id_matakuliah` = @p1) AND (`DOSEN_id_dosen` = "& _ 
-                "@p2) AND ((@p3 = 1 AND `MATA_KULIAH` IS NULL) OR (`MATA_KULIAH` = @p4)) AND ((@p"& _ 
-                "5 = 1 AND `sks` IS NULL) OR (`sks` = @p6)) AND ((@p7 = 1 AND `kode` IS NULL) OR "& _ 
+                "@p2) AND ((@p3 = 1 AND `sks` IS NULL) OR (`sks` = @p4)) AND ((@p5 = 1 AND `MATA_"& _ 
+                "KULIAH` IS NULL) OR (`MATA_KULIAH` = @p6)) AND ((@p7 = 1 AND `kode` IS NULL) OR "& _ 
                 "(`kode` = @p8)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6346,7 +6224,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH"
+            param.SourceColumn = "sks"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -6355,7 +6233,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH"
+            param.SourceColumn = "sks"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6363,7 +6241,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "sks"
+            param.SourceColumn = "MATA_KULIAH"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
@@ -6372,7 +6250,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "sks"
+            param.SourceColumn = "MATA_KULIAH"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6394,7 +6272,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `mata_kuliah` (`id_matakuliah`, `DOSEN_id_dosen`, `MATA_KULIAH`, `sks"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `mata_kuliah` (`id_matakuliah`, `DOSEN_id_dosen`, `sks`, `MATA_KULIAH"& _ 
                 "`, `kode`) VALUES (@p1, @p2, @p3, @p4, @p5)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6416,14 +6294,14 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH"
+            param.SourceColumn = "sks"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "sks"
+            param.SourceColumn = "MATA_KULIAH"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
@@ -6434,10 +6312,10 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `mata_kuliah` SET `id_matakuliah` = @p1, `DOSEN_id_dosen` = @p2, `MATA_KUL"& _ 
-                "IAH` = @p3, `sks` = @p4, `kode` = @p5 WHERE ((`id_matakuliah` = @p6) AND (`DOSEN"& _ 
-                "_id_dosen` = @p7) AND ((@p8 = 1 AND `MATA_KULIAH` IS NULL) OR (`MATA_KULIAH` = @"& _ 
-                "p9)) AND ((@p10 = 1 AND `sks` IS NULL) OR (`sks` = @p11)) AND ((@p12 = 1 AND `ko"& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `mata_kuliah` SET `id_matakuliah` = @p1, `DOSEN_id_dosen` = @p2, `sks` = @"& _ 
+                "p3, `MATA_KULIAH` = @p4, `kode` = @p5 WHERE ((`id_matakuliah` = @p6) AND (`DOSEN"& _ 
+                "_id_dosen` = @p7) AND ((@p8 = 1 AND `sks` IS NULL) OR (`sks` = @p9)) AND ((@p10 "& _ 
+                "= 1 AND `MATA_KULIAH` IS NULL) OR (`MATA_KULIAH` = @p11)) AND ((@p12 = 1 AND `ko"& _ 
                 "de` IS NULL) OR (`kode` = @p13)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6459,14 +6337,14 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH"
+            param.SourceColumn = "sks"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "sks"
+            param.SourceColumn = "MATA_KULIAH"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
@@ -6496,7 +6374,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH"
+            param.SourceColumn = "sks"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -6505,7 +6383,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH"
+            param.SourceColumn = "sks"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6513,7 +6391,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "sks"
+            param.SourceColumn = "MATA_KULIAH"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -6522,7 +6400,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "sks"
+            param.SourceColumn = "MATA_KULIAH"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6548,7 +6426,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_bersamaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6557,7 +6435,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `id_matakuliah`, `DOSEN_id_dosen`, `MATA_KULIAH`, `sks`, `kode` FROM `mata"& _ 
+            Me._commandCollection(0).CommandText = "SELECT `id_matakuliah`, `DOSEN_id_dosen`, `sks`, `MATA_KULIAH`, `kode` FROM `mata"& _ 
                 "_kuliah`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
@@ -6566,7 +6444,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_bersamaDataSet.mata_kuliahDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_informatikaDataSet.mata_kuliahDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6579,9 +6457,9 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As universitas_bersamaDataSet.mata_kuliahDataTable
+        Public Overloads Overridable Function GetData() As universitas_informatikaDataSet.mata_kuliahDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As universitas_bersamaDataSet.mata_kuliahDataTable = New universitas_bersamaDataSet.mata_kuliahDataTable()
+            Dim dataTable As universitas_informatikaDataSet.mata_kuliahDataTable = New universitas_informatikaDataSet.mata_kuliahDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6589,14 +6467,14 @@ Namespace universitas_bersamaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As universitas_bersamaDataSet.mata_kuliahDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As universitas_informatikaDataSet.mata_kuliahDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As universitas_bersamaDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As universitas_informatikaDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "mata_kuliah")
         End Function
         
@@ -6891,16 +6769,16 @@ Namespace universitas_bersamaDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "nilai"
             tableMapping.ColumnMappings.Add("id_nilai", "id_nilai")
-            tableMapping.ColumnMappings.Add("PESERTA MK_id_peserta", "PESERTA MK_id_peserta")
+            tableMapping.ColumnMappings.Add("PERSERTA_MK_id_peserta", "PERSERTA_MK_id_peserta")
             tableMapping.ColumnMappings.Add("tugas", "tugas")
             tableMapping.ColumnMappings.Add("uts", "uts")
             tableMapping.ColumnMappings.Add("uas", "uas")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `nilai` WHERE ((`id_nilai` = @p1) AND (`PESERTA MK_id_peserta` = @p2)"& _ 
-                " AND ((@p3 = 1 AND `tugas` IS NULL) OR (`tugas` = @p4)) AND ((@p5 = 1 AND `uts` "& _ 
-                "IS NULL) OR (`uts` = @p6)) AND ((@p7 = 1 AND `uas` IS NULL) OR (`uas` = @p8)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `nilai` WHERE ((`id_nilai` = @p1) AND (`PERSERTA_MK_id_peserta` = @p2"& _ 
+                ") AND ((@p3 = 1 AND `tugas` IS NULL) OR (`tugas` = @p4)) AND ((@p5 = 1 AND `uts`"& _ 
+                " IS NULL) OR (`uts` = @p6)) AND ((@p7 = 1 AND `uas` IS NULL) OR (`uas` = @p8)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -6915,7 +6793,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "PESERTA MK_id_peserta"
+            param.SourceColumn = "PERSERTA_MK_id_peserta"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -6971,8 +6849,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `nilai` (`id_nilai`, `PESERTA MK_id_peserta`, `tugas`, `uts`, `uas`) "& _ 
-                "VALUES (@p1, @p2, @p3, @p4, @p5)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `nilai` (`id_nilai`, `PERSERTA_MK_id_peserta`, `tugas`, `uts`, `uas`)"& _ 
+                " VALUES (@p1, @p2, @p3, @p4, @p5)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -6986,7 +6864,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "PESERTA MK_id_peserta"
+            param.SourceColumn = "PERSERTA_MK_id_peserta"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p3"
@@ -7011,11 +6889,11 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `nilai` SET `id_nilai` = @p1, `PESERTA MK_id_peserta` = @p2, `tugas` = @p3"& _ 
-                ", `uts` = @p4, `uas` = @p5 WHERE ((`id_nilai` = @p6) AND (`PESERTA MK_id_peserta"& _ 
-                "` = @p7) AND ((@p8 = 1 AND `tugas` IS NULL) OR (`tugas` = @p9)) AND ((@p10 = 1 A"& _ 
-                "ND `uts` IS NULL) OR (`uts` = @p11)) AND ((@p12 = 1 AND `uas` IS NULL) OR (`uas`"& _ 
-                " = @p13)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `nilai` SET `id_nilai` = @p1, `PERSERTA_MK_id_peserta` = @p2, `tugas` = @p"& _ 
+                "3, `uts` = @p4, `uas` = @p5 WHERE ((`id_nilai` = @p6) AND (`PERSERTA_MK_id_peser"& _ 
+                "ta` = @p7) AND ((@p8 = 1 AND `tugas` IS NULL) OR (`tugas` = @p9)) AND ((@p10 = 1"& _ 
+                " AND `uts` IS NULL) OR (`uts` = @p11)) AND ((@p12 = 1 AND `uas` IS NULL) OR (`ua"& _ 
+                "s` = @p13)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -7029,7 +6907,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "PESERTA MK_id_peserta"
+            param.SourceColumn = "PERSERTA_MK_id_peserta"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p3"
@@ -7065,7 +6943,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "PESERTA MK_id_peserta"
+            param.SourceColumn = "PERSERTA_MK_id_peserta"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7125,7 +7003,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_bersamaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7134,7 +7012,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `id_nilai`, `PESERTA MK_id_peserta`, `tugas`, `uts`, `uas` FROM `nilai`"
+            Me._commandCollection(0).CommandText = "SELECT `id_nilai`, `PERSERTA_MK_id_peserta`, `tugas`, `uts`, `uas` FROM `nilai`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7142,7 +7020,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_bersamaDataSet.nilaiDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_informatikaDataSet.nilaiDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7155,9 +7033,9 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As universitas_bersamaDataSet.nilaiDataTable
+        Public Overloads Overridable Function GetData() As universitas_informatikaDataSet.nilaiDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As universitas_bersamaDataSet.nilaiDataTable = New universitas_bersamaDataSet.nilaiDataTable()
+            Dim dataTable As universitas_informatikaDataSet.nilaiDataTable = New universitas_informatikaDataSet.nilaiDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7165,14 +7043,14 @@ Namespace universitas_bersamaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As universitas_bersamaDataSet.nilaiDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As universitas_informatikaDataSet.nilaiDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As universitas_bersamaDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As universitas_informatikaDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "nilai")
         End Function
         
@@ -7465,25 +7343,25 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._adapter = New Global.MySql.Data.MySqlClient.MySqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "peserta mk"
-            tableMapping.ColumnMappings.Add("id_peserta", "id_peserta")
-            tableMapping.ColumnMappings.Add("MAHASISWA_id MAHASISWA", "MAHASISWA_id MAHASISWA")
-            tableMapping.ColumnMappings.Add("MATA_KULIAH_id_matakuliah", "MATA_KULIAH_id_matakuliah")
-            tableMapping.ColumnMappings.Add("MATA_KULIAH_DOSEN_id_dosen", "MATA_KULIAH_DOSEN_id_dosen")
+            tableMapping.DataSetTable = "peserta_mk"
+            tableMapping.ColumnMappings.Add("id_perserta", "id_perserta")
+            tableMapping.ColumnMappings.Add("MAHASISWA_id_mahasiswa", "MAHASISWA_id_mahasiswa")
             tableMapping.ColumnMappings.Add("DOSEN_id_dosen", "DOSEN_id_dosen")
+            tableMapping.ColumnMappings.Add("MATA_KULIAH_id_matakuliah", "MATA_KULIAH_id_matakuliah")
+            tableMapping.ColumnMappings.Add("NILAI_id_nilai", "NILAI_id_nilai")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `peserta mk` WHERE ((`id_peserta` = @p1) AND (`MAHASISWA_id MAHASISWA"& _ 
-                "` = @p2) AND (`MATA_KULIAH_id_matakuliah` = @p3) AND (`MATA_KULIAH_DOSEN_id_dose"& _ 
-                "n` = @p4) AND (`DOSEN_id_dosen` = @p5))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `peserta_mk` WHERE ((`id_perserta` = @p1) AND (`MAHASISWA_id_mahasisw"& _ 
+                "a` = @p2) AND (`DOSEN_id_dosen` = @p3) AND (`MATA_KULIAH_id_matakuliah` = @p4) A"& _ 
+                "ND (`NILAI_id_nilai` = @p5))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id_peserta"
+            param.SourceColumn = "id_perserta"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7491,7 +7369,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MAHASISWA_id MAHASISWA"
+            param.SourceColumn = "MAHASISWA_id_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7499,7 +7377,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
+            param.SourceColumn = "DOSEN_id_dosen"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7507,7 +7385,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
+            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7515,99 +7393,99 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "DOSEN_id_dosen"
+            param.SourceColumn = "NILAI_id_nilai"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `peserta mk` (`id_peserta`, `MAHASISWA_id MAHASISWA`, `MATA_KULIAH_id"& _ 
-                "_matakuliah`, `MATA_KULIAH_DOSEN_id_dosen`, `DOSEN_id_dosen`) VALUES (@p1, @p2, "& _ 
-                "@p3, @p4, @p5)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `peserta_mk` (`id_perserta`, `MAHASISWA_id_mahasiswa`, `DOSEN_id_dose"& _ 
+                "n`, `MATA_KULIAH_id_matakuliah`, `NILAI_id_nilai`) VALUES (@p1, @p2, @p3, @p4, @"& _ 
+                "p5)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id_peserta"
+            param.SourceColumn = "id_perserta"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p2"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MAHASISWA_id MAHASISWA"
+            param.SourceColumn = "MAHASISWA_id_mahasiswa"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p3"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
+            param.SourceColumn = "DOSEN_id_dosen"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
+            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "DOSEN_id_dosen"
+            param.SourceColumn = "NILAI_id_nilai"
             Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `peserta mk` SET `id_peserta` = @p1, `MAHASISWA_id MAHASISWA` = @p2, `MATA"& _ 
-                "_KULIAH_id_matakuliah` = @p3, `MATA_KULIAH_DOSEN_id_dosen` = @p4, `DOSEN_id_dose"& _ 
-                "n` = @p5 WHERE ((`id_peserta` = @p6) AND (`MAHASISWA_id MAHASISWA` = @p7) AND (`"& _ 
-                "MATA_KULIAH_id_matakuliah` = @p8) AND (`MATA_KULIAH_DOSEN_id_dosen` = @p9) AND ("& _ 
-                "`DOSEN_id_dosen` = @p10))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `peserta_mk` SET `id_perserta` = @p1, `MAHASISWA_id_mahasiswa` = @p2, `DOS"& _ 
+                "EN_id_dosen` = @p3, `MATA_KULIAH_id_matakuliah` = @p4, `NILAI_id_nilai` = @p5 WH"& _ 
+                "ERE ((`id_perserta` = @p6) AND (`MAHASISWA_id_mahasiswa` = @p7) AND (`DOSEN_id_d"& _ 
+                "osen` = @p8) AND (`MATA_KULIAH_id_matakuliah` = @p9) AND (`NILAI_id_nilai` = @p1"& _ 
+                "0))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id_peserta"
+            param.SourceColumn = "id_perserta"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p2"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MAHASISWA_id MAHASISWA"
+            param.SourceColumn = "MAHASISWA_id_mahasiswa"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p3"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
+            param.SourceColumn = "DOSEN_id_dosen"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
+            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "DOSEN_id_dosen"
+            param.SourceColumn = "NILAI_id_nilai"
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "id_peserta"
+            param.SourceColumn = "id_perserta"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7615,7 +7493,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MAHASISWA_id MAHASISWA"
+            param.SourceColumn = "MAHASISWA_id_mahasiswa"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7623,7 +7501,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
+            param.SourceColumn = "DOSEN_id_dosen"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7631,7 +7509,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "MATA_KULIAH_DOSEN_id_dosen"
+            param.SourceColumn = "MATA_KULIAH_id_matakuliah"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -7639,7 +7517,7 @@ Namespace universitas_bersamaDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "DOSEN_id_dosen"
+            param.SourceColumn = "NILAI_id_nilai"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
         End Sub
@@ -7648,7 +7526,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_bersamaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7657,8 +7535,8 @@ Namespace universitas_bersamaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `id_peserta`, `MAHASISWA_id MAHASISWA`, `MATA_KULIAH_id_matakuliah`, `MATA"& _ 
-                "_KULIAH_DOSEN_id_dosen`, `DOSEN_id_dosen` FROM `peserta mk`"
+            Me._commandCollection(0).CommandText = "SELECT `id_perserta`, `MAHASISWA_id_mahasiswa`, `DOSEN_id_dosen`, `MATA_KULIAH_id"& _ 
+                "_matakuliah`, `NILAI_id_nilai` FROM `peserta_mk`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7666,7 +7544,7 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_bersamaDataSet.peserta_mkDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As universitas_informatikaDataSet.peserta_mkDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7679,9 +7557,9 @@ Namespace universitas_bersamaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As universitas_bersamaDataSet.peserta_mkDataTable
+        Public Overloads Overridable Function GetData() As universitas_informatikaDataSet.peserta_mkDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As universitas_bersamaDataSet.peserta_mkDataTable = New universitas_bersamaDataSet.peserta_mkDataTable()
+            Dim dataTable As universitas_informatikaDataSet.peserta_mkDataTable = New universitas_informatikaDataSet.peserta_mkDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7689,15 +7567,15 @@ Namespace universitas_bersamaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As universitas_bersamaDataSet.peserta_mkDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As universitas_informatikaDataSet.peserta_mkDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As universitas_bersamaDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "peserta mk")
+        Public Overloads Overridable Function Update(ByVal dataSet As universitas_informatikaDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "peserta_mk")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8010,50 +7888,14 @@ Namespace universitas_bersamaDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As universitas_bersamaDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As universitas_informatikaDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._dosenTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.dosen.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._dosenTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
             If (Not (Me._mata_kuliahTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.mata_kuliah.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._mata_kuliahTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._mahasiswaTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.mahasiswa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._mahasiswaTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._peserta_mkTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.peserta_mk.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._peserta_mkTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._informasiTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.informasi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._informasiTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -8066,6 +7908,42 @@ Namespace universitas_bersamaDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
+            If (Not (Me._peserta_mkTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.peserta_mk.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._peserta_mkTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._dosenTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.dosen.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._dosenTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._informasiTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.informasi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._informasiTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._mahasiswaTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.mahasiswa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._mahasiswaTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -8074,45 +7952,13 @@ Namespace universitas_bersamaDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As universitas_bersamaDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As universitas_informatikaDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._dosenTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.dosen.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._dosenTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             If (Not (Me._mata_kuliahTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.mata_kuliah.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._mata_kuliahTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._mahasiswaTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.mahasiswa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._mahasiswaTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._peserta_mkTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.peserta_mk.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._peserta_mkTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._informasiTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.informasi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._informasiTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -8124,6 +7970,38 @@ Namespace universitas_bersamaDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
+            If (Not (Me._peserta_mkTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.peserta_mk.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._peserta_mkTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._dosenTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.dosen.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._dosenTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._informasiTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.informasi.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._informasiTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._mahasiswaTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.mahasiswa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._mahasiswaTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -8132,13 +8010,13 @@ Namespace universitas_bersamaDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As universitas_bersamaDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As universitas_informatikaDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._nilaiTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.nilai.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._mahasiswaTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.mahasiswa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._nilaiTableAdapter.Update(deletedRows))
+                    result = (result + Me._mahasiswaTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -8150,6 +8028,14 @@ Namespace universitas_bersamaDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
+            If (Not (Me._dosenTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.dosen.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._dosenTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._peserta_mkTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.peserta_mk.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -8158,11 +8044,11 @@ Namespace universitas_bersamaDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._mahasiswaTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.mahasiswa.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._nilaiTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.nilai.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._mahasiswaTableAdapter.Update(deletedRows))
+                    result = (result + Me._nilaiTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -8171,14 +8057,6 @@ Namespace universitas_bersamaDataSetTableAdapters
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._mata_kuliahTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
-            If (Not (Me._dosenTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.dosen.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._dosenTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -8216,7 +8094,7 @@ Namespace universitas_bersamaDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As universitas_bersamaDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As universitas_informatikaDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

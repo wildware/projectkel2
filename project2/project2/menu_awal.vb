@@ -25,14 +25,30 @@
     End Sub
 
     Private Sub DosenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenToolStripMenuItem.Click
-        form_dosen.ShowDialog()
+        Form_dosen.ShowDialog()
     End Sub
 
     Private Sub MahasiswaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaToolStripMenuItem.Click
-        form_mahasiswa.ShowDialog()
+
     End Sub
 
     Private Sub InformasiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InformasiToolStripMenuItem.Click
-        form_informansi.ShowDialog()
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub MataKuliahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MataKuliahToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub NilaiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NilaiToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PesertaMKToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PesertaMKToolStripMenuItem.Click
+
     End Sub
 End Class
