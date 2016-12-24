@@ -49,7 +49,7 @@ Partial Class menu_awal
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 33)
+        Me.Label1.Location = New System.Drawing.Point(12, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(437, 29)
         Me.Label1.TabIndex = 0
@@ -93,19 +93,19 @@ Partial Class menu_awal
         'MataKuliahToolStripMenuItem
         '
         Me.MataKuliahToolStripMenuItem.Name = "MataKuliahToolStripMenuItem"
-        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.MataKuliahToolStripMenuItem.Text = "mata kuliah"
         '
         'NilaiToolStripMenuItem
         '
         Me.NilaiToolStripMenuItem.Name = "NilaiToolStripMenuItem"
-        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.NilaiToolStripMenuItem.Text = "nilai"
         '
         'PesertaMKToolStripMenuItem
         '
         Me.PesertaMKToolStripMenuItem.Name = "PesertaMKToolStripMenuItem"
-        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.PesertaMKToolStripMenuItem.Text = "peserta MK"
         '
         'GroupBox1
@@ -191,7 +191,7 @@ Partial Class menu_awal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(461, 323)
+        Me.ClientSize = New System.Drawing.Size(461, 282)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)

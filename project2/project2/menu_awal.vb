@@ -51,4 +51,9 @@
     Private Sub PesertaMKToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PesertaMKToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub But_ref_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles But_ref.Click
+        box_user.Text = ""
+        box_pass.Text = ""
+    End Sub
 End Class
