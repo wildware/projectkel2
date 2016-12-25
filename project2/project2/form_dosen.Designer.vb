@@ -23,6 +23,7 @@ Partial Class Form_dosen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_dosen))
         Dim Id_dosenLabel As System.Windows.Forms.Label
         Dim Nama_dosenLabel As System.Windows.Forms.Label
         Dim Email_dosenLabel As System.Windows.Forms.Label
@@ -30,7 +31,6 @@ Partial Class Form_dosen
         Dim PasswordLabel As System.Windows.Forms.Label
         Dim Link_fbLabel As System.Windows.Forms.Label
         Dim WibsiteLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_dosen))
         Me.add_butt = New System.Windows.Forms.Button()
         Me.edit_butt = New System.Windows.Forms.Button()
         Me.delete_butt = New System.Windows.Forms.Button()
@@ -53,6 +53,8 @@ Partial Class Form_dosen
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.DosenBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.DosenTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.dosenTableAdapter()
+        Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Me.Id_dosenTextBox = New System.Windows.Forms.TextBox()
         Me.Nama_dosenTextBox = New System.Windows.Forms.TextBox()
         Me.Email_dosenTextBox = New System.Windows.Forms.TextBox()
@@ -68,8 +70,6 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DosenTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.dosenTableAdapter()
-        Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Id_dosenLabel = New System.Windows.Forms.Label()
         Nama_dosenLabel = New System.Windows.Forms.Label()
         Email_dosenLabel = New System.Windows.Forms.Label()
@@ -83,69 +83,6 @@ Partial Class Form_dosen
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Id_dosenLabel
-        '
-        Id_dosenLabel.AutoSize = True
-        Id_dosenLabel.Location = New System.Drawing.Point(95, 18)
-        Id_dosenLabel.Name = "Id_dosenLabel"
-        Id_dosenLabel.Size = New System.Drawing.Size(50, 13)
-        Id_dosenLabel.TabIndex = 8
-        Id_dosenLabel.Text = "id dosen:"
-        '
-        'Nama_dosenLabel
-        '
-        Nama_dosenLabel.AutoSize = True
-        Nama_dosenLabel.Location = New System.Drawing.Point(95, 44)
-        Nama_dosenLabel.Name = "Nama_dosenLabel"
-        Nama_dosenLabel.Size = New System.Drawing.Size(68, 13)
-        Nama_dosenLabel.TabIndex = 10
-        Nama_dosenLabel.Text = "nama dosen:"
-        '
-        'Email_dosenLabel
-        '
-        Email_dosenLabel.AutoSize = True
-        Email_dosenLabel.Location = New System.Drawing.Point(95, 70)
-        Email_dosenLabel.Name = "Email_dosenLabel"
-        Email_dosenLabel.Size = New System.Drawing.Size(66, 13)
-        Email_dosenLabel.TabIndex = 12
-        Email_dosenLabel.Text = "email dosen:"
-        '
-        'User_nameLabel
-        '
-        User_nameLabel.AutoSize = True
-        User_nameLabel.Location = New System.Drawing.Point(95, 96)
-        User_nameLabel.Name = "User_nameLabel"
-        User_nameLabel.Size = New System.Drawing.Size(61, 13)
-        User_nameLabel.TabIndex = 14
-        User_nameLabel.Text = "User name:"
-        '
-        'PasswordLabel
-        '
-        PasswordLabel.AutoSize = True
-        PasswordLabel.Location = New System.Drawing.Point(95, 122)
-        PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(55, 13)
-        PasswordLabel.TabIndex = 16
-        PasswordLabel.Text = "password:"
-        '
-        'Link_fbLabel
-        '
-        Link_fbLabel.AutoSize = True
-        Link_fbLabel.Location = New System.Drawing.Point(95, 148)
-        Link_fbLabel.Name = "Link_fbLabel"
-        Link_fbLabel.Size = New System.Drawing.Size(38, 13)
-        Link_fbLabel.TabIndex = 18
-        Link_fbLabel.Text = "link fb:"
-        '
-        'WibsiteLabel
-        '
-        WibsiteLabel.AutoSize = True
-        WibsiteLabel.Location = New System.Drawing.Point(95, 174)
-        WibsiteLabel.Name = "WibsiteLabel"
-        WibsiteLabel.Size = New System.Drawing.Size(42, 13)
-        WibsiteLabel.TabIndex = 20
-        WibsiteLabel.Text = "wibsite:"
         '
         'add_butt
         '
@@ -231,7 +168,7 @@ Partial Class Form_dosen
         Me.DosenBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.DosenBindingNavigator.Name = "DosenBindingNavigator"
         Me.DosenBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.DosenBindingNavigator.Size = New System.Drawing.Size(873, 25)
+        Me.DosenBindingNavigator.Size = New System.Drawing.Size(885, 25)
         Me.DosenBindingNavigator.TabIndex = 7
         Me.DosenBindingNavigator.Text = "BindingNavigator1"
         Me.DosenBindingNavigator.Visible = False
@@ -339,65 +276,136 @@ Partial Class Form_dosen
         Me.DosenBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.DosenBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'DosenTableAdapter
+        '
+        Me.DosenTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.dosenTableAdapter = Me.DosenTableAdapter
+        Me.TableAdapterManager.informasiTableAdapter = Nothing
+        Me.TableAdapterManager.mahasiswaTableAdapter = Nothing
+        Me.TableAdapterManager.mata_kuliahTableAdapter = Nothing
+        Me.TableAdapterManager.nilaiTableAdapter = Nothing
+        Me.TableAdapterManager.peserta_mkTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Id_dosenLabel
+        '
+        Id_dosenLabel.AutoSize = True
+        Id_dosenLabel.Location = New System.Drawing.Point(96, 15)
+        Id_dosenLabel.Name = "Id_dosenLabel"
+        Id_dosenLabel.Size = New System.Drawing.Size(50, 13)
+        Id_dosenLabel.TabIndex = 8
+        Id_dosenLabel.Text = "id dosen:"
+        '
         'Id_dosenTextBox
         '
         Me.Id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "id_dosen", True))
-        Me.Id_dosenTextBox.Enabled = False
-        Me.Id_dosenTextBox.Location = New System.Drawing.Point(169, 15)
+        Me.Id_dosenTextBox.Location = New System.Drawing.Point(170, 12)
         Me.Id_dosenTextBox.Name = "Id_dosenTextBox"
         Me.Id_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Id_dosenTextBox.TabIndex = 9
         '
+        'Nama_dosenLabel
+        '
+        Nama_dosenLabel.AutoSize = True
+        Nama_dosenLabel.Location = New System.Drawing.Point(96, 41)
+        Nama_dosenLabel.Name = "Nama_dosenLabel"
+        Nama_dosenLabel.Size = New System.Drawing.Size(68, 13)
+        Nama_dosenLabel.TabIndex = 10
+        Nama_dosenLabel.Text = "nama dosen:"
+        '
         'Nama_dosenTextBox
         '
         Me.Nama_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "nama_dosen", True))
-        Me.Nama_dosenTextBox.Enabled = False
-        Me.Nama_dosenTextBox.Location = New System.Drawing.Point(169, 41)
+        Me.Nama_dosenTextBox.Location = New System.Drawing.Point(170, 38)
         Me.Nama_dosenTextBox.Name = "Nama_dosenTextBox"
         Me.Nama_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Nama_dosenTextBox.TabIndex = 11
         '
+        'Email_dosenLabel
+        '
+        Email_dosenLabel.AutoSize = True
+        Email_dosenLabel.Location = New System.Drawing.Point(96, 67)
+        Email_dosenLabel.Name = "Email_dosenLabel"
+        Email_dosenLabel.Size = New System.Drawing.Size(66, 13)
+        Email_dosenLabel.TabIndex = 12
+        Email_dosenLabel.Text = "email dosen:"
+        '
         'Email_dosenTextBox
         '
         Me.Email_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "email_dosen", True))
-        Me.Email_dosenTextBox.Enabled = False
-        Me.Email_dosenTextBox.Location = New System.Drawing.Point(169, 67)
+        Me.Email_dosenTextBox.Location = New System.Drawing.Point(170, 64)
         Me.Email_dosenTextBox.Name = "Email_dosenTextBox"
         Me.Email_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Email_dosenTextBox.TabIndex = 13
         '
+        'User_nameLabel
+        '
+        User_nameLabel.AutoSize = True
+        User_nameLabel.Location = New System.Drawing.Point(96, 93)
+        User_nameLabel.Name = "User_nameLabel"
+        User_nameLabel.Size = New System.Drawing.Size(61, 13)
+        User_nameLabel.TabIndex = 14
+        User_nameLabel.Text = "User name:"
+        '
         'User_nameTextBox
         '
         Me.User_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "User_name", True))
-        Me.User_nameTextBox.Enabled = False
-        Me.User_nameTextBox.Location = New System.Drawing.Point(169, 93)
+        Me.User_nameTextBox.Location = New System.Drawing.Point(170, 90)
         Me.User_nameTextBox.Name = "User_nameTextBox"
         Me.User_nameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.User_nameTextBox.TabIndex = 15
         '
+        'PasswordLabel
+        '
+        PasswordLabel.AutoSize = True
+        PasswordLabel.Location = New System.Drawing.Point(96, 119)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New System.Drawing.Size(55, 13)
+        PasswordLabel.TabIndex = 16
+        PasswordLabel.Text = "password:"
+        '
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "password", True))
-        Me.PasswordTextBox.Enabled = False
-        Me.PasswordTextBox.Location = New System.Drawing.Point(169, 119)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(170, 116)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PasswordTextBox.TabIndex = 17
         '
+        'Link_fbLabel
+        '
+        Link_fbLabel.AutoSize = True
+        Link_fbLabel.Location = New System.Drawing.Point(96, 145)
+        Link_fbLabel.Name = "Link_fbLabel"
+        Link_fbLabel.Size = New System.Drawing.Size(38, 13)
+        Link_fbLabel.TabIndex = 18
+        Link_fbLabel.Text = "link fb:"
+        '
         'Link_fbTextBox
         '
         Me.Link_fbTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "link_fb", True))
-        Me.Link_fbTextBox.Enabled = False
-        Me.Link_fbTextBox.Location = New System.Drawing.Point(169, 145)
+        Me.Link_fbTextBox.Location = New System.Drawing.Point(170, 142)
         Me.Link_fbTextBox.Name = "Link_fbTextBox"
         Me.Link_fbTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Link_fbTextBox.TabIndex = 19
         '
+        'WibsiteLabel
+        '
+        WibsiteLabel.AutoSize = True
+        WibsiteLabel.Location = New System.Drawing.Point(96, 171)
+        WibsiteLabel.Name = "WibsiteLabel"
+        WibsiteLabel.Size = New System.Drawing.Size(42, 13)
+        WibsiteLabel.TabIndex = 20
+        WibsiteLabel.Text = "wibsite:"
+        '
         'WibsiteTextBox
         '
         Me.WibsiteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "wibsite", True))
-        Me.WibsiteTextBox.Enabled = False
-        Me.WibsiteTextBox.Location = New System.Drawing.Point(169, 171)
+        Me.WibsiteTextBox.Location = New System.Drawing.Point(170, 168)
         Me.WibsiteTextBox.Name = "WibsiteTextBox"
         Me.WibsiteTextBox.Size = New System.Drawing.Size(100, 20)
         Me.WibsiteTextBox.TabIndex = 21
@@ -408,9 +416,9 @@ Partial Class Form_dosen
         Me.DosenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DosenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.DosenDataGridView.DataSource = Me.DosenBindingSource
-        Me.DosenDataGridView.Location = New System.Drawing.Point(286, 12)
+        Me.DosenDataGridView.Location = New System.Drawing.Point(276, 12)
         Me.DosenDataGridView.Name = "DosenDataGridView"
-        Me.DosenDataGridView.Size = New System.Drawing.Size(575, 220)
+        Me.DosenDataGridView.Size = New System.Drawing.Size(597, 220)
         Me.DosenDataGridView.TabIndex = 22
         '
         'DataGridViewTextBoxColumn1
@@ -454,21 +462,6 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "wibsite"
         Me.DataGridViewTextBoxColumn7.HeaderText = "wibsite"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DosenTableAdapter
-        '
-        Me.DosenTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.dosenTableAdapter = Me.DosenTableAdapter
-        Me.TableAdapterManager.informasiTableAdapter = Nothing
-        Me.TableAdapterManager.mahasiswaTableAdapter = Nothing
-        Me.TableAdapterManager.mata_kuliahTableAdapter = Nothing
-        Me.TableAdapterManager.nilaiTableAdapter = Nothing
-        Me.TableAdapterManager.peserta_mkTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Form_dosen
         '
