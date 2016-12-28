@@ -33,6 +33,13 @@ Partial Class Form_mahasiswa
         Dim Email_mhsLabel As System.Windows.Forms.Label
         Dim Alamat_mhsLabel As System.Windows.Forms.Label
         Dim Notelp_mhsLabel As System.Windows.Forms.Label
+        Me.exit_butt = New System.Windows.Forms.Button()
+        Me.refresh_butt = New System.Windows.Forms.Button()
+        Me.cancel_butt = New System.Windows.Forms.Button()
+        Me.save_butt = New System.Windows.Forms.Button()
+        Me.delete_butt = New System.Windows.Forms.Button()
+        Me.edit_butt = New System.Windows.Forms.Button()
+        Me.add_butt = New System.Windows.Forms.Button()
         Me.Universitas_informatikaDataSet = New project2.universitas_informatikaDataSet()
         Me.MahasiswaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MahasiswaTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.mahasiswaTableAdapter()
@@ -69,13 +76,6 @@ Partial Class Form_mahasiswa
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.exit_butt = New System.Windows.Forms.Button()
-        Me.refresh_butt = New System.Windows.Forms.Button()
-        Me.cancel_butt = New System.Windows.Forms.Button()
-        Me.save_butt = New System.Windows.Forms.Button()
-        Me.delete_butt = New System.Windows.Forms.Button()
-        Me.edit_butt = New System.Windows.Forms.Button()
-        Me.add_butt = New System.Windows.Forms.Button()
         Id_mahasiswaLabel = New System.Windows.Forms.Label()
         UsernameLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
@@ -91,6 +91,76 @@ Partial Class Form_mahasiswa
         Me.MahasiswaBindingNavigator.SuspendLayout()
         CType(Me.MahasiswaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'exit_butt
+        '
+        Me.exit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exit_butt.Location = New System.Drawing.Point(12, 186)
+        Me.exit_butt.Name = "exit_butt"
+        Me.exit_butt.Size = New System.Drawing.Size(75, 23)
+        Me.exit_butt.TabIndex = 34
+        Me.exit_butt.Text = "exit"
+        Me.exit_butt.UseVisualStyleBackColor = True
+        '
+        'refresh_butt
+        '
+        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.refresh_butt.Location = New System.Drawing.Point(12, 157)
+        Me.refresh_butt.Name = "refresh_butt"
+        Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
+        Me.refresh_butt.TabIndex = 33
+        Me.refresh_butt.Text = "refresh"
+        Me.refresh_butt.UseVisualStyleBackColor = True
+        '
+        'cancel_butt
+        '
+        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cancel_butt.Location = New System.Drawing.Point(12, 128)
+        Me.cancel_butt.Name = "cancel_butt"
+        Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
+        Me.cancel_butt.TabIndex = 32
+        Me.cancel_butt.Text = "cancel"
+        Me.cancel_butt.UseVisualStyleBackColor = True
+        '
+        'save_butt
+        '
+        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.save_butt.Location = New System.Drawing.Point(12, 99)
+        Me.save_butt.Name = "save_butt"
+        Me.save_butt.Size = New System.Drawing.Size(75, 23)
+        Me.save_butt.TabIndex = 31
+        Me.save_butt.Text = "Save"
+        Me.save_butt.UseVisualStyleBackColor = True
+        '
+        'delete_butt
+        '
+        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.delete_butt.Location = New System.Drawing.Point(12, 70)
+        Me.delete_butt.Name = "delete_butt"
+        Me.delete_butt.Size = New System.Drawing.Size(75, 23)
+        Me.delete_butt.TabIndex = 30
+        Me.delete_butt.Text = "delete"
+        Me.delete_butt.UseVisualStyleBackColor = True
+        '
+        'edit_butt
+        '
+        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit_butt.Location = New System.Drawing.Point(12, 41)
+        Me.edit_butt.Name = "edit_butt"
+        Me.edit_butt.Size = New System.Drawing.Size(75, 23)
+        Me.edit_butt.TabIndex = 29
+        Me.edit_butt.Text = "edit"
+        Me.edit_butt.UseVisualStyleBackColor = True
+        '
+        'add_butt
+        '
+        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add_butt.Location = New System.Drawing.Point(12, 12)
+        Me.add_butt.Name = "add_butt"
+        Me.add_butt.Size = New System.Drawing.Size(75, 23)
+        Me.add_butt.TabIndex = 28
+        Me.add_butt.Text = " Add"
+        Me.add_butt.UseVisualStyleBackColor = True
         '
         'Universitas_informatikaDataSet
         '
@@ -131,8 +201,8 @@ Partial Class Form_mahasiswa
         Me.MahasiswaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MahasiswaBindingNavigator.Name = "MahasiswaBindingNavigator"
         Me.MahasiswaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MahasiswaBindingNavigator.Size = New System.Drawing.Size(878, 25)
-        Me.MahasiswaBindingNavigator.TabIndex = 0
+        Me.MahasiswaBindingNavigator.Size = New System.Drawing.Size(889, 25)
+        Me.MahasiswaBindingNavigator.TabIndex = 35
         Me.MahasiswaBindingNavigator.Text = "BindingNavigator1"
         Me.MahasiswaBindingNavigator.Visible = False
         '
@@ -232,155 +302,155 @@ Partial Class Form_mahasiswa
         'Id_mahasiswaLabel
         '
         Id_mahasiswaLabel.AutoSize = True
-        Id_mahasiswaLabel.Location = New System.Drawing.Point(92, 24)
+        Id_mahasiswaLabel.Location = New System.Drawing.Point(103, 11)
         Id_mahasiswaLabel.Name = "Id_mahasiswaLabel"
         Id_mahasiswaLabel.Size = New System.Drawing.Size(73, 13)
-        Id_mahasiswaLabel.TabIndex = 1
+        Id_mahasiswaLabel.TabIndex = 35
         Id_mahasiswaLabel.Text = "id mahasiswa:"
         '
         'Id_mahasiswaTextBox
         '
         Me.Id_mahasiswaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "id_mahasiswa", True))
-        Me.Id_mahasiswaTextBox.Location = New System.Drawing.Point(189, 25)
+        Me.Id_mahasiswaTextBox.Location = New System.Drawing.Point(200, 8)
         Me.Id_mahasiswaTextBox.Name = "Id_mahasiswaTextBox"
         Me.Id_mahasiswaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Id_mahasiswaTextBox.TabIndex = 2
+        Me.Id_mahasiswaTextBox.TabIndex = 36
         '
         'UsernameLabel
         '
         UsernameLabel.AutoSize = True
-        UsernameLabel.Location = New System.Drawing.Point(92, 54)
+        UsernameLabel.Location = New System.Drawing.Point(103, 37)
         UsernameLabel.Name = "UsernameLabel"
         UsernameLabel.Size = New System.Drawing.Size(56, 13)
-        UsernameLabel.TabIndex = 3
+        UsernameLabel.TabIndex = 37
         UsernameLabel.Text = "username:"
         '
         'UsernameTextBox
         '
         Me.UsernameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "username", True))
-        Me.UsernameTextBox.Location = New System.Drawing.Point(189, 51)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(200, 34)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.UsernameTextBox.TabIndex = 4
+        Me.UsernameTextBox.TabIndex = 38
         '
         'PasswordLabel
         '
         PasswordLabel.AutoSize = True
-        PasswordLabel.Location = New System.Drawing.Point(92, 80)
+        PasswordLabel.Location = New System.Drawing.Point(103, 63)
         PasswordLabel.Name = "PasswordLabel"
         PasswordLabel.Size = New System.Drawing.Size(55, 13)
-        PasswordLabel.TabIndex = 5
+        PasswordLabel.TabIndex = 39
         PasswordLabel.Text = "password:"
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "password", True))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(189, 77)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(200, 60)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.PasswordTextBox.TabIndex = 6
+        Me.PasswordTextBox.TabIndex = 40
         '
         'Nama_mahasiswaLabel
         '
         Nama_mahasiswaLabel.AutoSize = True
-        Nama_mahasiswaLabel.Location = New System.Drawing.Point(92, 106)
+        Nama_mahasiswaLabel.Location = New System.Drawing.Point(103, 89)
         Nama_mahasiswaLabel.Name = "Nama_mahasiswaLabel"
         Nama_mahasiswaLabel.Size = New System.Drawing.Size(91, 13)
-        Nama_mahasiswaLabel.TabIndex = 7
+        Nama_mahasiswaLabel.TabIndex = 41
         Nama_mahasiswaLabel.Text = "nama mahasiswa:"
         '
         'Nama_mahasiswaTextBox
         '
         Me.Nama_mahasiswaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "nama_mahasiswa", True))
-        Me.Nama_mahasiswaTextBox.Location = New System.Drawing.Point(189, 103)
+        Me.Nama_mahasiswaTextBox.Location = New System.Drawing.Point(200, 86)
         Me.Nama_mahasiswaTextBox.Name = "Nama_mahasiswaTextBox"
         Me.Nama_mahasiswaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Nama_mahasiswaTextBox.TabIndex = 8
+        Me.Nama_mahasiswaTextBox.TabIndex = 42
         '
         'Nim_mahasiswaLabel
         '
         Nim_mahasiswaLabel.AutoSize = True
-        Nim_mahasiswaLabel.Location = New System.Drawing.Point(92, 132)
+        Nim_mahasiswaLabel.Location = New System.Drawing.Point(103, 115)
         Nim_mahasiswaLabel.Name = "Nim_mahasiswaLabel"
         Nim_mahasiswaLabel.Size = New System.Drawing.Size(81, 13)
-        Nim_mahasiswaLabel.TabIndex = 9
+        Nim_mahasiswaLabel.TabIndex = 43
         Nim_mahasiswaLabel.Text = "nim mahasiswa:"
         '
         'Nim_mahasiswaTextBox
         '
         Me.Nim_mahasiswaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "nim_mahasiswa", True))
-        Me.Nim_mahasiswaTextBox.Location = New System.Drawing.Point(189, 129)
+        Me.Nim_mahasiswaTextBox.Location = New System.Drawing.Point(200, 112)
         Me.Nim_mahasiswaTextBox.Name = "Nim_mahasiswaTextBox"
         Me.Nim_mahasiswaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Nim_mahasiswaTextBox.TabIndex = 10
+        Me.Nim_mahasiswaTextBox.TabIndex = 44
         '
         'Tgl_lahir_mhsLabel
         '
         Tgl_lahir_mhsLabel.AutoSize = True
-        Tgl_lahir_mhsLabel.Location = New System.Drawing.Point(92, 158)
+        Tgl_lahir_mhsLabel.Location = New System.Drawing.Point(103, 141)
         Tgl_lahir_mhsLabel.Name = "Tgl_lahir_mhsLabel"
         Tgl_lahir_mhsLabel.Size = New System.Drawing.Size(65, 13)
-        Tgl_lahir_mhsLabel.TabIndex = 11
+        Tgl_lahir_mhsLabel.TabIndex = 45
         Tgl_lahir_mhsLabel.Text = "tgl lahir mhs:"
         '
         'Tgl_lahir_mhsTextBox
         '
         Me.Tgl_lahir_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "tgl_lahir_mhs", True))
-        Me.Tgl_lahir_mhsTextBox.Location = New System.Drawing.Point(189, 155)
+        Me.Tgl_lahir_mhsTextBox.Location = New System.Drawing.Point(200, 138)
         Me.Tgl_lahir_mhsTextBox.Name = "Tgl_lahir_mhsTextBox"
         Me.Tgl_lahir_mhsTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Tgl_lahir_mhsTextBox.TabIndex = 12
+        Me.Tgl_lahir_mhsTextBox.TabIndex = 46
         '
         'Email_mhsLabel
         '
         Email_mhsLabel.AutoSize = True
-        Email_mhsLabel.Location = New System.Drawing.Point(92, 184)
+        Email_mhsLabel.Location = New System.Drawing.Point(103, 167)
         Email_mhsLabel.Name = "Email_mhsLabel"
         Email_mhsLabel.Size = New System.Drawing.Size(56, 13)
-        Email_mhsLabel.TabIndex = 13
+        Email_mhsLabel.TabIndex = 47
         Email_mhsLabel.Text = "email mhs:"
         '
         'Email_mhsTextBox
         '
         Me.Email_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "email_mhs", True))
-        Me.Email_mhsTextBox.Location = New System.Drawing.Point(189, 181)
+        Me.Email_mhsTextBox.Location = New System.Drawing.Point(200, 164)
         Me.Email_mhsTextBox.Name = "Email_mhsTextBox"
         Me.Email_mhsTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Email_mhsTextBox.TabIndex = 14
+        Me.Email_mhsTextBox.TabIndex = 48
         '
         'Alamat_mhsLabel
         '
         Alamat_mhsLabel.AutoSize = True
-        Alamat_mhsLabel.Location = New System.Drawing.Point(92, 210)
+        Alamat_mhsLabel.Location = New System.Drawing.Point(103, 193)
         Alamat_mhsLabel.Name = "Alamat_mhsLabel"
         Alamat_mhsLabel.Size = New System.Drawing.Size(63, 13)
-        Alamat_mhsLabel.TabIndex = 15
+        Alamat_mhsLabel.TabIndex = 49
         Alamat_mhsLabel.Text = "alamat mhs:"
         '
         'Alamat_mhsTextBox
         '
         Me.Alamat_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "alamat_mhs", True))
-        Me.Alamat_mhsTextBox.Location = New System.Drawing.Point(189, 207)
+        Me.Alamat_mhsTextBox.Location = New System.Drawing.Point(200, 190)
         Me.Alamat_mhsTextBox.Name = "Alamat_mhsTextBox"
         Me.Alamat_mhsTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Alamat_mhsTextBox.TabIndex = 16
+        Me.Alamat_mhsTextBox.TabIndex = 50
         '
         'Notelp_mhsLabel
         '
         Notelp_mhsLabel.AutoSize = True
-        Notelp_mhsLabel.Location = New System.Drawing.Point(92, 236)
+        Notelp_mhsLabel.Location = New System.Drawing.Point(103, 219)
         Notelp_mhsLabel.Name = "Notelp_mhsLabel"
         Notelp_mhsLabel.Size = New System.Drawing.Size(61, 13)
-        Notelp_mhsLabel.TabIndex = 17
+        Notelp_mhsLabel.TabIndex = 51
         Notelp_mhsLabel.Text = "notelp mhs:"
         '
         'Notelp_mhsTextBox
         '
         Me.Notelp_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "notelp_mhs", True))
-        Me.Notelp_mhsTextBox.Location = New System.Drawing.Point(189, 233)
+        Me.Notelp_mhsTextBox.Location = New System.Drawing.Point(200, 216)
         Me.Notelp_mhsTextBox.Name = "Notelp_mhsTextBox"
         Me.Notelp_mhsTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Notelp_mhsTextBox.TabIndex = 18
+        Me.Notelp_mhsTextBox.TabIndex = 52
         '
         'MahasiswaDataGridView
         '
@@ -388,10 +458,10 @@ Partial Class Form_mahasiswa
         Me.MahasiswaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MahasiswaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.MahasiswaDataGridView.DataSource = Me.MahasiswaBindingSource
-        Me.MahasiswaDataGridView.Location = New System.Drawing.Point(295, 29)
+        Me.MahasiswaDataGridView.Location = New System.Drawing.Point(306, 8)
         Me.MahasiswaDataGridView.Name = "MahasiswaDataGridView"
         Me.MahasiswaDataGridView.Size = New System.Drawing.Size(571, 220)
-        Me.MahasiswaDataGridView.TabIndex = 19
+        Me.MahasiswaDataGridView.TabIndex = 52
         '
         'DataGridViewTextBoxColumn1
         '
@@ -447,88 +517,11 @@ Partial Class Form_mahasiswa
         Me.DataGridViewTextBoxColumn9.HeaderText = "notelp_mhs"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
-        'exit_butt
-        '
-        Me.exit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.exit_butt.Location = New System.Drawing.Point(0, 193)
-        Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(75, 23)
-        Me.exit_butt.TabIndex = 26
-        Me.exit_butt.Text = "exit"
-        Me.exit_butt.UseVisualStyleBackColor = True
-        '
-        'refresh_butt
-        '
-        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(0, 164)
-        Me.refresh_butt.Name = "refresh_butt"
-        Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
-        Me.refresh_butt.TabIndex = 25
-        Me.refresh_butt.Text = "refresh"
-        Me.refresh_butt.UseVisualStyleBackColor = True
-        '
-        'cancel_butt
-        '
-        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cancel_butt.Location = New System.Drawing.Point(0, 135)
-        Me.cancel_butt.Name = "cancel_butt"
-        Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
-        Me.cancel_butt.TabIndex = 24
-        Me.cancel_butt.Text = "cancel"
-        Me.cancel_butt.UseVisualStyleBackColor = True
-        '
-        'save_butt
-        '
-        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save_butt.Location = New System.Drawing.Point(0, 106)
-        Me.save_butt.Name = "save_butt"
-        Me.save_butt.Size = New System.Drawing.Size(75, 23)
-        Me.save_butt.TabIndex = 23
-        Me.save_butt.Text = "Save"
-        Me.save_butt.UseVisualStyleBackColor = True
-        '
-        'delete_butt
-        '
-        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete_butt.Location = New System.Drawing.Point(0, 77)
-        Me.delete_butt.Name = "delete_butt"
-        Me.delete_butt.Size = New System.Drawing.Size(75, 23)
-        Me.delete_butt.TabIndex = 22
-        Me.delete_butt.Text = "delete"
-        Me.delete_butt.UseVisualStyleBackColor = True
-        '
-        'edit_butt
-        '
-        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit_butt.Location = New System.Drawing.Point(0, 48)
-        Me.edit_butt.Name = "edit_butt"
-        Me.edit_butt.Size = New System.Drawing.Size(75, 23)
-        Me.edit_butt.TabIndex = 21
-        Me.edit_butt.Text = "edit"
-        Me.edit_butt.UseVisualStyleBackColor = True
-        '
-        'add_butt
-        '
-        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_butt.Location = New System.Drawing.Point(0, 19)
-        Me.add_butt.Name = "add_butt"
-        Me.add_butt.Size = New System.Drawing.Size(75, 23)
-        Me.add_butt.TabIndex = 20
-        Me.add_butt.Text = "add"
-        Me.add_butt.UseVisualStyleBackColor = True
-        '
         'Form_mahasiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(878, 353)
-        Me.Controls.Add(Me.exit_butt)
-        Me.Controls.Add(Me.refresh_butt)
-        Me.Controls.Add(Me.cancel_butt)
-        Me.Controls.Add(Me.save_butt)
-        Me.Controls.Add(Me.delete_butt)
-        Me.Controls.Add(Me.edit_butt)
-        Me.Controls.Add(Me.add_butt)
+        Me.ClientSize = New System.Drawing.Size(889, 294)
         Me.Controls.Add(Me.MahasiswaDataGridView)
         Me.Controls.Add(Id_mahasiswaLabel)
         Me.Controls.Add(Me.Id_mahasiswaTextBox)
@@ -549,6 +542,13 @@ Partial Class Form_mahasiswa
         Me.Controls.Add(Notelp_mhsLabel)
         Me.Controls.Add(Me.Notelp_mhsTextBox)
         Me.Controls.Add(Me.MahasiswaBindingNavigator)
+        Me.Controls.Add(Me.exit_butt)
+        Me.Controls.Add(Me.refresh_butt)
+        Me.Controls.Add(Me.cancel_butt)
+        Me.Controls.Add(Me.save_butt)
+        Me.Controls.Add(Me.delete_butt)
+        Me.Controls.Add(Me.edit_butt)
+        Me.Controls.Add(Me.add_butt)
         Me.Name = "Form_mahasiswa"
         Me.Text = "Form_mahasiswa"
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -561,6 +561,13 @@ Partial Class Form_mahasiswa
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents exit_butt As System.Windows.Forms.Button
+    Friend WithEvents refresh_butt As System.Windows.Forms.Button
+    Friend WithEvents cancel_butt As System.Windows.Forms.Button
+    Friend WithEvents save_butt As System.Windows.Forms.Button
+    Friend WithEvents delete_butt As System.Windows.Forms.Button
+    Friend WithEvents edit_butt As System.Windows.Forms.Button
+    Friend WithEvents add_butt As System.Windows.Forms.Button
     Friend WithEvents Universitas_informatikaDataSet As project2.universitas_informatikaDataSet
     Friend WithEvents MahasiswaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MahasiswaTableAdapter As project2.universitas_informatikaDataSetTableAdapters.mahasiswaTableAdapter
@@ -597,11 +604,4 @@ Partial Class Form_mahasiswa
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents exit_butt As System.Windows.Forms.Button
-    Friend WithEvents refresh_butt As System.Windows.Forms.Button
-    Friend WithEvents cancel_butt As System.Windows.Forms.Button
-    Friend WithEvents save_butt As System.Windows.Forms.Button
-    Friend WithEvents delete_butt As System.Windows.Forms.Button
-    Friend WithEvents edit_butt As System.Windows.Forms.Button
-    Friend WithEvents add_butt As System.Windows.Forms.Button
 End Class

@@ -29,11 +29,11 @@
     End Sub
 
     Private Sub MahasiswaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaToolStripMenuItem.Click
-        Form_mahasiswa.ShowDialog()
+
     End Sub
 
     Private Sub InformasiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InformasiToolStripMenuItem.Click
-        Form_informasi.ShowDialog()
+
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
@@ -55,5 +55,13 @@
     Private Sub But_ref_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles But_ref.Click
         box_user.Text = ""
         box_pass.Text = ""
+    End Sub
+
+    Private Sub AddAndAditDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddAndAditDataToolStripMenuItem.Click
+        Form_informasi.ShowDialog()
+    End Sub
+
+    Private Sub ViewDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewDataToolStripMenuItem.Click
+        Form_view_informasi.ShowDialog()
     End Sub
 End Class

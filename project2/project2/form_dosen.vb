@@ -1,6 +1,14 @@
 ﻿Public Class Form_dosen
 
-    Private Sub DosenBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenBindingNavigatorSaveItem.Click
+    Private Sub DosenBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub DosenBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub DosenBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.DosenBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
@@ -10,7 +18,6 @@
     Private Sub Form_dosen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.dosen' table. You can move, or remove it, as needed.
         Me.DosenTableAdapter.Fill(Me.Universitas_informatikaDataSet.dosen)
-
 
     End Sub
 
@@ -29,7 +36,6 @@
         PasswordTextBox.Enabled = True
         Link_fbTextBox.Enabled = True
         WibsiteTextBox.Enabled = True
-
 
         DosenBindingSource.AddNew()
     End Sub
@@ -61,7 +67,6 @@
 
             MessageBox.Show("Data Was Deleted !")
         End If
-
     End Sub
 
     Private Sub save_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save_butt.Click
@@ -76,14 +81,13 @@
         edit_butt.Enabled = True
         save_butt.Enabled = False
 
-        Id_dosenTextBox.Enabled = False
-        Nama_dosenTextBox.Enabled = False
-        Email_dosenTextBox.Enabled = False
-        User_nameTextBox.Enabled = False
-        PasswordTextBox.Enabled = False
-        Link_fbTextBox.Enabled = False
-        WibsiteTextBox.Enabled = False
-
+        Id_dosenTextBox.Enabled = True
+        Nama_dosenTextBox.Enabled = True
+        Email_dosenTextBox.Enabled = True
+        User_nameTextBox.Enabled = True
+        PasswordTextBox.Enabled = True
+        Link_fbTextBox.Enabled = True
+        WibsiteTextBox.Enabled = True
     End Sub
 
     Private Sub cancel_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancel_butt.Click
@@ -93,13 +97,15 @@
         save_butt.Enabled = False
         refresh_butt.Enabled = True
         cancel_butt.Enabled = False
-    End Sub
 
-    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
-        Me.Close()
+        DosenBindingSource.CancelEdit()
     End Sub
 
     Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
         Me.DosenTableAdapter.Fill(Me.Universitas_informatikaDataSet.dosen)
+    End Sub
+
+    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
+        Me.Close()
     End Sub
 End Class

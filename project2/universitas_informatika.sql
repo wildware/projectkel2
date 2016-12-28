@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2016 at 02:23 PM
+-- Generation Time: Dec 28, 2016 at 09:06 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `dosen` (
-  `id_dosen` int(11) NOT NULL,
+  `id_dosen` varchar(22) NOT NULL,
   `nama_dosen` varchar(45) DEFAULT NULL,
   `email_dosen` varchar(45) DEFAULT NULL,
   `User_name` varchar(45) DEFAULT NULL,
@@ -37,6 +37,15 @@ CREATE TABLE IF NOT EXISTS `dosen` (
   PRIMARY KEY (`id_dosen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `dosen`
+--
+
+INSERT INTO `dosen` (`id_dosen`, `nama_dosen`, `email_dosen`, `User_name`, `password`, `link_fb`, `wibsite`) VALUES
+('322', 'Hanafi kambivi', NULL, 'Upiel', '123', NULL, NULL),
+('543', 'Arie syarwani', 'ari56tone@gmail.com', 'arsyar', '210297', 'Arie syarwani', 'www.lelakisehat.com'),
+('d21a', 'Eko Jurianto', NULL, 'EkoJun', '234', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -44,16 +53,22 @@ CREATE TABLE IF NOT EXISTS `dosen` (
 --
 
 CREATE TABLE IF NOT EXISTS `informasi` (
-  `id_informasi` int(11) NOT NULL,
-  `DOSEN_id_dosen` int(11) NOT NULL DEFAULT '0',
-  `MATA_KULIAH_id_matakuliah` int(11) NOT NULL DEFAULT '0',
-  `MATA_KULIAH_DOSEN_id_dosen` int(11) NOT NULL DEFAULT '0',
+  `id_informasi` varchar(11) NOT NULL,
+  `DOSEN_id_dosen` varchar(11) NOT NULL DEFAULT '0',
+  `MATA_KULIAH_id_matakuliah` varchar(11) NOT NULL DEFAULT '0',
+  `MATA_KULIAH_DOSEN_id_dosen` varchar(11) NOT NULL DEFAULT '0',
   `judul` varchar(45) DEFAULT NULL,
   `info` varchar(45) DEFAULT NULL,
-  `tanggal` varchar(45) DEFAULT NULL,
-  `hari` varchar(45) DEFAULT NULL,
+  `tanggal` date DEFAULT NULL,
   PRIMARY KEY (`id_informasi`,`DOSEN_id_dosen`,`MATA_KULIAH_id_matakuliah`,`MATA_KULIAH_DOSEN_id_dosen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `informasi`
+--
+
+INSERT INTO `informasi` (`id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_matakuliah`, `MATA_KULIAH_DOSEN_id_dosen`, `judul`, `info`, `tanggal`) VALUES
+('5433', '234', '5', '234', 'keuangan', 'pudir2', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -62,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `informasi` (
 --
 
 CREATE TABLE IF NOT EXISTS `mahasiswa` (
-  `id_mahasiswa` int(11) NOT NULL,
+  `id_mahasiswa` varchar(11) NOT NULL,
   `username` varchar(45) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
   `nama_mahasiswa` varchar(45) DEFAULT NULL,
@@ -81,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
 --
 
 CREATE TABLE IF NOT EXISTS `mata_kuliah` (
-  `id_matakuliah` int(11) NOT NULL,
-  `DOSEN_id_dosen` int(11) NOT NULL,
+  `id_matakuliah` varchar(11) NOT NULL,
+  `DOSEN_id_dosen` varchar(11) NOT NULL,
   `sks` varchar(45) DEFAULT NULL,
   `MATA_KULIAH` varchar(45) DEFAULT NULL,
   `kode` varchar(45) DEFAULT NULL,
@@ -96,8 +111,8 @@ CREATE TABLE IF NOT EXISTS `mata_kuliah` (
 --
 
 CREATE TABLE IF NOT EXISTS `nilai` (
-  `id_nilai` int(11) NOT NULL,
-  `PERSERTA_MK_id_peserta` int(11) NOT NULL,
+  `id_nilai` varchar(11) NOT NULL,
+  `PERSERTA_MK_id_peserta` varchar(11) NOT NULL,
   `tugas` varchar(22) DEFAULT NULL,
   `uts` varchar(22) DEFAULT NULL,
   `uas` varchar(22) DEFAULT NULL,
@@ -111,11 +126,11 @@ CREATE TABLE IF NOT EXISTS `nilai` (
 --
 
 CREATE TABLE IF NOT EXISTS `peserta_mk` (
-  `id_perserta` int(11) NOT NULL,
-  `MAHASISWA_id_mahasiswa` int(11) NOT NULL,
-  `DOSEN_id_dosen` int(11) NOT NULL,
-  `MATA_KULIAH_id_matakuliah` int(11) NOT NULL,
-  `NILAI_id_nilai` int(11) NOT NULL,
+  `id_perserta` varchar(11) NOT NULL,
+  `MAHASISWA_id_mahasiswa` varchar(11) NOT NULL,
+  `DOSEN_id_dosen` varchar(11) NOT NULL,
+  `MATA_KULIAH_id_matakuliah` varchar(11) NOT NULL,
+  `NILAI_id_nilai` varchar(11) NOT NULL,
   PRIMARY KEY (`id_perserta`,`MAHASISWA_id_mahasiswa`,`DOSEN_id_dosen`,`MATA_KULIAH_id_matakuliah`,`NILAI_id_nilai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form_informasi
+Partial Class Form_view_informasi
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,21 +23,7 @@ Partial Class Form_informasi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_informasi))
-        Dim Id_informasiLabel As System.Windows.Forms.Label
-        Dim DOSEN_id_dosenLabel As System.Windows.Forms.Label
-        Dim MATA_KULIAH_id_matakuliahLabel As System.Windows.Forms.Label
-        Dim MATA_KULIAH_DOSEN_id_dosenLabel As System.Windows.Forms.Label
-        Dim JudulLabel As System.Windows.Forms.Label
-        Dim InfoLabel As System.Windows.Forms.Label
-        Dim TanggalLabel As System.Windows.Forms.Label
-        Me.exit_butt = New System.Windows.Forms.Button()
-        Me.refresh_butt = New System.Windows.Forms.Button()
-        Me.cancel_butt = New System.Windows.Forms.Button()
-        Me.save_butt = New System.Windows.Forms.Button()
-        Me.delete_butt = New System.Windows.Forms.Button()
-        Me.edit_butt = New System.Windows.Forms.Button()
-        Me.add_butt = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_view_informasi))
         Me.Universitas_informatikaDataSet = New project2.universitas_informatikaDataSet()
         Me.InformasiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InformasiTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.informasiTableAdapter()
@@ -55,13 +41,6 @@ Partial Class Form_informasi
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.InformasiBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.Id_informasiTextBox = New System.Windows.Forms.TextBox()
-        Me.DOSEN_id_dosenTextBox = New System.Windows.Forms.TextBox()
-        Me.MATA_KULIAH_id_matakuliahTextBox = New System.Windows.Forms.TextBox()
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox = New System.Windows.Forms.TextBox()
-        Me.JudulTextBox = New System.Windows.Forms.TextBox()
-        Me.InfoTextBox = New System.Windows.Forms.TextBox()
-        Me.TanggalDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.InformasiDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,89 +49,14 @@ Partial Class Form_informasi
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Id_informasiLabel = New System.Windows.Forms.Label()
-        DOSEN_id_dosenLabel = New System.Windows.Forms.Label()
-        MATA_KULIAH_id_matakuliahLabel = New System.Windows.Forms.Label()
-        MATA_KULIAH_DOSEN_id_dosenLabel = New System.Windows.Forms.Label()
-        JudulLabel = New System.Windows.Forms.Label()
-        InfoLabel = New System.Windows.Forms.Label()
-        TanggalLabel = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.cari_but = New System.Windows.Forms.Button()
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.InformasiBindingNavigator.SuspendLayout()
         CType(Me.InformasiDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'exit_butt
-        '
-        Me.exit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.exit_butt.Location = New System.Drawing.Point(12, 186)
-        Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(75, 23)
-        Me.exit_butt.TabIndex = 27
-        Me.exit_butt.Text = "exit"
-        Me.exit_butt.UseVisualStyleBackColor = True
-        '
-        'refresh_butt
-        '
-        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(12, 157)
-        Me.refresh_butt.Name = "refresh_butt"
-        Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
-        Me.refresh_butt.TabIndex = 26
-        Me.refresh_butt.Text = "refresh"
-        Me.refresh_butt.UseVisualStyleBackColor = True
-        '
-        'cancel_butt
-        '
-        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cancel_butt.Location = New System.Drawing.Point(12, 128)
-        Me.cancel_butt.Name = "cancel_butt"
-        Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
-        Me.cancel_butt.TabIndex = 25
-        Me.cancel_butt.Text = "cancel"
-        Me.cancel_butt.UseVisualStyleBackColor = True
-        '
-        'save_butt
-        '
-        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save_butt.Location = New System.Drawing.Point(12, 99)
-        Me.save_butt.Name = "save_butt"
-        Me.save_butt.Size = New System.Drawing.Size(75, 23)
-        Me.save_butt.TabIndex = 24
-        Me.save_butt.Text = "Save"
-        Me.save_butt.UseVisualStyleBackColor = True
-        '
-        'delete_butt
-        '
-        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete_butt.Location = New System.Drawing.Point(12, 70)
-        Me.delete_butt.Name = "delete_butt"
-        Me.delete_butt.Size = New System.Drawing.Size(75, 23)
-        Me.delete_butt.TabIndex = 23
-        Me.delete_butt.Text = "delete"
-        Me.delete_butt.UseVisualStyleBackColor = True
-        '
-        'edit_butt
-        '
-        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit_butt.Location = New System.Drawing.Point(12, 41)
-        Me.edit_butt.Name = "edit_butt"
-        Me.edit_butt.Size = New System.Drawing.Size(75, 23)
-        Me.edit_butt.TabIndex = 22
-        Me.edit_butt.Text = "edit"
-        Me.edit_butt.UseVisualStyleBackColor = True
-        '
-        'add_butt
-        '
-        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_butt.Location = New System.Drawing.Point(12, 12)
-        Me.add_butt.Name = "add_butt"
-        Me.add_butt.Size = New System.Drawing.Size(75, 23)
-        Me.add_butt.TabIndex = 21
-        Me.add_butt.Text = " Add"
-        Me.add_butt.UseVisualStyleBackColor = True
         '
         'Universitas_informatikaDataSet
         '
@@ -193,8 +97,8 @@ Partial Class Form_informasi
         Me.InformasiBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.InformasiBindingNavigator.Name = "InformasiBindingNavigator"
         Me.InformasiBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.InformasiBindingNavigator.Size = New System.Drawing.Size(901, 25)
-        Me.InformasiBindingNavigator.TabIndex = 28
+        Me.InformasiBindingNavigator.Size = New System.Drawing.Size(847, 25)
+        Me.InformasiBindingNavigator.TabIndex = 0
         Me.InformasiBindingNavigator.Text = "BindingNavigator1"
         Me.InformasiBindingNavigator.Visible = False
         '
@@ -291,135 +195,16 @@ Partial Class Form_informasi
         Me.InformasiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.InformasiBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'Id_informasiLabel
-        '
-        Id_informasiLabel.AutoSize = True
-        Id_informasiLabel.Location = New System.Drawing.Point(93, 12)
-        Id_informasiLabel.Name = "Id_informasiLabel"
-        Id_informasiLabel.Size = New System.Drawing.Size(62, 13)
-        Id_informasiLabel.TabIndex = 28
-        Id_informasiLabel.Text = "id informasi:"
-        '
-        'Id_informasiTextBox
-        '
-        Me.Id_informasiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "id_informasi", True))
-        Me.Id_informasiTextBox.Location = New System.Drawing.Point(265, 9)
-        Me.Id_informasiTextBox.Name = "Id_informasiTextBox"
-        Me.Id_informasiTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Id_informasiTextBox.TabIndex = 29
-        '
-        'DOSEN_id_dosenLabel
-        '
-        DOSEN_id_dosenLabel.AutoSize = True
-        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(93, 38)
-        DOSEN_id_dosenLabel.Name = "DOSEN_id_dosenLabel"
-        DOSEN_id_dosenLabel.Size = New System.Drawing.Size(91, 13)
-        DOSEN_id_dosenLabel.TabIndex = 30
-        DOSEN_id_dosenLabel.Text = "DOSEN id dosen:"
-        '
-        'DOSEN_id_dosenTextBox
-        '
-        Me.DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "DOSEN_id_dosen", True))
-        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(265, 35)
-        Me.DOSEN_id_dosenTextBox.Name = "DOSEN_id_dosenTextBox"
-        Me.DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DOSEN_id_dosenTextBox.TabIndex = 31
-        '
-        'MATA_KULIAH_id_matakuliahLabel
-        '
-        MATA_KULIAH_id_matakuliahLabel.AutoSize = True
-        MATA_KULIAH_id_matakuliahLabel.Location = New System.Drawing.Point(93, 64)
-        MATA_KULIAH_id_matakuliahLabel.Name = "MATA_KULIAH_id_matakuliahLabel"
-        MATA_KULIAH_id_matakuliahLabel.Size = New System.Drawing.Size(147, 13)
-        MATA_KULIAH_id_matakuliahLabel.TabIndex = 32
-        MATA_KULIAH_id_matakuliahLabel.Text = "MATA KULIAH id matakuliah:"
-        '
-        'MATA_KULIAH_id_matakuliahTextBox
-        '
-        Me.MATA_KULIAH_id_matakuliahTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "MATA_KULIAH_id_matakuliah", True))
-        Me.MATA_KULIAH_id_matakuliahTextBox.Location = New System.Drawing.Point(265, 61)
-        Me.MATA_KULIAH_id_matakuliahTextBox.Name = "MATA_KULIAH_id_matakuliahTextBox"
-        Me.MATA_KULIAH_id_matakuliahTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.MATA_KULIAH_id_matakuliahTextBox.TabIndex = 33
-        '
-        'MATA_KULIAH_DOSEN_id_dosenLabel
-        '
-        MATA_KULIAH_DOSEN_id_dosenLabel.AutoSize = True
-        MATA_KULIAH_DOSEN_id_dosenLabel.Location = New System.Drawing.Point(93, 90)
-        MATA_KULIAH_DOSEN_id_dosenLabel.Name = "MATA_KULIAH_DOSEN_id_dosenLabel"
-        MATA_KULIAH_DOSEN_id_dosenLabel.Size = New System.Drawing.Size(166, 13)
-        MATA_KULIAH_DOSEN_id_dosenLabel.TabIndex = 34
-        MATA_KULIAH_DOSEN_id_dosenLabel.Text = "MATA KULIAH DOSEN id dosen:"
-        '
-        'MATA_KULIAH_DOSEN_id_dosenTextBox
-        '
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "MATA_KULIAH_DOSEN_id_dosen", True))
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(265, 87)
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Name = "MATA_KULIAH_DOSEN_id_dosenTextBox"
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.TabIndex = 35
-        '
-        'JudulLabel
-        '
-        JudulLabel.AutoSize = True
-        JudulLabel.Location = New System.Drawing.Point(93, 116)
-        JudulLabel.Name = "JudulLabel"
-        JudulLabel.Size = New System.Drawing.Size(32, 13)
-        JudulLabel.TabIndex = 36
-        JudulLabel.Text = "judul:"
-        '
-        'JudulTextBox
-        '
-        Me.JudulTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "judul", True))
-        Me.JudulTextBox.Location = New System.Drawing.Point(265, 113)
-        Me.JudulTextBox.Name = "JudulTextBox"
-        Me.JudulTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.JudulTextBox.TabIndex = 37
-        '
-        'InfoLabel
-        '
-        InfoLabel.AutoSize = True
-        InfoLabel.Location = New System.Drawing.Point(93, 142)
-        InfoLabel.Name = "InfoLabel"
-        InfoLabel.Size = New System.Drawing.Size(27, 13)
-        InfoLabel.TabIndex = 38
-        InfoLabel.Text = "info:"
-        '
-        'InfoTextBox
-        '
-        Me.InfoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "info", True))
-        Me.InfoTextBox.Location = New System.Drawing.Point(265, 139)
-        Me.InfoTextBox.Name = "InfoTextBox"
-        Me.InfoTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.InfoTextBox.TabIndex = 39
-        '
-        'TanggalLabel
-        '
-        TanggalLabel.AutoSize = True
-        TanggalLabel.Location = New System.Drawing.Point(93, 169)
-        TanggalLabel.Name = "TanggalLabel"
-        TanggalLabel.Size = New System.Drawing.Size(45, 13)
-        TanggalLabel.TabIndex = 40
-        TanggalLabel.Text = "tanggal:"
-        '
-        'TanggalDateTimePicker
-        '
-        Me.TanggalDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.InformasiBindingSource, "tanggal", True))
-        Me.TanggalDateTimePicker.Location = New System.Drawing.Point(265, 165)
-        Me.TanggalDateTimePicker.Name = "TanggalDateTimePicker"
-        Me.TanggalDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.TanggalDateTimePicker.TabIndex = 41
-        '
         'InformasiDataGridView
         '
         Me.InformasiDataGridView.AutoGenerateColumns = False
         Me.InformasiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InformasiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.InformasiDataGridView.DataSource = Me.InformasiBindingSource
-        Me.InformasiDataGridView.Location = New System.Drawing.Point(471, 12)
+        Me.InformasiDataGridView.Location = New System.Drawing.Point(37, 59)
         Me.InformasiDataGridView.Name = "InformasiDataGridView"
-        Me.InformasiDataGridView.Size = New System.Drawing.Size(425, 220)
-        Me.InformasiDataGridView.TabIndex = 41
+        Me.InformasiDataGridView.Size = New System.Drawing.Size(779, 220)
+        Me.InformasiDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
         '
@@ -463,36 +248,34 @@ Partial Class Form_informasi
         Me.DataGridViewTextBoxColumn7.HeaderText = "tanggal"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'Form_informasi
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(43, 15)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(335, 20)
+        Me.TextBox1.TabIndex = 2
+        '
+        'cari_but
+        '
+        Me.cari_but.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cari_but.Location = New System.Drawing.Point(384, 12)
+        Me.cari_but.Name = "cari_but"
+        Me.cari_but.Size = New System.Drawing.Size(75, 23)
+        Me.cari_but.TabIndex = 3
+        Me.cari_but.Text = "Cari"
+        Me.cari_but.UseVisualStyleBackColor = True
+        '
+        'Form_view_informasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(901, 421)
+        Me.ClientSize = New System.Drawing.Size(847, 304)
+        Me.Controls.Add(Me.cari_but)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.InformasiDataGridView)
-        Me.Controls.Add(Id_informasiLabel)
-        Me.Controls.Add(Me.Id_informasiTextBox)
-        Me.Controls.Add(DOSEN_id_dosenLabel)
-        Me.Controls.Add(Me.DOSEN_id_dosenTextBox)
-        Me.Controls.Add(MATA_KULIAH_id_matakuliahLabel)
-        Me.Controls.Add(Me.MATA_KULIAH_id_matakuliahTextBox)
-        Me.Controls.Add(MATA_KULIAH_DOSEN_id_dosenLabel)
-        Me.Controls.Add(Me.MATA_KULIAH_DOSEN_id_dosenTextBox)
-        Me.Controls.Add(JudulLabel)
-        Me.Controls.Add(Me.JudulTextBox)
-        Me.Controls.Add(InfoLabel)
-        Me.Controls.Add(Me.InfoTextBox)
-        Me.Controls.Add(TanggalLabel)
-        Me.Controls.Add(Me.TanggalDateTimePicker)
         Me.Controls.Add(Me.InformasiBindingNavigator)
-        Me.Controls.Add(Me.exit_butt)
-        Me.Controls.Add(Me.refresh_butt)
-        Me.Controls.Add(Me.cancel_butt)
-        Me.Controls.Add(Me.save_butt)
-        Me.Controls.Add(Me.delete_butt)
-        Me.Controls.Add(Me.edit_butt)
-        Me.Controls.Add(Me.add_butt)
-        Me.Name = "Form_informasi"
-        Me.Text = "Form_informasi"
+        Me.Name = "Form_view_informasi"
+        Me.Text = "Form_view_informasi"
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -503,13 +286,6 @@ Partial Class Form_informasi
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents exit_butt As System.Windows.Forms.Button
-    Friend WithEvents refresh_butt As System.Windows.Forms.Button
-    Friend WithEvents cancel_butt As System.Windows.Forms.Button
-    Friend WithEvents save_butt As System.Windows.Forms.Button
-    Friend WithEvents delete_butt As System.Windows.Forms.Button
-    Friend WithEvents edit_butt As System.Windows.Forms.Button
-    Friend WithEvents add_butt As System.Windows.Forms.Button
     Friend WithEvents Universitas_informatikaDataSet As project2.universitas_informatikaDataSet
     Friend WithEvents InformasiBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents InformasiTableAdapter As project2.universitas_informatikaDataSetTableAdapters.informasiTableAdapter
@@ -527,14 +303,6 @@ Partial Class Form_informasi
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents InformasiBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Id_informasiTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DOSEN_id_dosenTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MATA_KULIAH_id_matakuliahTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MATA_KULIAH_DOSEN_id_dosenTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents JudulTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents InfoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TanggalDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents InformasiDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -543,4 +311,6 @@ Partial Class Form_informasi
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents cari_but As System.Windows.Forms.Button
 End Class

@@ -27,6 +27,7 @@
         Nama_mahasiswaTextBox.Enabled = True
         Nim_mahasiswaTextBox.Enabled = True
         Tgl_lahir_mhsTextBox.Enabled = True
+        Email_mhsTextBox.Enabled = True
         Alamat_mhsTextBox.Enabled = True
         Notelp_mhsTextBox.Enabled = True
 
@@ -47,12 +48,14 @@
         Nama_mahasiswaTextBox.Enabled = True
         Nim_mahasiswaTextBox.Enabled = True
         Tgl_lahir_mhsTextBox.Enabled = True
+        Email_mhsTextBox.Enabled = True
         Alamat_mhsTextBox.Enabled = True
         Notelp_mhsTextBox.Enabled = True
+
     End Sub
 
     Private Sub delete_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delete_butt.Click
-        If MessageBox.Show("Delete data ?", "confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show("Delete data ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             MahasiswaBindingSource.RemoveCurrent()
 
             Me.Validate()
@@ -61,7 +64,6 @@
 
             MessageBox.Show("Data Was Deleted !")
         End If
-
     End Sub
 
     Private Sub save_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save_butt.Click
@@ -75,16 +77,16 @@
         delete_butt.Enabled = True
         edit_butt.Enabled = True
         save_butt.Enabled = False
-        
-        Id_mahasiswaTextBox.Enabled = False
-        UsernameTextBox.Enabled = False
-        PasswordTextBox.Enabled = False
-        Nama_mahasiswaTextBox.Enabled = False
-        Nim_mahasiswaTextBox.Enabled = False
-        Tgl_lahir_mhsTextBox.Enabled = False
-        Alamat_mhsTextBox.Enabled = False
-        Notelp_mhsTextBox.Enabled = False
 
+        Id_mahasiswaTextBox.Enabled = True
+        UsernameTextBox.Enabled = True
+        PasswordTextBox.Enabled = True
+        Nama_mahasiswaTextBox.Enabled = True
+        Nim_mahasiswaTextBox.Enabled = True
+        Tgl_lahir_mhsTextBox.Enabled = True
+        Email_mhsTextBox.Enabled = True
+        Alamat_mhsTextBox.Enabled = True
+        Notelp_mhsTextBox.Enabled = True
     End Sub
 
     Private Sub cancel_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancel_butt.Click
@@ -94,13 +96,25 @@
         save_butt.Enabled = False
         refresh_butt.Enabled = True
         cancel_butt.Enabled = False
-    End Sub
 
-    Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
-        Me.MahasiswaTableAdapter.Fill(Me.Universitas_informatikaDataSet.mahasiswa)
+        Id_mahasiswaTextBox.Enabled = True
+        UsernameTextBox.Enabled = True
+        PasswordTextBox.Enabled = True
+        Nama_mahasiswaTextBox.Enabled = True
+        Nim_mahasiswaTextBox.Enabled = True
+        Tgl_lahir_mhsTextBox.Enabled = True
+        Email_mhsTextBox.Enabled = True
+        Alamat_mhsTextBox.Enabled = True
+        Notelp_mhsTextBox.Enabled = True
+
+        MahasiswaBindingSource.CancelEdit()
     End Sub
 
     Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
         Me.Close()
+    End Sub
+
+    Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
+        Me.MahasiswaTableAdapter.Fill(Me.Universitas_informatikaDataSet.mahasiswa)
     End Sub
 End Class

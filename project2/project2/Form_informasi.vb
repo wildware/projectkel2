@@ -14,6 +14,7 @@
     End Sub
 
     Private Sub add_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles add_butt.Click
+
         add_butt.Enabled = False
         delete_butt.Enabled = False
         edit_butt.Enabled = False
@@ -27,10 +28,7 @@
         MATA_KULIAH_DOSEN_id_dosenTextBox.Enabled = True
         JudulTextBox.Enabled = True
         InfoTextBox.Enabled = True
-        TanggalTextBox.Enabled = True
-        HariTextBox.Enabled = True
-
-        InformasiBindingSource.AddNew()
+        TanggalDateTimePicker.Enabled = True
 
     End Sub
 
@@ -48,8 +46,7 @@
         MATA_KULIAH_DOSEN_id_dosenTextBox.Enabled = True
         JudulTextBox.Enabled = True
         InfoTextBox.Enabled = True
-        TanggalTextBox.Enabled = True
-        HariTextBox.Enabled = True
+        TanggalDateTimePicker.Enabled = True
     End Sub
 
     Private Sub delete_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delete_butt.Click
@@ -82,8 +79,7 @@
         MATA_KULIAH_DOSEN_id_dosenTextBox.Enabled = True
         JudulTextBox.Enabled = True
         InfoTextBox.Enabled = True
-        TanggalTextBox.Enabled = True
-        HariTextBox.Enabled = True
+        TanggalDateTimePicker.Enabled = True
     End Sub
 
     Private Sub cancel_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancel_butt.Click
@@ -93,13 +89,15 @@
         save_butt.Enabled = False
         refresh_butt.Enabled = True
         cancel_butt.Enabled = False
-    End Sub
 
-    Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
-        Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
+        InformasiBindingSource.CancelEdit()
     End Sub
 
     Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
         Me.Close()
+    End Sub
+
+    Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
+        Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
     End Sub
 End Class
