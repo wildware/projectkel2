@@ -275,7 +275,7 @@ Partial Class Form_view_informasi
         Me.Controls.Add(Me.InformasiDataGridView)
         Me.Controls.Add(Me.InformasiBindingNavigator)
         Me.Name = "Form_view_informasi"
-        Me.Text = "Form_view_informasi"
+        Me.Text = " "
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

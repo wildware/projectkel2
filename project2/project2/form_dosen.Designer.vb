@@ -23,7 +23,6 @@ Partial Class Form_dosen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_dosen))
         Dim Id_dosenLabel As System.Windows.Forms.Label
         Dim Nama_dosenLabel As System.Windows.Forms.Label
         Dim Email_dosenLabel As System.Windows.Forms.Label
@@ -31,6 +30,7 @@ Partial Class Form_dosen
         Dim PasswordLabel As System.Windows.Forms.Label
         Dim Link_fbLabel As System.Windows.Forms.Label
         Dim WibsiteLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_dosen))
         Me.exit_butt = New System.Windows.Forms.Button()
         Me.refresh_butt = New System.Windows.Forms.Button()
         Me.cancel_butt = New System.Windows.Forms.Button()
@@ -39,17 +39,19 @@ Partial Class Form_dosen
         Me.edit_butt = New System.Windows.Forms.Button()
         Me.add_butt = New System.Windows.Forms.Button()
         Me.DosenBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.DosenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Universitas_informatikaDataSet = New project2.universitas_informatikaDataSet()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DosenBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Id_dosenTextBox = New System.Windows.Forms.TextBox()
         Me.Nama_dosenTextBox = New System.Windows.Forms.TextBox()
@@ -66,8 +68,6 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DosenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Universitas_informatikaDataSet = New project2.universitas_informatikaDataSet()
         Me.DosenTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.dosenTableAdapter()
         Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Id_dosenLabel = New System.Windows.Forms.Label()
@@ -79,10 +79,73 @@ Partial Class Form_dosen
         WibsiteLabel = New System.Windows.Forms.Label()
         CType(Me.DosenBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DosenBindingNavigator.SuspendLayout()
-        CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Id_dosenLabel
+        '
+        Id_dosenLabel.AutoSize = True
+        Id_dosenLabel.Location = New System.Drawing.Point(94, 15)
+        Id_dosenLabel.Name = "Id_dosenLabel"
+        Id_dosenLabel.Size = New System.Drawing.Size(50, 13)
+        Id_dosenLabel.TabIndex = 21
+        Id_dosenLabel.Text = "id dosen:"
+        '
+        'Nama_dosenLabel
+        '
+        Nama_dosenLabel.AutoSize = True
+        Nama_dosenLabel.Location = New System.Drawing.Point(94, 41)
+        Nama_dosenLabel.Name = "Nama_dosenLabel"
+        Nama_dosenLabel.Size = New System.Drawing.Size(68, 13)
+        Nama_dosenLabel.TabIndex = 23
+        Nama_dosenLabel.Text = "nama dosen:"
+        '
+        'Email_dosenLabel
+        '
+        Email_dosenLabel.AutoSize = True
+        Email_dosenLabel.Location = New System.Drawing.Point(94, 67)
+        Email_dosenLabel.Name = "Email_dosenLabel"
+        Email_dosenLabel.Size = New System.Drawing.Size(66, 13)
+        Email_dosenLabel.TabIndex = 25
+        Email_dosenLabel.Text = "email dosen:"
+        '
+        'User_nameLabel
+        '
+        User_nameLabel.AutoSize = True
+        User_nameLabel.Location = New System.Drawing.Point(94, 93)
+        User_nameLabel.Name = "User_nameLabel"
+        User_nameLabel.Size = New System.Drawing.Size(61, 13)
+        User_nameLabel.TabIndex = 27
+        User_nameLabel.Text = "User name:"
+        '
+        'PasswordLabel
+        '
+        PasswordLabel.AutoSize = True
+        PasswordLabel.Location = New System.Drawing.Point(94, 119)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New System.Drawing.Size(55, 13)
+        PasswordLabel.TabIndex = 29
+        PasswordLabel.Text = "password:"
+        '
+        'Link_fbLabel
+        '
+        Link_fbLabel.AutoSize = True
+        Link_fbLabel.Location = New System.Drawing.Point(94, 145)
+        Link_fbLabel.Name = "Link_fbLabel"
+        Link_fbLabel.Size = New System.Drawing.Size(38, 13)
+        Link_fbLabel.TabIndex = 31
+        Link_fbLabel.Text = "link fb:"
+        '
+        'WibsiteLabel
+        '
+        WibsiteLabel.AutoSize = True
+        WibsiteLabel.Location = New System.Drawing.Point(94, 171)
+        WibsiteLabel.Name = "WibsiteLabel"
+        WibsiteLabel.Size = New System.Drawing.Size(42, 13)
+        WibsiteLabel.TabIndex = 33
+        WibsiteLabel.Text = "wibsite:"
         '
         'exit_butt
         '
@@ -173,6 +236,41 @@ Partial Class Form_dosen
         Me.DosenBindingNavigator.Text = "BindingNavigator1"
         Me.DosenBindingNavigator.Visible = False
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'DosenBindingSource
+        '
+        Me.DosenBindingSource.DataMember = "dosen"
+        Me.DosenBindingSource.DataSource = Me.Universitas_informatikaDataSet
+        '
+        'Universitas_informatikaDataSet
+        '
+        Me.Universitas_informatikaDataSet.DataSetName = "universitas_informatikaDataSet"
+        Me.Universitas_informatikaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -205,16 +303,9 @@ Partial Class Form_dosen
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -237,26 +328,8 @@ Partial Class Form_dosen
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'DosenBindingNavigatorSaveItem
         '
@@ -266,15 +339,6 @@ Partial Class Form_dosen
         Me.DosenBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.DosenBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'Id_dosenLabel
-        '
-        Id_dosenLabel.AutoSize = True
-        Id_dosenLabel.Location = New System.Drawing.Point(94, 15)
-        Id_dosenLabel.Name = "Id_dosenLabel"
-        Id_dosenLabel.Size = New System.Drawing.Size(50, 13)
-        Id_dosenLabel.TabIndex = 21
-        Id_dosenLabel.Text = "id dosen:"
-        '
         'Id_dosenTextBox
         '
         Me.Id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "id_dosen", True))
@@ -282,15 +346,6 @@ Partial Class Form_dosen
         Me.Id_dosenTextBox.Name = "Id_dosenTextBox"
         Me.Id_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Id_dosenTextBox.TabIndex = 22
-        '
-        'Nama_dosenLabel
-        '
-        Nama_dosenLabel.AutoSize = True
-        Nama_dosenLabel.Location = New System.Drawing.Point(94, 41)
-        Nama_dosenLabel.Name = "Nama_dosenLabel"
-        Nama_dosenLabel.Size = New System.Drawing.Size(68, 13)
-        Nama_dosenLabel.TabIndex = 23
-        Nama_dosenLabel.Text = "nama dosen:"
         '
         'Nama_dosenTextBox
         '
@@ -300,15 +355,6 @@ Partial Class Form_dosen
         Me.Nama_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Nama_dosenTextBox.TabIndex = 24
         '
-        'Email_dosenLabel
-        '
-        Email_dosenLabel.AutoSize = True
-        Email_dosenLabel.Location = New System.Drawing.Point(94, 67)
-        Email_dosenLabel.Name = "Email_dosenLabel"
-        Email_dosenLabel.Size = New System.Drawing.Size(66, 13)
-        Email_dosenLabel.TabIndex = 25
-        Email_dosenLabel.Text = "email dosen:"
-        '
         'Email_dosenTextBox
         '
         Me.Email_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "email_dosen", True))
@@ -316,15 +362,6 @@ Partial Class Form_dosen
         Me.Email_dosenTextBox.Name = "Email_dosenTextBox"
         Me.Email_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Email_dosenTextBox.TabIndex = 26
-        '
-        'User_nameLabel
-        '
-        User_nameLabel.AutoSize = True
-        User_nameLabel.Location = New System.Drawing.Point(94, 93)
-        User_nameLabel.Name = "User_nameLabel"
-        User_nameLabel.Size = New System.Drawing.Size(61, 13)
-        User_nameLabel.TabIndex = 27
-        User_nameLabel.Text = "User name:"
         '
         'User_nameTextBox
         '
@@ -334,15 +371,6 @@ Partial Class Form_dosen
         Me.User_nameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.User_nameTextBox.TabIndex = 28
         '
-        'PasswordLabel
-        '
-        PasswordLabel.AutoSize = True
-        PasswordLabel.Location = New System.Drawing.Point(94, 119)
-        PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(55, 13)
-        PasswordLabel.TabIndex = 29
-        PasswordLabel.Text = "password:"
-        '
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "password", True))
@@ -351,15 +379,6 @@ Partial Class Form_dosen
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PasswordTextBox.TabIndex = 30
         '
-        'Link_fbLabel
-        '
-        Link_fbLabel.AutoSize = True
-        Link_fbLabel.Location = New System.Drawing.Point(94, 145)
-        Link_fbLabel.Name = "Link_fbLabel"
-        Link_fbLabel.Size = New System.Drawing.Size(38, 13)
-        Link_fbLabel.TabIndex = 31
-        Link_fbLabel.Text = "link fb:"
-        '
         'Link_fbTextBox
         '
         Me.Link_fbTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "link_fb", True))
@@ -367,15 +386,6 @@ Partial Class Form_dosen
         Me.Link_fbTextBox.Name = "Link_fbTextBox"
         Me.Link_fbTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Link_fbTextBox.TabIndex = 32
-        '
-        'WibsiteLabel
-        '
-        WibsiteLabel.AutoSize = True
-        WibsiteLabel.Location = New System.Drawing.Point(94, 171)
-        WibsiteLabel.Name = "WibsiteLabel"
-        WibsiteLabel.Size = New System.Drawing.Size(42, 13)
-        WibsiteLabel.TabIndex = 33
-        WibsiteLabel.Text = "wibsite:"
         '
         'WibsiteTextBox
         '
@@ -438,16 +448,6 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn7.HeaderText = "wibsite"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'DosenBindingSource
-        '
-        Me.DosenBindingSource.DataMember = "dosen"
-        Me.DosenBindingSource.DataSource = Me.Universitas_informatikaDataSet
-        '
-        'Universitas_informatikaDataSet
-        '
-        Me.Universitas_informatikaDataSet.DataSetName = "universitas_informatikaDataSet"
-        Me.Universitas_informatikaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'DosenTableAdapter
         '
         Me.DosenTableAdapter.ClearBeforeFill = True
@@ -467,7 +467,7 @@ Partial Class Form_dosen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(896, 261)
+        Me.ClientSize = New System.Drawing.Size(896, 318)
         Me.Controls.Add(Me.DosenDataGridView)
         Me.Controls.Add(Id_dosenLabel)
         Me.Controls.Add(Me.Id_dosenTextBox)
@@ -496,9 +496,9 @@ Partial Class Form_dosen
         CType(Me.DosenBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DosenBindingNavigator.ResumeLayout(False)
         Me.DosenBindingNavigator.PerformLayout()
-        CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
