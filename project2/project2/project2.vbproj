@@ -95,6 +95,12 @@
     <Compile Include="Form_mahasiswa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_mata_kuliah.Designer.vb">
+      <DependentUpon>Form_mata_kuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_mata_kuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_view_informasi.Designer.vb">
       <DependentUpon>Form_view_informasi.vb</DependentUpon>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_mahasiswa.resx">
       <DependentUpon>Form_mahasiswa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_mata_kuliah.resx">
+      <DependentUpon>Form_mata_kuliah.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_view_informasi.resx">
       <DependentUpon>Form_view_informasi.vb</DependentUpon>

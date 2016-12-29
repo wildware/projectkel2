@@ -28,6 +28,8 @@ Partial Class menu_awal
         Me.MasterDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DosenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddAndAditDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MahasiswaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MataKuliahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NilaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,8 +43,6 @@ Partial Class menu_awal
         Me.box_pass = New System.Windows.Forms.TextBox()
         Me.box_user = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.AddAndAditDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -86,6 +86,18 @@ Partial Class menu_awal
         Me.InformasiToolStripMenuItem.Name = "InformasiToolStripMenuItem"
         Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InformasiToolStripMenuItem.Text = "informasi"
+        '
+        'AddAndAditDataToolStripMenuItem
+        '
+        Me.AddAndAditDataToolStripMenuItem.Name = "AddAndAditDataToolStripMenuItem"
+        Me.AddAndAditDataToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.AddAndAditDataToolStripMenuItem.Text = "add and adit data"
+        '
+        'ViewDataToolStripMenuItem
+        '
+        Me.ViewDataToolStripMenuItem.Name = "ViewDataToolStripMenuItem"
+        Me.ViewDataToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.ViewDataToolStripMenuItem.Text = "view data"
         '
         'MahasiswaToolStripMenuItem
         '
@@ -189,18 +201,6 @@ Partial Class menu_awal
         '
         'Timer1
         '
-        '
-        'AddAndAditDataToolStripMenuItem
-        '
-        Me.AddAndAditDataToolStripMenuItem.Name = "AddAndAditDataToolStripMenuItem"
-        Me.AddAndAditDataToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.AddAndAditDataToolStripMenuItem.Text = "add and adit data"
-        '
-        'ViewDataToolStripMenuItem
-        '
-        Me.ViewDataToolStripMenuItem.Name = "ViewDataToolStripMenuItem"
-        Me.ViewDataToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.ViewDataToolStripMenuItem.Text = "view data"
         '
         'menu_awal
         '

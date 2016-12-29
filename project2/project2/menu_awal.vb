@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub MataKuliahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MataKuliahToolStripMenuItem.Click
-
+        Form_mata_kuliah.ShowDialog()
     End Sub
 
     Private Sub NilaiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NilaiToolStripMenuItem.Click
@@ -63,5 +63,9 @@
 
     Private Sub ViewDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewDataToolStripMenuItem.Click
         Form_view_informasi.ShowDialog()
+    End Sub
+
+    Private Sub MasterDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterDataToolStripMenuItem.Click
+
     End Sub
 End Class
