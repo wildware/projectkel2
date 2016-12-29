@@ -1,6 +1,6 @@
 ﻿Public Class Form_mata_kuliah
 
-    Private Sub Mata_kuliahBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Mata_kuliahBindingNavigatorSaveItem.Click
+    Private Sub Mata_kuliahBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.Mata_kuliahBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub Form_mata_kuliah_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.mata_kuliah' table. You can move, or remove it, as needed.
+        Me.Mata_kuliahTableAdapter.Fill(Me.Universitas_informatikaDataSet.mata_kuliah)
         'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.mata_kuliah' table. You can move, or remove it, as needed.
         Me.Mata_kuliahTableAdapter.Fill(Me.Universitas_informatikaDataSet.mata_kuliah)
 
@@ -96,5 +98,12 @@
 
     Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
         Me.Close()
+    End Sub
+
+    Private Sub Mata_kuliahBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Mata_kuliahBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Mata_kuliahBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
     End Sub
 End Class

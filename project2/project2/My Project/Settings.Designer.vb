@@ -74,6 +74,25 @@ Namespace My
                 Return CType(Me("universitas_informatikaConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=universitas_informatika")>  _
+        Public ReadOnly Property universitas_informatikaConnectionString1() As String
+            Get
+                Return CType(Me("universitas_informatikaConnectionString1"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("12/29/2016 00:25:21")>  _
+        Public ReadOnly Property timepicker() As Date
+            Get
+                Return CType(Me("timepicker"),Date)
+            End Get
+        End Property
     End Class
 End Namespace
 

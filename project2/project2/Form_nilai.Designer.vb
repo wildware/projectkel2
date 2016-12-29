@@ -225,14 +225,14 @@ Partial Class Form_nilai
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -240,7 +240,7 @@ Partial Class Form_nilai
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -249,13 +249,13 @@ Partial Class Form_nilai
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorAddNewItem
         '
@@ -272,7 +272,7 @@ Partial Class Form_nilai
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'NilaiBindingNavigatorSaveItem
@@ -280,13 +280,13 @@ Partial Class Form_nilai
         Me.NilaiBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.NilaiBindingNavigatorSaveItem.Image = CType(resources.GetObject("NilaiBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.NilaiBindingNavigatorSaveItem.Name = "NilaiBindingNavigatorSaveItem"
-        Me.NilaiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.NilaiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.NilaiBindingNavigatorSaveItem.Text = "Save Data"
         '
         'Id_nilaiLabel
         '
         Id_nilaiLabel.AutoSize = True
-        Id_nilaiLabel.Location = New System.Drawing.Point(91, 12)
+        Id_nilaiLabel.Location = New System.Drawing.Point(85, 12)
         Id_nilaiLabel.Name = "Id_nilaiLabel"
         Id_nilaiLabel.Size = New System.Drawing.Size(39, 13)
         Id_nilaiLabel.TabIndex = 42
@@ -295,8 +295,7 @@ Partial Class Form_nilai
         'Id_nilaiTextBox
         '
         Me.Id_nilaiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "id_nilai", True))
-        Me.Id_nilaiTextBox.Enabled = False
-        Me.Id_nilaiTextBox.Location = New System.Drawing.Point(224, 9)
+        Me.Id_nilaiTextBox.Location = New System.Drawing.Point(227, 9)
         Me.Id_nilaiTextBox.Name = "Id_nilaiTextBox"
         Me.Id_nilaiTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Id_nilaiTextBox.TabIndex = 43
@@ -304,7 +303,7 @@ Partial Class Form_nilai
         'PERSERTA_MK_id_pesertaLabel
         '
         PERSERTA_MK_id_pesertaLabel.AutoSize = True
-        PERSERTA_MK_id_pesertaLabel.Location = New System.Drawing.Point(82, 38)
+        PERSERTA_MK_id_pesertaLabel.Location = New System.Drawing.Point(85, 38)
         PERSERTA_MK_id_pesertaLabel.Name = "PERSERTA_MK_id_pesertaLabel"
         PERSERTA_MK_id_pesertaLabel.Size = New System.Drawing.Size(136, 13)
         PERSERTA_MK_id_pesertaLabel.TabIndex = 44
@@ -313,8 +312,7 @@ Partial Class Form_nilai
         'PERSERTA_MK_id_pesertaTextBox
         '
         Me.PERSERTA_MK_id_pesertaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "PERSERTA_MK_id_peserta", True))
-        Me.PERSERTA_MK_id_pesertaTextBox.Enabled = False
-        Me.PERSERTA_MK_id_pesertaTextBox.Location = New System.Drawing.Point(224, 35)
+        Me.PERSERTA_MK_id_pesertaTextBox.Location = New System.Drawing.Point(227, 35)
         Me.PERSERTA_MK_id_pesertaTextBox.Name = "PERSERTA_MK_id_pesertaTextBox"
         Me.PERSERTA_MK_id_pesertaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PERSERTA_MK_id_pesertaTextBox.TabIndex = 45
@@ -322,7 +320,7 @@ Partial Class Form_nilai
         'TugasLabel
         '
         TugasLabel.AutoSize = True
-        TugasLabel.Location = New System.Drawing.Point(82, 64)
+        TugasLabel.Location = New System.Drawing.Point(85, 64)
         TugasLabel.Name = "TugasLabel"
         TugasLabel.Size = New System.Drawing.Size(36, 13)
         TugasLabel.TabIndex = 46
@@ -331,8 +329,7 @@ Partial Class Form_nilai
         'TugasTextBox
         '
         Me.TugasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "tugas", True))
-        Me.TugasTextBox.Enabled = False
-        Me.TugasTextBox.Location = New System.Drawing.Point(224, 61)
+        Me.TugasTextBox.Location = New System.Drawing.Point(227, 61)
         Me.TugasTextBox.Name = "TugasTextBox"
         Me.TugasTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TugasTextBox.TabIndex = 47
@@ -340,7 +337,7 @@ Partial Class Form_nilai
         'UtsLabel
         '
         UtsLabel.AutoSize = True
-        UtsLabel.Location = New System.Drawing.Point(82, 90)
+        UtsLabel.Location = New System.Drawing.Point(85, 90)
         UtsLabel.Name = "UtsLabel"
         UtsLabel.Size = New System.Drawing.Size(24, 13)
         UtsLabel.TabIndex = 48
@@ -349,8 +346,7 @@ Partial Class Form_nilai
         'UtsTextBox
         '
         Me.UtsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "uts", True))
-        Me.UtsTextBox.Enabled = False
-        Me.UtsTextBox.Location = New System.Drawing.Point(224, 87)
+        Me.UtsTextBox.Location = New System.Drawing.Point(227, 87)
         Me.UtsTextBox.Name = "UtsTextBox"
         Me.UtsTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UtsTextBox.TabIndex = 49
@@ -358,7 +354,7 @@ Partial Class Form_nilai
         'UasLabel
         '
         UasLabel.AutoSize = True
-        UasLabel.Location = New System.Drawing.Point(82, 116)
+        UasLabel.Location = New System.Drawing.Point(85, 116)
         UasLabel.Name = "UasLabel"
         UasLabel.Size = New System.Drawing.Size(27, 13)
         UasLabel.TabIndex = 50
@@ -367,8 +363,7 @@ Partial Class Form_nilai
         'UasTextBox
         '
         Me.UasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "uas", True))
-        Me.UasTextBox.Enabled = False
-        Me.UasTextBox.Location = New System.Drawing.Point(224, 113)
+        Me.UasTextBox.Location = New System.Drawing.Point(227, 113)
         Me.UasTextBox.Name = "UasTextBox"
         Me.UasTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UasTextBox.TabIndex = 51
@@ -379,9 +374,9 @@ Partial Class Form_nilai
         Me.NilaiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NilaiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.NilaiDataGridView.DataSource = Me.NilaiBindingSource
-        Me.NilaiDataGridView.Location = New System.Drawing.Point(343, 7)
+        Me.NilaiDataGridView.Location = New System.Drawing.Point(333, 9)
         Me.NilaiDataGridView.Name = "NilaiDataGridView"
-        Me.NilaiDataGridView.Size = New System.Drawing.Size(476, 220)
+        Me.NilaiDataGridView.Size = New System.Drawing.Size(486, 220)
         Me.NilaiDataGridView.TabIndex = 51
         '
         'DataGridViewTextBoxColumn1

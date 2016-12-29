@@ -185,7 +185,7 @@ Partial Class Form_mata_kuliah
         Me.Mata_kuliahBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Mata_kuliahBindingNavigator.Name = "Mata_kuliahBindingNavigator"
         Me.Mata_kuliahBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Mata_kuliahBindingNavigator.Size = New System.Drawing.Size(896, 25)
+        Me.Mata_kuliahBindingNavigator.Size = New System.Drawing.Size(873, 25)
         Me.Mata_kuliahBindingNavigator.TabIndex = 28
         Me.Mata_kuliahBindingNavigator.Text = "BindingNavigator1"
         Me.Mata_kuliahBindingNavigator.Visible = False
@@ -225,14 +225,14 @@ Partial Class Form_mata_kuliah
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -240,7 +240,7 @@ Partial Class Form_mata_kuliah
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -249,13 +249,13 @@ Partial Class Form_mata_kuliah
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorAddNewItem
         '
@@ -272,7 +272,7 @@ Partial Class Form_mata_kuliah
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'Mata_kuliahBindingNavigatorSaveItem
@@ -280,13 +280,13 @@ Partial Class Form_mata_kuliah
         Me.Mata_kuliahBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.Mata_kuliahBindingNavigatorSaveItem.Image = CType(resources.GetObject("Mata_kuliahBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.Mata_kuliahBindingNavigatorSaveItem.Name = "Mata_kuliahBindingNavigatorSaveItem"
-        Me.Mata_kuliahBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.Mata_kuliahBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.Mata_kuliahBindingNavigatorSaveItem.Text = "Save Data"
         '
         'Id_matakuliahLabel
         '
         Id_matakuliahLabel.AutoSize = True
-        Id_matakuliahLabel.Location = New System.Drawing.Point(97, 18)
+        Id_matakuliahLabel.Location = New System.Drawing.Point(95, 15)
         Id_matakuliahLabel.Name = "Id_matakuliahLabel"
         Id_matakuliahLabel.Size = New System.Drawing.Size(72, 13)
         Id_matakuliahLabel.TabIndex = 28
@@ -295,8 +295,7 @@ Partial Class Form_mata_kuliah
         'Id_matakuliahTextBox
         '
         Me.Id_matakuliahTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Mata_kuliahBindingSource, "id_matakuliah", True))
-        Me.Id_matakuliahTextBox.Enabled = False
-        Me.Id_matakuliahTextBox.Location = New System.Drawing.Point(194, 15)
+        Me.Id_matakuliahTextBox.Location = New System.Drawing.Point(192, 12)
         Me.Id_matakuliahTextBox.Name = "Id_matakuliahTextBox"
         Me.Id_matakuliahTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Id_matakuliahTextBox.TabIndex = 29
@@ -304,7 +303,7 @@ Partial Class Form_mata_kuliah
         'DOSEN_id_dosenLabel
         '
         DOSEN_id_dosenLabel.AutoSize = True
-        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(97, 44)
+        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(95, 41)
         DOSEN_id_dosenLabel.Name = "DOSEN_id_dosenLabel"
         DOSEN_id_dosenLabel.Size = New System.Drawing.Size(91, 13)
         DOSEN_id_dosenLabel.TabIndex = 30
@@ -313,8 +312,7 @@ Partial Class Form_mata_kuliah
         'DOSEN_id_dosenTextBox
         '
         Me.DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Mata_kuliahBindingSource, "DOSEN_id_dosen", True))
-        Me.DOSEN_id_dosenTextBox.Enabled = False
-        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(194, 41)
+        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(192, 38)
         Me.DOSEN_id_dosenTextBox.Name = "DOSEN_id_dosenTextBox"
         Me.DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DOSEN_id_dosenTextBox.TabIndex = 31
@@ -322,7 +320,7 @@ Partial Class Form_mata_kuliah
         'SksLabel
         '
         SksLabel.AutoSize = True
-        SksLabel.Location = New System.Drawing.Point(97, 70)
+        SksLabel.Location = New System.Drawing.Point(95, 67)
         SksLabel.Name = "SksLabel"
         SksLabel.Size = New System.Drawing.Size(26, 13)
         SksLabel.TabIndex = 32
@@ -331,8 +329,7 @@ Partial Class Form_mata_kuliah
         'SksTextBox
         '
         Me.SksTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Mata_kuliahBindingSource, "sks", True))
-        Me.SksTextBox.Enabled = False
-        Me.SksTextBox.Location = New System.Drawing.Point(194, 67)
+        Me.SksTextBox.Location = New System.Drawing.Point(192, 64)
         Me.SksTextBox.Name = "SksTextBox"
         Me.SksTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SksTextBox.TabIndex = 33
@@ -340,7 +337,7 @@ Partial Class Form_mata_kuliah
         'MATA_KULIAHLabel
         '
         MATA_KULIAHLabel.AutoSize = True
-        MATA_KULIAHLabel.Location = New System.Drawing.Point(97, 96)
+        MATA_KULIAHLabel.Location = New System.Drawing.Point(95, 93)
         MATA_KULIAHLabel.Name = "MATA_KULIAHLabel"
         MATA_KULIAHLabel.Size = New System.Drawing.Size(82, 13)
         MATA_KULIAHLabel.TabIndex = 34
@@ -349,8 +346,7 @@ Partial Class Form_mata_kuliah
         'MATA_KULIAHTextBox
         '
         Me.MATA_KULIAHTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Mata_kuliahBindingSource, "MATA_KULIAH", True))
-        Me.MATA_KULIAHTextBox.Enabled = False
-        Me.MATA_KULIAHTextBox.Location = New System.Drawing.Point(194, 93)
+        Me.MATA_KULIAHTextBox.Location = New System.Drawing.Point(192, 90)
         Me.MATA_KULIAHTextBox.Name = "MATA_KULIAHTextBox"
         Me.MATA_KULIAHTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MATA_KULIAHTextBox.TabIndex = 35
@@ -358,7 +354,7 @@ Partial Class Form_mata_kuliah
         'KodeLabel
         '
         KodeLabel.AutoSize = True
-        KodeLabel.Location = New System.Drawing.Point(97, 122)
+        KodeLabel.Location = New System.Drawing.Point(95, 119)
         KodeLabel.Name = "KodeLabel"
         KodeLabel.Size = New System.Drawing.Size(34, 13)
         KodeLabel.TabIndex = 36
@@ -367,8 +363,7 @@ Partial Class Form_mata_kuliah
         'KodeTextBox
         '
         Me.KodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Mata_kuliahBindingSource, "kode", True))
-        Me.KodeTextBox.Enabled = False
-        Me.KodeTextBox.Location = New System.Drawing.Point(194, 119)
+        Me.KodeTextBox.Location = New System.Drawing.Point(192, 116)
         Me.KodeTextBox.Name = "KodeTextBox"
         Me.KodeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.KodeTextBox.TabIndex = 37
@@ -379,9 +374,9 @@ Partial Class Form_mata_kuliah
         Me.Mata_kuliahDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Mata_kuliahDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.Mata_kuliahDataGridView.DataSource = Me.Mata_kuliahBindingSource
-        Me.Mata_kuliahDataGridView.Location = New System.Drawing.Point(310, 15)
+        Me.Mata_kuliahDataGridView.Location = New System.Drawing.Point(307, 11)
         Me.Mata_kuliahDataGridView.Name = "Mata_kuliahDataGridView"
-        Me.Mata_kuliahDataGridView.Size = New System.Drawing.Size(543, 220)
+        Me.Mata_kuliahDataGridView.Size = New System.Drawing.Size(554, 220)
         Me.Mata_kuliahDataGridView.TabIndex = 37
         '
         'DataGridViewTextBoxColumn1

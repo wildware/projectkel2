@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2016 at 09:06 AM
+-- Generation Time: Dec 29, 2016 at 10:32 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `informasi` (
   `MATA_KULIAH_DOSEN_id_dosen` varchar(11) NOT NULL DEFAULT '0',
   `judul` varchar(45) DEFAULT NULL,
   `info` varchar(45) DEFAULT NULL,
-  `tanggal` date DEFAULT NULL,
+  `tanggal` datetime DEFAULT NULL,
   PRIMARY KEY (`id_informasi`,`DOSEN_id_dosen`,`MATA_KULIAH_id_matakuliah`,`MATA_KULIAH_DOSEN_id_dosen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `informasi` (
 --
 
 INSERT INTO `informasi` (`id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_matakuliah`, `MATA_KULIAH_DOSEN_id_dosen`, `judul`, `info`, `tanggal`) VALUES
-('5433', '234', '5', '234', 'keuangan', 'pudir2', '0000-00-00');
+('D234A', '234', 'D123A', '234', 'Pelaksanaan Uas', 'Akademik', '2016-12-29 01:30:53');
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `password` varchar(45) DEFAULT NULL,
   `nama_mahasiswa` varchar(45) DEFAULT NULL,
   `nim_mahasiswa` varchar(45) DEFAULT NULL,
-  `tgl_lahir_mhs` varchar(45) DEFAULT NULL,
+  `tgl_lahir_mhs` datetime DEFAULT NULL,
   `email_mhs` varchar(45) DEFAULT NULL,
   `alamat_mhs` varchar(45) DEFAULT NULL,
   `notelp_mhs` varchar(45) DEFAULT NULL,

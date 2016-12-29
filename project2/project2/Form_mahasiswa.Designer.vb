@@ -62,7 +62,7 @@ Partial Class Form_mahasiswa
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Nama_mahasiswaTextBox = New System.Windows.Forms.TextBox()
         Me.Nim_mahasiswaTextBox = New System.Windows.Forms.TextBox()
-        Me.Tgl_lahir_mhsTextBox = New System.Windows.Forms.TextBox()
+        Me.Tgl_lahir_mhsDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.Email_mhsTextBox = New System.Windows.Forms.TextBox()
         Me.Alamat_mhsTextBox = New System.Windows.Forms.TextBox()
         Me.Notelp_mhsTextBox = New System.Windows.Forms.TextBox()
@@ -302,7 +302,7 @@ Partial Class Form_mahasiswa
         'Id_mahasiswaLabel
         '
         Id_mahasiswaLabel.AutoSize = True
-        Id_mahasiswaLabel.Location = New System.Drawing.Point(103, 11)
+        Id_mahasiswaLabel.Location = New System.Drawing.Point(93, 19)
         Id_mahasiswaLabel.Name = "Id_mahasiswaLabel"
         Id_mahasiswaLabel.Size = New System.Drawing.Size(73, 13)
         Id_mahasiswaLabel.TabIndex = 35
@@ -311,15 +311,15 @@ Partial Class Form_mahasiswa
         'Id_mahasiswaTextBox
         '
         Me.Id_mahasiswaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "id_mahasiswa", True))
-        Me.Id_mahasiswaTextBox.Location = New System.Drawing.Point(200, 8)
+        Me.Id_mahasiswaTextBox.Location = New System.Drawing.Point(190, 16)
         Me.Id_mahasiswaTextBox.Name = "Id_mahasiswaTextBox"
-        Me.Id_mahasiswaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Id_mahasiswaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Id_mahasiswaTextBox.TabIndex = 36
         '
         'UsernameLabel
         '
         UsernameLabel.AutoSize = True
-        UsernameLabel.Location = New System.Drawing.Point(103, 37)
+        UsernameLabel.Location = New System.Drawing.Point(93, 45)
         UsernameLabel.Name = "UsernameLabel"
         UsernameLabel.Size = New System.Drawing.Size(56, 13)
         UsernameLabel.TabIndex = 37
@@ -328,15 +328,15 @@ Partial Class Form_mahasiswa
         'UsernameTextBox
         '
         Me.UsernameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "username", True))
-        Me.UsernameTextBox.Location = New System.Drawing.Point(200, 34)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(190, 42)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(200, 20)
         Me.UsernameTextBox.TabIndex = 38
         '
         'PasswordLabel
         '
         PasswordLabel.AutoSize = True
-        PasswordLabel.Location = New System.Drawing.Point(103, 63)
+        PasswordLabel.Location = New System.Drawing.Point(93, 71)
         PasswordLabel.Name = "PasswordLabel"
         PasswordLabel.Size = New System.Drawing.Size(55, 13)
         PasswordLabel.TabIndex = 39
@@ -345,15 +345,15 @@ Partial Class Form_mahasiswa
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "password", True))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(200, 60)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(190, 68)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(200, 20)
         Me.PasswordTextBox.TabIndex = 40
         '
         'Nama_mahasiswaLabel
         '
         Nama_mahasiswaLabel.AutoSize = True
-        Nama_mahasiswaLabel.Location = New System.Drawing.Point(103, 89)
+        Nama_mahasiswaLabel.Location = New System.Drawing.Point(93, 97)
         Nama_mahasiswaLabel.Name = "Nama_mahasiswaLabel"
         Nama_mahasiswaLabel.Size = New System.Drawing.Size(91, 13)
         Nama_mahasiswaLabel.TabIndex = 41
@@ -362,15 +362,15 @@ Partial Class Form_mahasiswa
         'Nama_mahasiswaTextBox
         '
         Me.Nama_mahasiswaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "nama_mahasiswa", True))
-        Me.Nama_mahasiswaTextBox.Location = New System.Drawing.Point(200, 86)
+        Me.Nama_mahasiswaTextBox.Location = New System.Drawing.Point(190, 94)
         Me.Nama_mahasiswaTextBox.Name = "Nama_mahasiswaTextBox"
-        Me.Nama_mahasiswaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Nama_mahasiswaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Nama_mahasiswaTextBox.TabIndex = 42
         '
         'Nim_mahasiswaLabel
         '
         Nim_mahasiswaLabel.AutoSize = True
-        Nim_mahasiswaLabel.Location = New System.Drawing.Point(103, 115)
+        Nim_mahasiswaLabel.Location = New System.Drawing.Point(93, 123)
         Nim_mahasiswaLabel.Name = "Nim_mahasiswaLabel"
         Nim_mahasiswaLabel.Size = New System.Drawing.Size(81, 13)
         Nim_mahasiswaLabel.TabIndex = 43
@@ -379,32 +379,32 @@ Partial Class Form_mahasiswa
         'Nim_mahasiswaTextBox
         '
         Me.Nim_mahasiswaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "nim_mahasiswa", True))
-        Me.Nim_mahasiswaTextBox.Location = New System.Drawing.Point(200, 112)
+        Me.Nim_mahasiswaTextBox.Location = New System.Drawing.Point(190, 120)
         Me.Nim_mahasiswaTextBox.Name = "Nim_mahasiswaTextBox"
-        Me.Nim_mahasiswaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Nim_mahasiswaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Nim_mahasiswaTextBox.TabIndex = 44
         '
         'Tgl_lahir_mhsLabel
         '
         Tgl_lahir_mhsLabel.AutoSize = True
-        Tgl_lahir_mhsLabel.Location = New System.Drawing.Point(103, 141)
+        Tgl_lahir_mhsLabel.Location = New System.Drawing.Point(93, 150)
         Tgl_lahir_mhsLabel.Name = "Tgl_lahir_mhsLabel"
         Tgl_lahir_mhsLabel.Size = New System.Drawing.Size(65, 13)
         Tgl_lahir_mhsLabel.TabIndex = 45
         Tgl_lahir_mhsLabel.Text = "tgl lahir mhs:"
         '
-        'Tgl_lahir_mhsTextBox
+        'Tgl_lahir_mhsDateTimePicker
         '
-        Me.Tgl_lahir_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "tgl_lahir_mhs", True))
-        Me.Tgl_lahir_mhsTextBox.Location = New System.Drawing.Point(200, 138)
-        Me.Tgl_lahir_mhsTextBox.Name = "Tgl_lahir_mhsTextBox"
-        Me.Tgl_lahir_mhsTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Tgl_lahir_mhsTextBox.TabIndex = 46
+        Me.Tgl_lahir_mhsDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MahasiswaBindingSource, "tgl_lahir_mhs", True))
+        Me.Tgl_lahir_mhsDateTimePicker.Location = New System.Drawing.Point(190, 146)
+        Me.Tgl_lahir_mhsDateTimePicker.Name = "Tgl_lahir_mhsDateTimePicker"
+        Me.Tgl_lahir_mhsDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Tgl_lahir_mhsDateTimePicker.TabIndex = 46
         '
         'Email_mhsLabel
         '
         Email_mhsLabel.AutoSize = True
-        Email_mhsLabel.Location = New System.Drawing.Point(103, 167)
+        Email_mhsLabel.Location = New System.Drawing.Point(93, 175)
         Email_mhsLabel.Name = "Email_mhsLabel"
         Email_mhsLabel.Size = New System.Drawing.Size(56, 13)
         Email_mhsLabel.TabIndex = 47
@@ -413,15 +413,15 @@ Partial Class Form_mahasiswa
         'Email_mhsTextBox
         '
         Me.Email_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "email_mhs", True))
-        Me.Email_mhsTextBox.Location = New System.Drawing.Point(200, 164)
+        Me.Email_mhsTextBox.Location = New System.Drawing.Point(190, 172)
         Me.Email_mhsTextBox.Name = "Email_mhsTextBox"
-        Me.Email_mhsTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Email_mhsTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Email_mhsTextBox.TabIndex = 48
         '
         'Alamat_mhsLabel
         '
         Alamat_mhsLabel.AutoSize = True
-        Alamat_mhsLabel.Location = New System.Drawing.Point(103, 193)
+        Alamat_mhsLabel.Location = New System.Drawing.Point(93, 201)
         Alamat_mhsLabel.Name = "Alamat_mhsLabel"
         Alamat_mhsLabel.Size = New System.Drawing.Size(63, 13)
         Alamat_mhsLabel.TabIndex = 49
@@ -430,15 +430,15 @@ Partial Class Form_mahasiswa
         'Alamat_mhsTextBox
         '
         Me.Alamat_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "alamat_mhs", True))
-        Me.Alamat_mhsTextBox.Location = New System.Drawing.Point(200, 190)
+        Me.Alamat_mhsTextBox.Location = New System.Drawing.Point(190, 198)
         Me.Alamat_mhsTextBox.Name = "Alamat_mhsTextBox"
-        Me.Alamat_mhsTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Alamat_mhsTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Alamat_mhsTextBox.TabIndex = 50
         '
         'Notelp_mhsLabel
         '
         Notelp_mhsLabel.AutoSize = True
-        Notelp_mhsLabel.Location = New System.Drawing.Point(103, 219)
+        Notelp_mhsLabel.Location = New System.Drawing.Point(93, 227)
         Notelp_mhsLabel.Name = "Notelp_mhsLabel"
         Notelp_mhsLabel.Size = New System.Drawing.Size(61, 13)
         Notelp_mhsLabel.TabIndex = 51
@@ -447,9 +447,9 @@ Partial Class Form_mahasiswa
         'Notelp_mhsTextBox
         '
         Me.Notelp_mhsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MahasiswaBindingSource, "notelp_mhs", True))
-        Me.Notelp_mhsTextBox.Location = New System.Drawing.Point(200, 216)
+        Me.Notelp_mhsTextBox.Location = New System.Drawing.Point(190, 224)
         Me.Notelp_mhsTextBox.Name = "Notelp_mhsTextBox"
-        Me.Notelp_mhsTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Notelp_mhsTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Notelp_mhsTextBox.TabIndex = 52
         '
         'MahasiswaDataGridView
@@ -458,9 +458,9 @@ Partial Class Form_mahasiswa
         Me.MahasiswaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MahasiswaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.MahasiswaDataGridView.DataSource = Me.MahasiswaBindingSource
-        Me.MahasiswaDataGridView.Location = New System.Drawing.Point(306, 8)
+        Me.MahasiswaDataGridView.Location = New System.Drawing.Point(405, 16)
         Me.MahasiswaDataGridView.Name = "MahasiswaDataGridView"
-        Me.MahasiswaDataGridView.Size = New System.Drawing.Size(571, 220)
+        Me.MahasiswaDataGridView.Size = New System.Drawing.Size(472, 220)
         Me.MahasiswaDataGridView.TabIndex = 52
         '
         'DataGridViewTextBoxColumn1
@@ -521,7 +521,7 @@ Partial Class Form_mahasiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(889, 294)
+        Me.ClientSize = New System.Drawing.Size(889, 324)
         Me.Controls.Add(Me.MahasiswaDataGridView)
         Me.Controls.Add(Id_mahasiswaLabel)
         Me.Controls.Add(Me.Id_mahasiswaTextBox)
@@ -534,7 +534,7 @@ Partial Class Form_mahasiswa
         Me.Controls.Add(Nim_mahasiswaLabel)
         Me.Controls.Add(Me.Nim_mahasiswaTextBox)
         Me.Controls.Add(Tgl_lahir_mhsLabel)
-        Me.Controls.Add(Me.Tgl_lahir_mhsTextBox)
+        Me.Controls.Add(Me.Tgl_lahir_mhsDateTimePicker)
         Me.Controls.Add(Email_mhsLabel)
         Me.Controls.Add(Me.Email_mhsTextBox)
         Me.Controls.Add(Alamat_mhsLabel)
@@ -590,7 +590,7 @@ Partial Class Form_mahasiswa
     Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Nama_mahasiswaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Nim_mahasiswaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Tgl_lahir_mhsTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Tgl_lahir_mhsDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Email_mhsTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Alamat_mhsTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Notelp_mhsTextBox As System.Windows.Forms.TextBox

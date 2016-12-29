@@ -1,6 +1,6 @@
 ﻿Public Class Form_mahasiswa
 
-    Private Sub MahasiswaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaBindingNavigatorSaveItem.Click
+    Private Sub MahasiswaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.MahasiswaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub Form_mahasiswa_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.mahasiswa' table. You can move, or remove it, as needed.
+        Me.MahasiswaTableAdapter.Fill(Me.Universitas_informatikaDataSet.mahasiswa)
         'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.mahasiswa' table. You can move, or remove it, as needed.
         Me.MahasiswaTableAdapter.Fill(Me.Universitas_informatikaDataSet.mahasiswa)
 
@@ -26,7 +28,7 @@
         PasswordTextBox.Enabled = True
         Nama_mahasiswaTextBox.Enabled = True
         Nim_mahasiswaTextBox.Enabled = True
-        Tgl_lahir_mhsTextBox.Enabled = True
+        Tgl_lahir_mhsDateTimePicker.Enabled = True
         Email_mhsTextBox.Enabled = True
         Alamat_mhsTextBox.Enabled = True
         Notelp_mhsTextBox.Enabled = True
@@ -47,7 +49,7 @@
         PasswordTextBox.Enabled = True
         Nama_mahasiswaTextBox.Enabled = True
         Nim_mahasiswaTextBox.Enabled = True
-        Tgl_lahir_mhsTextBox.Enabled = True
+        Tgl_lahir_mhsDateTimePicker.Enabled = True
         Email_mhsTextBox.Enabled = True
         Alamat_mhsTextBox.Enabled = True
         Notelp_mhsTextBox.Enabled = True
@@ -83,7 +85,7 @@
         PasswordTextBox.Enabled = True
         Nama_mahasiswaTextBox.Enabled = True
         Nim_mahasiswaTextBox.Enabled = True
-        Tgl_lahir_mhsTextBox.Enabled = True
+        Tgl_lahir_mhsDateTimePicker.Enabled = True
         Email_mhsTextBox.Enabled = True
         Alamat_mhsTextBox.Enabled = True
         Notelp_mhsTextBox.Enabled = True
@@ -102,7 +104,7 @@
         PasswordTextBox.Enabled = True
         Nama_mahasiswaTextBox.Enabled = True
         Nim_mahasiswaTextBox.Enabled = True
-        Tgl_lahir_mhsTextBox.Enabled = True
+        Tgl_lahir_mhsDateTimePicker.Enabled = True
         Email_mhsTextBox.Enabled = True
         Alamat_mhsTextBox.Enabled = True
         Notelp_mhsTextBox.Enabled = True
@@ -116,5 +118,12 @@
 
     Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
         Me.MahasiswaTableAdapter.Fill(Me.Universitas_informatikaDataSet.mahasiswa)
+    End Sub
+
+    Private Sub MahasiswaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.MahasiswaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
     End Sub
 End Class

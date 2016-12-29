@@ -1,6 +1,6 @@
 ﻿Public Class Form_informasi
 
-    Private Sub InformasiBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InformasiBindingNavigatorSaveItem.Click
+    Private Sub InformasiBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.InformasiBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
@@ -10,7 +10,8 @@
     Private Sub Form_informasi_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.informasi' table. You can move, or remove it, as needed.
         Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
-
+        'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.informasi' table. You can move, or remove it, as needed.
+        Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
     End Sub
 
     Private Sub add_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles add_butt.Click
@@ -29,6 +30,8 @@
         JudulTextBox.Enabled = True
         InfoTextBox.Enabled = True
         TanggalDateTimePicker.Enabled = True
+
+        InformasiBindingSource.AddNew()
 
     End Sub
 
@@ -99,5 +102,44 @@
 
     Private Sub refresh_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_butt.Click
         Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
+    End Sub
+
+    Private Sub InformasiBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.InformasiBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
+    End Sub
+
+    Private Sub InformasiBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.InformasiBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
+    End Sub
+
+    Private Sub InformasiBindingNavigatorSaveItem_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.InformasiBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
+    End Sub
+
+    Private Sub InformasiBindingNavigatorSaveItem_Click_4(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.InformasiBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
+    End Sub
+
+    Private Sub InformasiDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub InformasiBindingNavigatorSaveItem_Click_5(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InformasiBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.InformasiBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
     End Sub
 End Class

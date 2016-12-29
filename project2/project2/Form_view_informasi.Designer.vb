@@ -49,8 +49,10 @@ Partial Class Form_view_informasi
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.cari_but = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.refresh_but = New System.Windows.Forms.Button()
+        Me.Keluar_but = New System.Windows.Forms.Button()
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +99,7 @@ Partial Class Form_view_informasi
         Me.InformasiBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.InformasiBindingNavigator.Name = "InformasiBindingNavigator"
         Me.InformasiBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.InformasiBindingNavigator.Size = New System.Drawing.Size(847, 25)
+        Me.InformasiBindingNavigator.Size = New System.Drawing.Size(811, 25)
         Me.InformasiBindingNavigator.TabIndex = 0
         Me.InformasiBindingNavigator.Text = "BindingNavigator1"
         Me.InformasiBindingNavigator.Visible = False
@@ -201,9 +203,9 @@ Partial Class Form_view_informasi
         Me.InformasiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InformasiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.InformasiDataGridView.DataSource = Me.InformasiBindingSource
-        Me.InformasiDataGridView.Location = New System.Drawing.Point(37, 59)
+        Me.InformasiDataGridView.Location = New System.Drawing.Point(27, 42)
         Me.InformasiDataGridView.Name = "InformasiDataGridView"
-        Me.InformasiDataGridView.Size = New System.Drawing.Size(779, 220)
+        Me.InformasiDataGridView.Size = New System.Drawing.Size(754, 266)
         Me.InformasiDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -248,34 +250,53 @@ Partial Class Form_view_informasi
         Me.DataGridViewTextBoxColumn7.HeaderText = "tanggal"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(43, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(335, 20)
-        Me.TextBox1.TabIndex = 2
-        '
         'cari_but
         '
-        Me.cari_but.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cari_but.Location = New System.Drawing.Point(384, 12)
+        Me.cari_but.Location = New System.Drawing.Point(319, 15)
         Me.cari_but.Name = "cari_but"
-        Me.cari_but.Size = New System.Drawing.Size(75, 23)
-        Me.cari_but.TabIndex = 3
+        Me.cari_but.Size = New System.Drawing.Size(75, 22)
+        Me.cari_but.TabIndex = 2
         Me.cari_but.Text = "Cari"
         Me.cari_but.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(45, 15)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(268, 20)
+        Me.TextBox1.TabIndex = 3
+        '
+        'refresh_but
+        '
+        Me.refresh_but.Location = New System.Drawing.Point(400, 15)
+        Me.refresh_but.Name = "refresh_but"
+        Me.refresh_but.Size = New System.Drawing.Size(75, 22)
+        Me.refresh_but.TabIndex = 4
+        Me.refresh_but.Text = "Refresh"
+        Me.refresh_but.UseVisualStyleBackColor = True
+        '
+        'Keluar_but
+        '
+        Me.Keluar_but.Location = New System.Drawing.Point(481, 15)
+        Me.Keluar_but.Name = "Keluar_but"
+        Me.Keluar_but.Size = New System.Drawing.Size(75, 23)
+        Me.Keluar_but.TabIndex = 5
+        Me.Keluar_but.Text = "Keluar"
+        Me.Keluar_but.UseVisualStyleBackColor = True
         '
         'Form_view_informasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(847, 304)
-        Me.Controls.Add(Me.cari_but)
+        Me.ClientSize = New System.Drawing.Size(811, 322)
+        Me.Controls.Add(Me.Keluar_but)
+        Me.Controls.Add(Me.refresh_but)
         Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cari_but)
         Me.Controls.Add(Me.InformasiDataGridView)
         Me.Controls.Add(Me.InformasiBindingNavigator)
         Me.Name = "Form_view_informasi"
-        Me.Text = " "
+        Me.Text = "Form_view_informasi"
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -311,6 +332,8 @@ Partial Class Form_view_informasi
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents cari_but As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents refresh_but As System.Windows.Forms.Button
+    Friend WithEvents Keluar_but As System.Windows.Forms.Button
 End Class

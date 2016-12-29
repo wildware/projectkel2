@@ -8,7 +8,7 @@
 
     End Sub
 
-    Private Sub DosenBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenBindingNavigatorSaveItem.Click
+    Private Sub DosenBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.DosenBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
@@ -16,6 +16,8 @@
     End Sub
 
     Private Sub Form_dosen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.dosen' table. You can move, or remove it, as needed.
+        Me.DosenTableAdapter.Fill(Me.Universitas_informatikaDataSet.dosen)
         'TODO: This line of code loads data into the 'Universitas_informatikaDataSet.dosen' table. You can move, or remove it, as needed.
         Me.DosenTableAdapter.Fill(Me.Universitas_informatikaDataSet.dosen)
 
@@ -107,5 +109,12 @@
 
     Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
         Me.Close()
+    End Sub
+
+    Private Sub DosenBindingNavigatorSaveItem_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.DosenBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
+
     End Sub
 End Class

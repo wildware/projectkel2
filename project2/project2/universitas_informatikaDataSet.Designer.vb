@@ -1313,7 +1313,7 @@ Partial Public Class universitas_informatikaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddmahasiswaRow(ByVal id_mahasiswa As String, ByVal username As String, ByVal password As String, ByVal nama_mahasiswa As String, ByVal nim_mahasiswa As String, ByVal tgl_lahir_mhs As String, ByVal email_mhs As String, ByVal alamat_mhs As String, ByVal notelp_mhs As String) As mahasiswaRow
+        Public Overloads Function AddmahasiswaRow(ByVal id_mahasiswa As String, ByVal username As String, ByVal password As String, ByVal nama_mahasiswa As String, ByVal nim_mahasiswa As String, ByVal tgl_lahir_mhs As Date, ByVal email_mhs As String, ByVal alamat_mhs As String, ByVal notelp_mhs As String) As mahasiswaRow
             Dim rowmahasiswaRow As mahasiswaRow = CType(Me.NewRow,mahasiswaRow)
             Dim columnValuesArray() As Object = New Object() {id_mahasiswa, username, password, nama_mahasiswa, nim_mahasiswa, tgl_lahir_mhs, email_mhs, alamat_mhs, notelp_mhs}
             rowmahasiswaRow.ItemArray = columnValuesArray
@@ -1368,7 +1368,7 @@ Partial Public Class universitas_informatikaDataSet
             MyBase.Columns.Add(Me.columnnama_mahasiswa)
             Me.columnnim_mahasiswa = New Global.System.Data.DataColumn("nim_mahasiswa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnim_mahasiswa)
-            Me.columntgl_lahir_mhs = New Global.System.Data.DataColumn("tgl_lahir_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntgl_lahir_mhs = New Global.System.Data.DataColumn("tgl_lahir_mhs", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntgl_lahir_mhs)
             Me.columnemail_mhs = New Global.System.Data.DataColumn("email_mhs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemail_mhs)
@@ -1384,7 +1384,6 @@ Partial Public Class universitas_informatikaDataSet
             Me.columnpassword.MaxLength = 45
             Me.columnnama_mahasiswa.MaxLength = 45
             Me.columnnim_mahasiswa.MaxLength = 45
-            Me.columntgl_lahir_mhs.MaxLength = 45
             Me.columnemail_mhs.MaxLength = 45
             Me.columnalamat_mhs.MaxLength = 45
             Me.columnnotelp_mhs.MaxLength = 45
@@ -2892,10 +2891,10 @@ Partial Public Class universitas_informatikaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property tgl_lahir_mhs() As String
+        Public Property tgl_lahir_mhs() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tablemahasiswa.tgl_lahir_mhsColumn),String)
+                    Return CType(Me(Me.tablemahasiswa.tgl_lahir_mhsColumn),Date)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'tgl_lahir_mhs' in table 'mahasiswa' is DBNull.", e)
                 End Try
@@ -4058,7 +4057,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4577,8 +4576,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p10"
-            param.DbType = Global.System.Data.DbType.[Date]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tanggal"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
@@ -4633,8 +4632,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
-            param.DbType = Global.System.Data.DbType.[Date]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tanggal"
             Me._adapter.InsertCommand.Parameters.Add(param)
@@ -4692,8 +4691,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
-            param.DbType = Global.System.Data.DbType.[Date]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tanggal"
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -4774,8 +4773,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p17"
-            param.DbType = Global.System.Data.DbType.[Date]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tanggal"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
@@ -4786,7 +4785,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4795,14 +4794,14 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(1) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id_informasi, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah, MATA_KULIAH_DOSEN"& _ 
-                "_id_dosen, judul, info, tanggal FROM informasi"
+            Me._commandCollection(0).CommandText = "SELECT `id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_matakuliah`, `MATA_KULIA"& _ 
+                "H_DOSEN_id_dosen`, `judul`, `info`, `tanggal` FROM `informasi`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT id_informasi, DOSEN_id_dosen, MATA_KULIAH_id_matakuliah, MATA_KULIAH_DOSEN"& _ 
-                "_id_dosen, judul, info, tanggal FROM informasi"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_informasi like @cari or"& _ 
-                " judul like @cari"
+            Me._commandCollection(1).CommandText = "SELECT `id_informasi`, `DOSEN_id_dosen`, `MATA_KULIAH_id_matakuliah`, `MATA_KULIA"& _ 
+                "H_DOSEN_id_dosen`, `judul`, `info`,`tanggal` FROM `informasi`"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_informas"& _ 
+                "i like @cari or judul like @cari"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@cari"
@@ -5340,8 +5339,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p11"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tgl_lahir_mhs"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
@@ -5440,8 +5439,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tgl_lahir_mhs"
             Me._adapter.InsertCommand.Parameters.Add(param)
@@ -5516,8 +5515,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tgl_lahir_mhs"
             Me._adapter.UpdateCommand.Parameters.Add(param)
@@ -5629,8 +5628,8 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p20"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "tgl_lahir_mhs"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
@@ -5692,7 +5691,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5762,7 +5761,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As String, ByVal p3 As String, ByVal p5 As String, ByVal p7 As String, ByVal p9 As String, ByVal p11 As String, ByVal p13 As String, ByVal p15 As String, ByVal p17 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As String, ByVal p3 As String, ByVal p5 As String, ByVal p7 As String, ByVal p9 As String, ByVal p11 As Global.System.Nullable(Of Date), ByVal p13 As String, ByVal p15 As String, ByVal p17 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
@@ -5796,12 +5795,12 @@ Namespace universitas_informatikaDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = CType(p9,String)
             End If
-            If (p11 Is Nothing) Then
+            If (p11.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(p11.Value,Date)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(p11,String)
             End If
             If (p13 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
@@ -5843,7 +5842,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String, ByVal p9 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As Global.System.Nullable(Of Date), ByVal p7 As String, ByVal p8 As String, ByVal p9 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
@@ -5869,10 +5868,10 @@ Namespace universitas_informatikaDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5,String)
             End If
-            If (p6 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            If (p6.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6.Value,Date)
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
             If (p7 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
@@ -5914,7 +5913,7 @@ Namespace universitas_informatikaDataSetTableAdapters
                     ByVal p3 As String,  _
                     ByVal p4 As String,  _
                     ByVal p5 As String,  _
-                    ByVal p6 As String,  _
+                    ByVal p6 As Global.System.Nullable(Of Date),  _
                     ByVal p7 As String,  _
                     ByVal p8 As String,  _
                     ByVal p9 As String,  _
@@ -5923,7 +5922,7 @@ Namespace universitas_informatikaDataSetTableAdapters
                     ByVal p14 As String,  _
                     ByVal p16 As String,  _
                     ByVal p18 As String,  _
-                    ByVal p20 As String,  _
+                    ByVal p20 As Global.System.Nullable(Of Date),  _
                     ByVal p22 As String,  _
                     ByVal p24 As String,  _
                     ByVal p26 As String) As Integer
@@ -5952,10 +5951,10 @@ Namespace universitas_informatikaDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,String)
             End If
-            If (p6 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            If (p6.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
             If (p7 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
@@ -6005,12 +6004,12 @@ Namespace universitas_informatikaDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(p18,String)
             End If
-            If (p20 Is Nothing) Then
+            If (p20.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(p20.Value,Date)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(p20,String)
             End If
             If (p22 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
@@ -6057,7 +6056,7 @@ Namespace universitas_informatikaDataSetTableAdapters
                     ByVal p3 As String,  _
                     ByVal p4 As String,  _
                     ByVal p5 As String,  _
-                    ByVal p6 As String,  _
+                    ByVal p6 As Global.System.Nullable(Of Date),  _
                     ByVal p7 As String,  _
                     ByVal p8 As String,  _
                     ByVal p9 As String,  _
@@ -6066,7 +6065,7 @@ Namespace universitas_informatikaDataSetTableAdapters
                     ByVal p14 As String,  _
                     ByVal p16 As String,  _
                     ByVal p18 As String,  _
-                    ByVal p20 As String,  _
+                    ByVal p20 As Global.System.Nullable(Of Date),  _
                     ByVal p22 As String,  _
                     ByVal p24 As String,  _
                     ByVal p26 As String) As Integer
@@ -6437,7 +6436,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7046,7 +7045,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7601,7 +7600,7 @@ Namespace universitas_informatikaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString
+            Me._connection.ConnectionString = Global.project2.My.MySettings.Default.universitas_informatikaConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

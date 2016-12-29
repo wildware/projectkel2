@@ -20,4 +20,12 @@
     Private Sub cari_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cari_but.Click
         InformasiTableAdapter.cariquery(Universitas_informatikaDataSet.informasi, "&" & TextBox1.Text & "%")
     End Sub
+
+    Private Sub refresh_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_but.Click
+        Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
+    End Sub
+
+    Private Sub Keluar_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Keluar_but.Click
+        Me.Close()
+    End Sub
 End Class
