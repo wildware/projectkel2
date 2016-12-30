@@ -52,7 +52,8 @@ Partial Class Form_view_informasi
         Me.cari_but = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.refresh_but = New System.Windows.Forms.Button()
-        Me.Keluar_but = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.exit_butt = New System.Windows.Forms.Button()
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,12 +201,16 @@ Partial Class Form_view_informasi
         'InformasiDataGridView
         '
         Me.InformasiDataGridView.AutoGenerateColumns = False
+        Me.InformasiDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.InformasiDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.InformasiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InformasiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.InformasiDataGridView.DataSource = Me.InformasiBindingSource
-        Me.InformasiDataGridView.Location = New System.Drawing.Point(27, 42)
+        Me.InformasiDataGridView.GridColor = System.Drawing.Color.Gray
+        Me.InformasiDataGridView.Location = New System.Drawing.Point(33, 108)
         Me.InformasiDataGridView.Name = "InformasiDataGridView"
-        Me.InformasiDataGridView.Size = New System.Drawing.Size(754, 266)
+        Me.InformasiDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.InformasiDataGridView.Size = New System.Drawing.Size(745, 266)
         Me.InformasiDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -252,7 +257,7 @@ Partial Class Form_view_informasi
         '
         'cari_but
         '
-        Me.cari_but.Location = New System.Drawing.Point(319, 15)
+        Me.cari_but.Location = New System.Drawing.Point(317, 79)
         Me.cari_but.Name = "cari_but"
         Me.cari_but.Size = New System.Drawing.Size(75, 22)
         Me.cari_but.TabIndex = 2
@@ -261,42 +266,65 @@ Partial Class Form_view_informasi
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(45, 15)
+        Me.TextBox1.Location = New System.Drawing.Point(43, 79)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(268, 20)
         Me.TextBox1.TabIndex = 3
         '
         'refresh_but
         '
-        Me.refresh_but.Location = New System.Drawing.Point(400, 15)
+        Me.refresh_but.Location = New System.Drawing.Point(398, 79)
         Me.refresh_but.Name = "refresh_but"
         Me.refresh_but.Size = New System.Drawing.Size(75, 22)
         Me.refresh_but.TabIndex = 4
         Me.refresh_but.Text = "Refresh"
         Me.refresh_but.UseVisualStyleBackColor = True
         '
-        'Keluar_but
+        'Label1
         '
-        Me.Keluar_but.Location = New System.Drawing.Point(481, 15)
-        Me.Keluar_but.Name = "Keluar_but"
-        Me.Keluar_but.Size = New System.Drawing.Size(75, 23)
-        Me.Keluar_but.TabIndex = 5
-        Me.Keluar_but.Text = "Keluar"
-        Me.Keluar_but.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label1.Location = New System.Drawing.Point(328, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(158, 38)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "View And Search Data" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Informasi"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'exit_butt
+        '
+        Me.exit_butt.Cursor = System.Windows.Forms.Cursors.Default
+        Me.exit_butt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exit_butt.ForeColor = System.Drawing.Color.Red
+        Me.exit_butt.Location = New System.Drawing.Point(767, -6)
+        Me.exit_butt.Name = "exit_butt"
+        Me.exit_butt.Size = New System.Drawing.Size(46, 35)
+        Me.exit_butt.TabIndex = 28
+        Me.exit_butt.Text = "X"
+        Me.exit_butt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.exit_butt.UseVisualStyleBackColor = True
         '
         'Form_view_informasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(811, 322)
-        Me.Controls.Add(Me.Keluar_but)
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.ClientSize = New System.Drawing.Size(811, 389)
+        Me.Controls.Add(Me.exit_butt)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.refresh_but)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.cari_but)
         Me.Controls.Add(Me.InformasiDataGridView)
         Me.Controls.Add(Me.InformasiBindingNavigator)
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form_view_informasi"
-        Me.Text = "Form_view_informasi"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -335,5 +363,6 @@ Partial Class Form_view_informasi
     Friend WithEvents cari_but As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents refresh_but As System.Windows.Forms.Button
-    Friend WithEvents Keluar_but As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents exit_butt As System.Windows.Forms.Button
 End Class

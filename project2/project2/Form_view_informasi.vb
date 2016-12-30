@@ -25,7 +25,11 @@
         Me.InformasiTableAdapter.Fill(Me.Universitas_informatikaDataSet.informasi)
     End Sub
 
-    Private Sub Keluar_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Keluar_but.Click
+    Private Sub Keluar_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Close()
+    End Sub
+
+    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
         Me.Close()
     End Sub
 End Class

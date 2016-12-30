@@ -23,7 +23,6 @@ Partial Class Form_informasi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_informasi))
         Dim Id_informasiLabel As System.Windows.Forms.Label
         Dim DOSEN_id_dosenLabel As System.Windows.Forms.Label
         Dim MATA_KULIAH_id_matakuliahLabel As System.Windows.Forms.Label
@@ -31,6 +30,7 @@ Partial Class Form_informasi
         Dim JudulLabel As System.Windows.Forms.Label
         Dim InfoLabel As System.Windows.Forms.Label
         Dim TanggalLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_informasi))
         Me.exit_butt = New System.Windows.Forms.Button()
         Me.refresh_butt = New System.Windows.Forms.Button()
         Me.cancel_butt = New System.Windows.Forms.Button()
@@ -43,17 +43,17 @@ Partial Class Form_informasi
         Me.InformasiTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.informasiTableAdapter()
         Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Me.InformasiBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.InformasiBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.InformasiDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,6 +70,7 @@ Partial Class Form_informasi
         Me.JudulTextBox = New System.Windows.Forms.TextBox()
         Me.InfoTextBox = New System.Windows.Forms.TextBox()
         Me.TanggalDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
         Id_informasiLabel = New System.Windows.Forms.Label()
         DOSEN_id_dosenLabel = New System.Windows.Forms.Label()
         MATA_KULIAH_id_matakuliahLabel = New System.Windows.Forms.Label()
@@ -84,30 +85,110 @@ Partial Class Form_informasi
         CType(Me.InformasiDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Id_informasiLabel
+        '
+        Id_informasiLabel.AutoSize = True
+        Id_informasiLabel.BackColor = System.Drawing.SystemColors.Window
+        Id_informasiLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Id_informasiLabel.Location = New System.Drawing.Point(225, 345)
+        Id_informasiLabel.Name = "Id_informasiLabel"
+        Id_informasiLabel.Size = New System.Drawing.Size(87, 15)
+        Id_informasiLabel.TabIndex = 28
+        Id_informasiLabel.Text = "id informasi:"
+        '
+        'DOSEN_id_dosenLabel
+        '
+        DOSEN_id_dosenLabel.AutoSize = True
+        DOSEN_id_dosenLabel.BackColor = System.Drawing.SystemColors.Window
+        DOSEN_id_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(225, 371)
+        DOSEN_id_dosenLabel.Name = "DOSEN_id_dosenLabel"
+        DOSEN_id_dosenLabel.Size = New System.Drawing.Size(118, 15)
+        DOSEN_id_dosenLabel.TabIndex = 30
+        DOSEN_id_dosenLabel.Text = "DOSEN id dosen:"
+        '
+        'MATA_KULIAH_id_matakuliahLabel
+        '
+        MATA_KULIAH_id_matakuliahLabel.AutoSize = True
+        MATA_KULIAH_id_matakuliahLabel.BackColor = System.Drawing.SystemColors.Window
+        MATA_KULIAH_id_matakuliahLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        MATA_KULIAH_id_matakuliahLabel.Location = New System.Drawing.Point(225, 397)
+        MATA_KULIAH_id_matakuliahLabel.Name = "MATA_KULIAH_id_matakuliahLabel"
+        MATA_KULIAH_id_matakuliahLabel.Size = New System.Drawing.Size(191, 15)
+        MATA_KULIAH_id_matakuliahLabel.TabIndex = 32
+        MATA_KULIAH_id_matakuliahLabel.Text = "MATA KULIAH id matakuliah:"
+        '
+        'MATA_KULIAH_DOSEN_id_dosenLabel
+        '
+        MATA_KULIAH_DOSEN_id_dosenLabel.AutoSize = True
+        MATA_KULIAH_DOSEN_id_dosenLabel.BackColor = System.Drawing.SystemColors.Window
+        MATA_KULIAH_DOSEN_id_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        MATA_KULIAH_DOSEN_id_dosenLabel.Location = New System.Drawing.Point(225, 423)
+        MATA_KULIAH_DOSEN_id_dosenLabel.Name = "MATA_KULIAH_DOSEN_id_dosenLabel"
+        MATA_KULIAH_DOSEN_id_dosenLabel.Size = New System.Drawing.Size(211, 15)
+        MATA_KULIAH_DOSEN_id_dosenLabel.TabIndex = 34
+        MATA_KULIAH_DOSEN_id_dosenLabel.Text = "MATA KULIAH DOSEN id dosen:"
+        '
+        'JudulLabel
+        '
+        JudulLabel.AutoSize = True
+        JudulLabel.BackColor = System.Drawing.SystemColors.Window
+        JudulLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        JudulLabel.Location = New System.Drawing.Point(225, 449)
+        JudulLabel.Name = "JudulLabel"
+        JudulLabel.Size = New System.Drawing.Size(43, 15)
+        JudulLabel.TabIndex = 36
+        JudulLabel.Text = "judul:"
+        '
+        'InfoLabel
+        '
+        InfoLabel.AutoSize = True
+        InfoLabel.BackColor = System.Drawing.SystemColors.Window
+        InfoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        InfoLabel.Location = New System.Drawing.Point(225, 475)
+        InfoLabel.Name = "InfoLabel"
+        InfoLabel.Size = New System.Drawing.Size(35, 15)
+        InfoLabel.TabIndex = 38
+        InfoLabel.Text = "info:"
+        '
+        'TanggalLabel
+        '
+        TanggalLabel.AutoSize = True
+        TanggalLabel.BackColor = System.Drawing.SystemColors.Window
+        TanggalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TanggalLabel.Location = New System.Drawing.Point(225, 502)
+        TanggalLabel.Name = "TanggalLabel"
+        TanggalLabel.Size = New System.Drawing.Size(59, 15)
+        TanggalLabel.TabIndex = 40
+        TanggalLabel.Text = "tanggal:"
+        '
         'exit_butt
         '
-        Me.exit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.exit_butt.Location = New System.Drawing.Point(12, 186)
+        Me.exit_butt.Cursor = System.Windows.Forms.Cursors.Default
+        Me.exit_butt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exit_butt.ForeColor = System.Drawing.Color.Red
+        Me.exit_butt.Location = New System.Drawing.Point(818, -2)
         Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(75, 23)
+        Me.exit_butt.Size = New System.Drawing.Size(43, 38)
         Me.exit_butt.TabIndex = 27
-        Me.exit_butt.Text = "exit"
+        Me.exit_butt.Text = "X"
+        Me.exit_butt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.exit_butt.UseVisualStyleBackColor = True
         '
         'refresh_butt
         '
-        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(12, 157)
+        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.refresh_butt.Location = New System.Drawing.Point(68, 77)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 26
-        Me.refresh_butt.Text = "refresh"
+        Me.refresh_butt.Text = "Refresh"
         Me.refresh_butt.UseVisualStyleBackColor = True
         '
         'cancel_butt
         '
-        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cancel_butt.Location = New System.Drawing.Point(12, 128)
+        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cancel_butt.Location = New System.Drawing.Point(123, 479)
         Me.cancel_butt.Name = "cancel_butt"
         Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
         Me.cancel_butt.TabIndex = 25
@@ -116,8 +197,8 @@ Partial Class Form_informasi
         '
         'save_butt
         '
-        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save_butt.Location = New System.Drawing.Point(12, 99)
+        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.save_butt.Location = New System.Drawing.Point(123, 450)
         Me.save_butt.Name = "save_butt"
         Me.save_butt.Size = New System.Drawing.Size(75, 23)
         Me.save_butt.TabIndex = 24
@@ -126,8 +207,8 @@ Partial Class Form_informasi
         '
         'delete_butt
         '
-        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete_butt.Location = New System.Drawing.Point(12, 70)
+        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.delete_butt.Location = New System.Drawing.Point(123, 421)
         Me.delete_butt.Name = "delete_butt"
         Me.delete_butt.Size = New System.Drawing.Size(75, 23)
         Me.delete_butt.TabIndex = 23
@@ -136,8 +217,8 @@ Partial Class Form_informasi
         '
         'edit_butt
         '
-        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit_butt.Location = New System.Drawing.Point(12, 41)
+        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit_butt.Location = New System.Drawing.Point(123, 392)
         Me.edit_butt.Name = "edit_butt"
         Me.edit_butt.Size = New System.Drawing.Size(75, 23)
         Me.edit_butt.TabIndex = 22
@@ -146,8 +227,8 @@ Partial Class Form_informasi
         '
         'add_butt
         '
-        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_butt.Location = New System.Drawing.Point(12, 12)
+        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add_butt.Location = New System.Drawing.Point(123, 363)
         Me.add_butt.Name = "add_butt"
         Me.add_butt.Size = New System.Drawing.Size(75, 23)
         Me.add_butt.TabIndex = 21
@@ -198,6 +279,31 @@ Partial Class Form_informasi
         Me.InformasiBindingNavigator.Text = "BindingNavigator1"
         Me.InformasiBindingNavigator.Visible = False
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -230,17 +336,10 @@ Partial Class Form_informasi
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -248,7 +347,7 @@ Partial Class Form_informasi
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -257,49 +356,33 @@ Partial Class Form_informasi
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'InformasiBindingNavigatorSaveItem
         '
         Me.InformasiBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.InformasiBindingNavigatorSaveItem.Image = CType(resources.GetObject("InformasiBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.InformasiBindingNavigatorSaveItem.Name = "InformasiBindingNavigatorSaveItem"
-        Me.InformasiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.InformasiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.InformasiBindingNavigatorSaveItem.Text = "Save Data"
         '
         'InformasiDataGridView
         '
         Me.InformasiDataGridView.AutoGenerateColumns = False
+        Me.InformasiDataGridView.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.InformasiDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.InformasiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InformasiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.InformasiDataGridView.DataSource = Me.InformasiBindingSource
-        Me.InformasiDataGridView.Location = New System.Drawing.Point(473, 12)
+        Me.InformasiDataGridView.Location = New System.Drawing.Point(55, 106)
         Me.InformasiDataGridView.Name = "InformasiDataGridView"
-        Me.InformasiDataGridView.Size = New System.Drawing.Size(416, 220)
+        Me.InformasiDataGridView.Size = New System.Drawing.Size(743, 220)
         Me.InformasiDataGridView.TabIndex = 28
         '
         'DataGridViewTextBoxColumn1
@@ -344,130 +427,83 @@ Partial Class Form_informasi
         Me.DataGridViewTextBoxColumn7.HeaderText = "tanggal"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'Id_informasiLabel
-        '
-        Id_informasiLabel.AutoSize = True
-        Id_informasiLabel.Location = New System.Drawing.Point(95, 18)
-        Id_informasiLabel.Name = "Id_informasiLabel"
-        Id_informasiLabel.Size = New System.Drawing.Size(62, 13)
-        Id_informasiLabel.TabIndex = 28
-        Id_informasiLabel.Text = "id informasi:"
-        '
         'Id_informasiTextBox
         '
         Me.Id_informasiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "id_informasi", True))
-        Me.Id_informasiTextBox.Location = New System.Drawing.Point(267, 15)
+        Me.Id_informasiTextBox.Location = New System.Drawing.Point(465, 344)
         Me.Id_informasiTextBox.Name = "Id_informasiTextBox"
-        Me.Id_informasiTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Id_informasiTextBox.Size = New System.Drawing.Size(266, 20)
         Me.Id_informasiTextBox.TabIndex = 29
-        '
-        'DOSEN_id_dosenLabel
-        '
-        DOSEN_id_dosenLabel.AutoSize = True
-        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(95, 44)
-        DOSEN_id_dosenLabel.Name = "DOSEN_id_dosenLabel"
-        DOSEN_id_dosenLabel.Size = New System.Drawing.Size(91, 13)
-        DOSEN_id_dosenLabel.TabIndex = 30
-        DOSEN_id_dosenLabel.Text = "DOSEN id dosen:"
         '
         'DOSEN_id_dosenTextBox
         '
         Me.DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "DOSEN_id_dosen", True))
-        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(267, 41)
+        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(465, 371)
         Me.DOSEN_id_dosenTextBox.Name = "DOSEN_id_dosenTextBox"
-        Me.DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(266, 20)
         Me.DOSEN_id_dosenTextBox.TabIndex = 31
-        '
-        'MATA_KULIAH_id_matakuliahLabel
-        '
-        MATA_KULIAH_id_matakuliahLabel.AutoSize = True
-        MATA_KULIAH_id_matakuliahLabel.Location = New System.Drawing.Point(95, 70)
-        MATA_KULIAH_id_matakuliahLabel.Name = "MATA_KULIAH_id_matakuliahLabel"
-        MATA_KULIAH_id_matakuliahLabel.Size = New System.Drawing.Size(147, 13)
-        MATA_KULIAH_id_matakuliahLabel.TabIndex = 32
-        MATA_KULIAH_id_matakuliahLabel.Text = "MATA KULIAH id matakuliah:"
         '
         'MATA_KULIAH_id_matakuliahTextBox
         '
         Me.MATA_KULIAH_id_matakuliahTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "MATA_KULIAH_id_matakuliah", True))
-        Me.MATA_KULIAH_id_matakuliahTextBox.Location = New System.Drawing.Point(267, 67)
+        Me.MATA_KULIAH_id_matakuliahTextBox.Location = New System.Drawing.Point(465, 397)
         Me.MATA_KULIAH_id_matakuliahTextBox.Name = "MATA_KULIAH_id_matakuliahTextBox"
-        Me.MATA_KULIAH_id_matakuliahTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.MATA_KULIAH_id_matakuliahTextBox.Size = New System.Drawing.Size(266, 20)
         Me.MATA_KULIAH_id_matakuliahTextBox.TabIndex = 33
-        '
-        'MATA_KULIAH_DOSEN_id_dosenLabel
-        '
-        MATA_KULIAH_DOSEN_id_dosenLabel.AutoSize = True
-        MATA_KULIAH_DOSEN_id_dosenLabel.Location = New System.Drawing.Point(95, 96)
-        MATA_KULIAH_DOSEN_id_dosenLabel.Name = "MATA_KULIAH_DOSEN_id_dosenLabel"
-        MATA_KULIAH_DOSEN_id_dosenLabel.Size = New System.Drawing.Size(166, 13)
-        MATA_KULIAH_DOSEN_id_dosenLabel.TabIndex = 34
-        MATA_KULIAH_DOSEN_id_dosenLabel.Text = "MATA KULIAH DOSEN id dosen:"
         '
         'MATA_KULIAH_DOSEN_id_dosenTextBox
         '
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "MATA_KULIAH_DOSEN_id_dosen", True))
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(267, 93)
+        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(465, 423)
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Name = "MATA_KULIAH_DOSEN_id_dosenTextBox"
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(266, 20)
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.TabIndex = 35
-        '
-        'JudulLabel
-        '
-        JudulLabel.AutoSize = True
-        JudulLabel.Location = New System.Drawing.Point(95, 122)
-        JudulLabel.Name = "JudulLabel"
-        JudulLabel.Size = New System.Drawing.Size(32, 13)
-        JudulLabel.TabIndex = 36
-        JudulLabel.Text = "judul:"
         '
         'JudulTextBox
         '
         Me.JudulTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "judul", True))
-        Me.JudulTextBox.Location = New System.Drawing.Point(267, 119)
+        Me.JudulTextBox.Location = New System.Drawing.Point(465, 449)
         Me.JudulTextBox.Name = "JudulTextBox"
-        Me.JudulTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.JudulTextBox.Size = New System.Drawing.Size(266, 20)
         Me.JudulTextBox.TabIndex = 37
-        '
-        'InfoLabel
-        '
-        InfoLabel.AutoSize = True
-        InfoLabel.Location = New System.Drawing.Point(95, 148)
-        InfoLabel.Name = "InfoLabel"
-        InfoLabel.Size = New System.Drawing.Size(27, 13)
-        InfoLabel.TabIndex = 38
-        InfoLabel.Text = "info:"
         '
         'InfoTextBox
         '
         Me.InfoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "info", True))
-        Me.InfoTextBox.Location = New System.Drawing.Point(267, 145)
+        Me.InfoTextBox.Location = New System.Drawing.Point(465, 475)
         Me.InfoTextBox.Name = "InfoTextBox"
-        Me.InfoTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.InfoTextBox.Size = New System.Drawing.Size(266, 20)
         Me.InfoTextBox.TabIndex = 39
-        '
-        'TanggalLabel
-        '
-        TanggalLabel.AutoSize = True
-        TanggalLabel.Location = New System.Drawing.Point(95, 175)
-        TanggalLabel.Name = "TanggalLabel"
-        TanggalLabel.Size = New System.Drawing.Size(45, 13)
-        TanggalLabel.TabIndex = 40
-        TanggalLabel.Text = "tanggal:"
         '
         'TanggalDateTimePicker
         '
         Me.TanggalDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.InformasiBindingSource, "tanggal", True))
-        Me.TanggalDateTimePicker.Location = New System.Drawing.Point(267, 171)
+        Me.TanggalDateTimePicker.Location = New System.Drawing.Point(465, 501)
         Me.TanggalDateTimePicker.Name = "TanggalDateTimePicker"
-        Me.TanggalDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.TanggalDateTimePicker.Size = New System.Drawing.Size(266, 20)
         Me.TanggalDateTimePicker.TabIndex = 41
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label1.Location = New System.Drawing.Point(294, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(308, 44)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "Penambahan dan Penggantian Data " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Informasi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Form_informasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(901, 326)
+        Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.Navy
+        Me.ClientSize = New System.Drawing.Size(858, 545)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Id_informasiLabel)
         Me.Controls.Add(Me.Id_informasiTextBox)
         Me.Controls.Add(DOSEN_id_dosenLabel)
@@ -491,8 +527,15 @@ Partial Class Form_informasi
         Me.Controls.Add(Me.delete_butt)
         Me.Controls.Add(Me.edit_butt)
         Me.Controls.Add(Me.add_butt)
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form_informasi"
-        Me.Text = "Form_informasi"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.TransparencyKey = System.Drawing.Color.Red
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -543,4 +586,5 @@ Partial Class Form_informasi
     Friend WithEvents JudulTextBox As System.Windows.Forms.TextBox
     Friend WithEvents InfoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TanggalDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
