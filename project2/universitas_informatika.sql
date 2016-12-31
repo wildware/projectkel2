@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2016 at 10:32 AM
+-- Generation Time: Dec 31, 2016 at 08:45 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -43,8 +43,8 @@ CREATE TABLE IF NOT EXISTS `dosen` (
 
 INSERT INTO `dosen` (`id_dosen`, `nama_dosen`, `email_dosen`, `User_name`, `password`, `link_fb`, `wibsite`) VALUES
 ('322', 'Hanafi kambivi', NULL, 'Upiel', '123', NULL, NULL),
-('543', 'Arie syarwani', 'ari56tone@gmail.com', 'arsyar', '210297', 'Arie syarwani', 'www.lelakisehat.com'),
-('d21a', 'Eko Jurianto', NULL, 'EkoJun', '234', NULL, NULL);
+('d21a', 'Eko Jurianto', NULL, 'EkoJun', '234', NULL, NULL),
+('D543', 'Arie syarwani', 'ari56tone@gmail.com', 'arsyar', '2102', 'Arie syarwani', 'www.lelakisehat.com');
 
 -- --------------------------------------------------------
 
@@ -88,6 +88,13 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `notelp_mhs` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_mahasiswa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mahasiswa`
+--
+
+INSERT INTO `mahasiswa` (`id_mahasiswa`, `username`, `password`, `nama_mahasiswa`, `nim_mahasiswa`, `tgl_lahir_mhs`, `email_mhs`, `alamat_mhs`, `notelp_mhs`) VALUES
+('B120', 'Bobby', 'loser', 'Bobby Aulia Ananda', 'H150600405', NULL, 'bobby_aulia@gmail.com', 'Jl.Perum mas Keledang', '081256757543');
 
 -- --------------------------------------------------------
 

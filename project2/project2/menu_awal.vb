@@ -24,6 +24,17 @@
             Button2.Visible = False
             Lab_dat.Visible = True
             Lab_wel.Visible = False
+            Button3.Visible = True
+        ElseIf box_user.Text = "arie" And box_pass.Text = "2102" Then
+            Timer1.Stop()
+            MsgBox("Welcome Admin", MsgBoxStyle.Information)
+            GroupBox1.Visible = False
+            MenuStrip1.Visible = True
+            GroupBox2.Visible = True
+            Button2.Visible = False
+            Lab_dat.Visible = True
+            Lab_wel.Visible = False
+            Button3.Visible = True
         Else
             Timer1.Stop()
             MsgBox("Login Failed", MsgBoxStyle.Critical)
@@ -121,5 +132,16 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         GroupBox1.Visible = True
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        If MessageBox.Show("Apakah anda yakin keluar?", "konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        End If
+        Lab_wel.Visible = True
+        GroupBox2.Visible = True
+        Button2.Visible = True
+        MenuStrip1.Visible = False
+        Button3.Visible = False
+        Lab_dat.Visible = False
     End Sub
 End Class

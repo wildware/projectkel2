@@ -508,9 +508,9 @@ Partial Class Form_dosen
         Me.exit_butt.Cursor = System.Windows.Forms.Cursors.Default
         Me.exit_butt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exit_butt.ForeColor = System.Drawing.Color.Red
-        Me.exit_butt.Location = New System.Drawing.Point(732, -4)
+        Me.exit_butt.Location = New System.Drawing.Point(733, 0)
         Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(43, 38)
+        Me.exit_butt.Size = New System.Drawing.Size(43, 30)
         Me.exit_butt.TabIndex = 35
         Me.exit_butt.Text = "X"
         Me.exit_butt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
