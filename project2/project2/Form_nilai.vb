@@ -87,7 +87,7 @@
         Me.NilaiTableAdapter.Fill(Me.Universitas_informatikaDataSet.nilai)
     End Sub
 
-    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
+    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
 
@@ -96,5 +96,13 @@
         Me.NilaiBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
 
+    End Sub
+
+    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles picclose.Click
+        Me.Close()
     End Sub
 End Class

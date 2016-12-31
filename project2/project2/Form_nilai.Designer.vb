@@ -23,13 +23,12 @@ Partial Class Form_nilai
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_nilai))
         Dim Id_nilaiLabel As System.Windows.Forms.Label
         Dim PERSERTA_MK_id_pesertaLabel As System.Windows.Forms.Label
         Dim TugasLabel As System.Windows.Forms.Label
         Dim UtsLabel As System.Windows.Forms.Label
         Dim UasLabel As System.Windows.Forms.Label
-        Me.exit_butt = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_nilai))
         Me.refresh_butt = New System.Windows.Forms.Button()
         Me.cancel_butt = New System.Windows.Forms.Button()
         Me.save_butt = New System.Windows.Forms.Button()
@@ -41,17 +40,17 @@ Partial Class Form_nilai
         Me.NilaiTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.nilaiTableAdapter()
         Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Me.NilaiBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.NilaiBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Id_nilaiTextBox = New System.Windows.Forms.TextBox()
         Me.PERSERTA_MK_id_pesertaTextBox = New System.Windows.Forms.TextBox()
@@ -64,6 +63,10 @@ Partial Class Form_nilai
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.picclose = New System.Windows.Forms.PictureBox()
         Id_nilaiLabel = New System.Windows.Forms.Label()
         PERSERTA_MK_id_pesertaLabel = New System.Windows.Forms.Label()
         TugasLabel = New System.Windows.Forms.Label()
@@ -74,22 +77,60 @@ Partial Class Form_nilai
         CType(Me.NilaiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NilaiBindingNavigator.SuspendLayout()
         CType(Me.NilaiDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.picclose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'exit_butt
+        'Id_nilaiLabel
         '
-        Me.exit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.exit_butt.Location = New System.Drawing.Point(1, 181)
-        Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(75, 23)
-        Me.exit_butt.TabIndex = 41
-        Me.exit_butt.Text = "exit"
-        Me.exit_butt.UseVisualStyleBackColor = True
+        Id_nilaiLabel.AutoSize = True
+        Id_nilaiLabel.Location = New System.Drawing.Point(12, 20)
+        Id_nilaiLabel.Name = "Id_nilaiLabel"
+        Id_nilaiLabel.Size = New System.Drawing.Size(39, 13)
+        Id_nilaiLabel.TabIndex = 42
+        Id_nilaiLabel.Text = "id nilai:"
+        '
+        'PERSERTA_MK_id_pesertaLabel
+        '
+        PERSERTA_MK_id_pesertaLabel.AutoSize = True
+        PERSERTA_MK_id_pesertaLabel.Location = New System.Drawing.Point(12, 46)
+        PERSERTA_MK_id_pesertaLabel.Name = "PERSERTA_MK_id_pesertaLabel"
+        PERSERTA_MK_id_pesertaLabel.Size = New System.Drawing.Size(56, 13)
+        PERSERTA_MK_id_pesertaLabel.TabIndex = 44
+        PERSERTA_MK_id_pesertaLabel.Text = "id peserta:"
+        '
+        'TugasLabel
+        '
+        TugasLabel.AutoSize = True
+        TugasLabel.Location = New System.Drawing.Point(12, 72)
+        TugasLabel.Name = "TugasLabel"
+        TugasLabel.Size = New System.Drawing.Size(36, 13)
+        TugasLabel.TabIndex = 46
+        TugasLabel.Text = "tugas:"
+        '
+        'UtsLabel
+        '
+        UtsLabel.AutoSize = True
+        UtsLabel.Location = New System.Drawing.Point(12, 98)
+        UtsLabel.Name = "UtsLabel"
+        UtsLabel.Size = New System.Drawing.Size(24, 13)
+        UtsLabel.TabIndex = 48
+        UtsLabel.Text = "uts:"
+        '
+        'UasLabel
+        '
+        UasLabel.AutoSize = True
+        UasLabel.Location = New System.Drawing.Point(12, 124)
+        UasLabel.Name = "UasLabel"
+        UasLabel.Size = New System.Drawing.Size(27, 13)
+        UasLabel.TabIndex = 50
+        UasLabel.Text = "uas:"
         '
         'refresh_butt
         '
         Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(1, 152)
+        Me.refresh_butt.Location = New System.Drawing.Point(40, 38)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 40
@@ -99,7 +140,7 @@ Partial Class Form_nilai
         'cancel_butt
         '
         Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cancel_butt.Location = New System.Drawing.Point(1, 123)
+        Me.cancel_butt.Location = New System.Drawing.Point(15, 124)
         Me.cancel_butt.Name = "cancel_butt"
         Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
         Me.cancel_butt.TabIndex = 39
@@ -109,7 +150,7 @@ Partial Class Form_nilai
         'save_butt
         '
         Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save_butt.Location = New System.Drawing.Point(1, 94)
+        Me.save_butt.Location = New System.Drawing.Point(15, 67)
         Me.save_butt.Name = "save_butt"
         Me.save_butt.Size = New System.Drawing.Size(75, 23)
         Me.save_butt.TabIndex = 38
@@ -119,7 +160,7 @@ Partial Class Form_nilai
         'delete_butt
         '
         Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete_butt.Location = New System.Drawing.Point(1, 65)
+        Me.delete_butt.Location = New System.Drawing.Point(15, 96)
         Me.delete_butt.Name = "delete_butt"
         Me.delete_butt.Size = New System.Drawing.Size(75, 23)
         Me.delete_butt.TabIndex = 37
@@ -129,7 +170,7 @@ Partial Class Form_nilai
         'edit_butt
         '
         Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit_butt.Location = New System.Drawing.Point(1, 36)
+        Me.edit_butt.Location = New System.Drawing.Point(15, 41)
         Me.edit_butt.Name = "edit_butt"
         Me.edit_butt.Size = New System.Drawing.Size(75, 23)
         Me.edit_butt.TabIndex = 36
@@ -139,7 +180,7 @@ Partial Class Form_nilai
         'add_butt
         '
         Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_butt.Location = New System.Drawing.Point(1, 7)
+        Me.add_butt.Location = New System.Drawing.Point(15, 15)
         Me.add_butt.Name = "add_butt"
         Me.add_butt.Size = New System.Drawing.Size(75, 23)
         Me.add_butt.TabIndex = 35
@@ -190,6 +231,31 @@ Partial Class Form_nilai
         Me.NilaiBindingNavigator.Text = "BindingNavigator1"
         Me.NilaiBindingNavigator.Visible = False
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -222,17 +288,10 @@ Partial Class Form_nilai
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -240,7 +299,7 @@ Partial Class Form_nilai
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -249,123 +308,65 @@ Partial Class Form_nilai
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'NilaiBindingNavigatorSaveItem
         '
         Me.NilaiBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.NilaiBindingNavigatorSaveItem.Image = CType(resources.GetObject("NilaiBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.NilaiBindingNavigatorSaveItem.Name = "NilaiBindingNavigatorSaveItem"
-        Me.NilaiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.NilaiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.NilaiBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Id_nilaiLabel
-        '
-        Id_nilaiLabel.AutoSize = True
-        Id_nilaiLabel.Location = New System.Drawing.Point(85, 12)
-        Id_nilaiLabel.Name = "Id_nilaiLabel"
-        Id_nilaiLabel.Size = New System.Drawing.Size(39, 13)
-        Id_nilaiLabel.TabIndex = 42
-        Id_nilaiLabel.Text = "id nilai:"
         '
         'Id_nilaiTextBox
         '
         Me.Id_nilaiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "id_nilai", True))
-        Me.Id_nilaiTextBox.Location = New System.Drawing.Point(227, 9)
+        Me.Id_nilaiTextBox.Enabled = False
+        Me.Id_nilaiTextBox.Location = New System.Drawing.Point(98, 17)
         Me.Id_nilaiTextBox.Name = "Id_nilaiTextBox"
-        Me.Id_nilaiTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Id_nilaiTextBox.Size = New System.Drawing.Size(144, 20)
         Me.Id_nilaiTextBox.TabIndex = 43
-        '
-        'PERSERTA_MK_id_pesertaLabel
-        '
-        PERSERTA_MK_id_pesertaLabel.AutoSize = True
-        PERSERTA_MK_id_pesertaLabel.Location = New System.Drawing.Point(85, 38)
-        PERSERTA_MK_id_pesertaLabel.Name = "PERSERTA_MK_id_pesertaLabel"
-        PERSERTA_MK_id_pesertaLabel.Size = New System.Drawing.Size(136, 13)
-        PERSERTA_MK_id_pesertaLabel.TabIndex = 44
-        PERSERTA_MK_id_pesertaLabel.Text = "PERSERTA MK id peserta:"
         '
         'PERSERTA_MK_id_pesertaTextBox
         '
         Me.PERSERTA_MK_id_pesertaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "PERSERTA_MK_id_peserta", True))
-        Me.PERSERTA_MK_id_pesertaTextBox.Location = New System.Drawing.Point(227, 35)
+        Me.PERSERTA_MK_id_pesertaTextBox.Enabled = False
+        Me.PERSERTA_MK_id_pesertaTextBox.Location = New System.Drawing.Point(98, 43)
         Me.PERSERTA_MK_id_pesertaTextBox.Name = "PERSERTA_MK_id_pesertaTextBox"
-        Me.PERSERTA_MK_id_pesertaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.PERSERTA_MK_id_pesertaTextBox.Size = New System.Drawing.Size(144, 20)
         Me.PERSERTA_MK_id_pesertaTextBox.TabIndex = 45
-        '
-        'TugasLabel
-        '
-        TugasLabel.AutoSize = True
-        TugasLabel.Location = New System.Drawing.Point(85, 64)
-        TugasLabel.Name = "TugasLabel"
-        TugasLabel.Size = New System.Drawing.Size(36, 13)
-        TugasLabel.TabIndex = 46
-        TugasLabel.Text = "tugas:"
         '
         'TugasTextBox
         '
         Me.TugasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "tugas", True))
-        Me.TugasTextBox.Location = New System.Drawing.Point(227, 61)
+        Me.TugasTextBox.Enabled = False
+        Me.TugasTextBox.Location = New System.Drawing.Point(98, 69)
         Me.TugasTextBox.Name = "TugasTextBox"
-        Me.TugasTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TugasTextBox.Size = New System.Drawing.Size(144, 20)
         Me.TugasTextBox.TabIndex = 47
-        '
-        'UtsLabel
-        '
-        UtsLabel.AutoSize = True
-        UtsLabel.Location = New System.Drawing.Point(85, 90)
-        UtsLabel.Name = "UtsLabel"
-        UtsLabel.Size = New System.Drawing.Size(24, 13)
-        UtsLabel.TabIndex = 48
-        UtsLabel.Text = "uts:"
         '
         'UtsTextBox
         '
         Me.UtsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "uts", True))
-        Me.UtsTextBox.Location = New System.Drawing.Point(227, 87)
+        Me.UtsTextBox.Enabled = False
+        Me.UtsTextBox.Location = New System.Drawing.Point(98, 95)
         Me.UtsTextBox.Name = "UtsTextBox"
-        Me.UtsTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UtsTextBox.Size = New System.Drawing.Size(144, 20)
         Me.UtsTextBox.TabIndex = 49
-        '
-        'UasLabel
-        '
-        UasLabel.AutoSize = True
-        UasLabel.Location = New System.Drawing.Point(85, 116)
-        UasLabel.Name = "UasLabel"
-        UasLabel.Size = New System.Drawing.Size(27, 13)
-        UasLabel.TabIndex = 50
-        UasLabel.Text = "uas:"
         '
         'UasTextBox
         '
         Me.UasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NilaiBindingSource, "uas", True))
-        Me.UasTextBox.Location = New System.Drawing.Point(227, 113)
+        Me.UasTextBox.Enabled = False
+        Me.UasTextBox.Location = New System.Drawing.Point(98, 121)
         Me.UasTextBox.Name = "UasTextBox"
-        Me.UasTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UasTextBox.Size = New System.Drawing.Size(144, 20)
         Me.UasTextBox.TabIndex = 51
         '
         'NilaiDataGridView
@@ -374,9 +375,9 @@ Partial Class Form_nilai
         Me.NilaiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NilaiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.NilaiDataGridView.DataSource = Me.NilaiBindingSource
-        Me.NilaiDataGridView.Location = New System.Drawing.Point(333, 9)
+        Me.NilaiDataGridView.Location = New System.Drawing.Point(40, 67)
         Me.NilaiDataGridView.Name = "NilaiDataGridView"
-        Me.NilaiDataGridView.Size = New System.Drawing.Size(486, 220)
+        Me.NilaiDataGridView.Size = New System.Drawing.Size(674, 276)
         Me.NilaiDataGridView.TabIndex = 51
         '
         'DataGridViewTextBoxColumn1
@@ -409,43 +410,98 @@ Partial Class Form_nilai
         Me.DataGridViewTextBoxColumn5.HeaderText = "uas"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Controls.Add(PERSERTA_MK_id_pesertaLabel)
+        Me.GroupBox1.Controls.Add(Me.UasTextBox)
+        Me.GroupBox1.Controls.Add(Id_nilaiLabel)
+        Me.GroupBox1.Controls.Add(UasLabel)
+        Me.GroupBox1.Controls.Add(Me.Id_nilaiTextBox)
+        Me.GroupBox1.Controls.Add(Me.UtsTextBox)
+        Me.GroupBox1.Controls.Add(UtsLabel)
+        Me.GroupBox1.Controls.Add(Me.PERSERTA_MK_id_pesertaTextBox)
+        Me.GroupBox1.Controls.Add(Me.TugasTextBox)
+        Me.GroupBox1.Controls.Add(TugasLabel)
+        Me.GroupBox1.Location = New System.Drawing.Point(310, 365)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(260, 156)
+        Me.GroupBox1.TabIndex = 52
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Details"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Controls.Add(Me.edit_butt)
+        Me.GroupBox2.Controls.Add(Me.add_butt)
+        Me.GroupBox2.Controls.Add(Me.delete_butt)
+        Me.GroupBox2.Controls.Add(Me.save_butt)
+        Me.GroupBox2.Controls.Add(Me.cancel_butt)
+        Me.GroupBox2.Location = New System.Drawing.Point(200, 365)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(104, 156)
+        Me.GroupBox2.TabIndex = 53
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Action"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(343, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(72, 31)
+        Me.Label1.TabIndex = 54
+        Me.Label1.Text = "Nilai"
+        '
+        'picclose
+        '
+        Me.picclose.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.picclose.BackColor = System.Drawing.Color.White
+        Me.picclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.picclose.ErrorImage = Global.project2.My.Resources.Resources.Close_Window_Filled_100
+        Me.picclose.Image = Global.project2.My.Resources.Resources.Close_Window_Filled_100
+        Me.picclose.InitialImage = Global.project2.My.Resources.Resources.Close_Window_Filled_100
+        Me.picclose.Location = New System.Drawing.Point(683, 38)
+        Me.picclose.Name = "picclose"
+        Me.picclose.Size = New System.Drawing.Size(31, 31)
+        Me.picclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picclose.TabIndex = 55
+        Me.picclose.TabStop = False
+        '
         'Form_nilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(831, 299)
+        Me.BackColor = System.Drawing.Color.MediumBlue
+        Me.ClientSize = New System.Drawing.Size(763, 545)
+        Me.Controls.Add(Me.picclose)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.NilaiDataGridView)
-        Me.Controls.Add(Id_nilaiLabel)
-        Me.Controls.Add(Me.Id_nilaiTextBox)
-        Me.Controls.Add(PERSERTA_MK_id_pesertaLabel)
-        Me.Controls.Add(Me.PERSERTA_MK_id_pesertaTextBox)
-        Me.Controls.Add(TugasLabel)
-        Me.Controls.Add(Me.TugasTextBox)
-        Me.Controls.Add(UtsLabel)
-        Me.Controls.Add(Me.UtsTextBox)
-        Me.Controls.Add(UasLabel)
-        Me.Controls.Add(Me.UasTextBox)
         Me.Controls.Add(Me.NilaiBindingNavigator)
-        Me.Controls.Add(Me.exit_butt)
         Me.Controls.Add(Me.refresh_butt)
-        Me.Controls.Add(Me.cancel_butt)
-        Me.Controls.Add(Me.save_butt)
-        Me.Controls.Add(Me.delete_butt)
-        Me.Controls.Add(Me.edit_butt)
-        Me.Controls.Add(Me.add_butt)
         Me.Name = "Form_nilai"
-        Me.Text = "Form_nilai"
+        Me.Text = "Nilai"
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NilaiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NilaiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NilaiBindingNavigator.ResumeLayout(False)
         Me.NilaiBindingNavigator.PerformLayout()
         CType(Me.NilaiDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.picclose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents exit_butt As System.Windows.Forms.Button
     Friend WithEvents refresh_butt As System.Windows.Forms.Button
     Friend WithEvents cancel_butt As System.Windows.Forms.Button
     Friend WithEvents save_butt As System.Windows.Forms.Button
@@ -480,4 +536,8 @@ Partial Class Form_nilai
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents picclose As System.Windows.Forms.PictureBox
 End Class

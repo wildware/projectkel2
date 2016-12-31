@@ -77,14 +77,14 @@ Partial Class menu_awal
         'DosenToolStripMenuItem
         '
         Me.DosenToolStripMenuItem.Name = "DosenToolStripMenuItem"
-        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.DosenToolStripMenuItem.Text = "dosen"
         '
         'InformasiToolStripMenuItem
         '
         Me.InformasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndAditDataToolStripMenuItem, Me.ViewDataToolStripMenuItem})
         Me.InformasiToolStripMenuItem.Name = "InformasiToolStripMenuItem"
-        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.InformasiToolStripMenuItem.Text = "informasi"
         '
         'AddAndAditDataToolStripMenuItem
@@ -102,25 +102,25 @@ Partial Class menu_awal
         'MahasiswaToolStripMenuItem
         '
         Me.MahasiswaToolStripMenuItem.Name = "MahasiswaToolStripMenuItem"
-        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.MahasiswaToolStripMenuItem.Text = "mahasiswa"
         '
         'MataKuliahToolStripMenuItem
         '
         Me.MataKuliahToolStripMenuItem.Name = "MataKuliahToolStripMenuItem"
-        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.MataKuliahToolStripMenuItem.Text = "mata kuliah"
         '
         'NilaiToolStripMenuItem
         '
         Me.NilaiToolStripMenuItem.Name = "NilaiToolStripMenuItem"
-        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.NilaiToolStripMenuItem.Text = "nilai"
         '
         'PesertaMKToolStripMenuItem
         '
         Me.PesertaMKToolStripMenuItem.Name = "PesertaMKToolStripMenuItem"
-        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.PesertaMKToolStripMenuItem.Text = "peserta MK"
         '
         'GroupBox1
@@ -134,7 +134,7 @@ Partial Class menu_awal
         Me.GroupBox1.Controls.Add(Me.box_user)
         Me.GroupBox1.Location = New System.Drawing.Point(112, 78)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(235, 182)
+        Me.GroupBox1.Size = New System.Drawing.Size(235, 164)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
@@ -159,7 +159,7 @@ Partial Class menu_awal
         '
         'but_exit
         '
-        Me.but_exit.Location = New System.Drawing.Point(161, 146)
+        Me.but_exit.Location = New System.Drawing.Point(163, 124)
         Me.but_exit.Name = "but_exit"
         Me.but_exit.Size = New System.Drawing.Size(54, 23)
         Me.but_exit.TabIndex = 4
@@ -168,7 +168,7 @@ Partial Class menu_awal
         '
         'But_ref
         '
-        Me.But_ref.Location = New System.Drawing.Point(86, 146)
+        Me.But_ref.Location = New System.Drawing.Point(88, 124)
         Me.But_ref.Name = "But_ref"
         Me.But_ref.Size = New System.Drawing.Size(54, 23)
         Me.But_ref.TabIndex = 3
@@ -177,7 +177,8 @@ Partial Class menu_awal
         '
         'but_log
         '
-        Me.but_log.Location = New System.Drawing.Point(12, 146)
+        Me.but_log.AutoEllipsis = True
+        Me.but_log.Location = New System.Drawing.Point(14, 124)
         Me.but_log.Name = "but_log"
         Me.but_log.Size = New System.Drawing.Size(54, 23)
         Me.but_log.TabIndex = 2
@@ -206,7 +207,7 @@ Partial Class menu_awal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(461, 282)
+        Me.ClientSize = New System.Drawing.Size(461, 271)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
