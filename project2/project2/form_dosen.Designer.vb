@@ -23,7 +23,6 @@ Partial Class Form_dosen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_dosen))
         Dim Id_dosenLabel As System.Windows.Forms.Label
         Dim Nama_dosenLabel As System.Windows.Forms.Label
         Dim Email_dosenLabel As System.Windows.Forms.Label
@@ -31,7 +30,7 @@ Partial Class Form_dosen
         Dim PasswordLabel As System.Windows.Forms.Label
         Dim Link_fbLabel As System.Windows.Forms.Label
         Dim WibsiteLabel As System.Windows.Forms.Label
-        Me.exit_butt = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_dosen))
         Me.refresh_butt = New System.Windows.Forms.Button()
         Me.cancel_butt = New System.Windows.Forms.Button()
         Me.save_butt = New System.Windows.Forms.Button()
@@ -43,17 +42,17 @@ Partial Class Form_dosen
         Me.DosenTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.dosenTableAdapter()
         Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Me.DosenBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DosenBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Id_dosenTextBox = New System.Windows.Forms.TextBox()
         Me.Nama_dosenTextBox = New System.Windows.Forms.TextBox()
@@ -70,6 +69,10 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.exit_butt = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Id_dosenLabel = New System.Windows.Forms.Label()
         Nama_dosenLabel = New System.Windows.Forms.Label()
         Email_dosenLabel = New System.Windows.Forms.Label()
@@ -82,32 +85,94 @@ Partial Class Form_dosen
         CType(Me.DosenBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DosenBindingNavigator.SuspendLayout()
         CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'exit_butt
+        'Id_dosenLabel
         '
-        Me.exit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.exit_butt.Location = New System.Drawing.Point(12, 186)
-        Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(75, 23)
-        Me.exit_butt.TabIndex = 20
-        Me.exit_butt.Text = "exit"
-        Me.exit_butt.UseVisualStyleBackColor = True
+        Id_dosenLabel.AutoSize = True
+        Id_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Id_dosenLabel.Location = New System.Drawing.Point(6, 15)
+        Id_dosenLabel.Name = "Id_dosenLabel"
+        Id_dosenLabel.Size = New System.Drawing.Size(66, 15)
+        Id_dosenLabel.TabIndex = 21
+        Id_dosenLabel.Text = "id dosen:"
+        '
+        'Nama_dosenLabel
+        '
+        Nama_dosenLabel.AutoSize = True
+        Nama_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Nama_dosenLabel.Location = New System.Drawing.Point(6, 41)
+        Nama_dosenLabel.Name = "Nama_dosenLabel"
+        Nama_dosenLabel.Size = New System.Drawing.Size(90, 15)
+        Nama_dosenLabel.TabIndex = 23
+        Nama_dosenLabel.Text = "nama dosen:"
+        '
+        'Email_dosenLabel
+        '
+        Email_dosenLabel.AutoSize = True
+        Email_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Email_dosenLabel.Location = New System.Drawing.Point(6, 67)
+        Email_dosenLabel.Name = "Email_dosenLabel"
+        Email_dosenLabel.Size = New System.Drawing.Size(90, 15)
+        Email_dosenLabel.TabIndex = 25
+        Email_dosenLabel.Text = "email dosen:"
+        '
+        'User_nameLabel
+        '
+        User_nameLabel.AutoSize = True
+        User_nameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        User_nameLabel.Location = New System.Drawing.Point(6, 93)
+        User_nameLabel.Name = "User_nameLabel"
+        User_nameLabel.Size = New System.Drawing.Size(81, 15)
+        User_nameLabel.TabIndex = 27
+        User_nameLabel.Text = "User name:"
+        '
+        'PasswordLabel
+        '
+        PasswordLabel.AutoSize = True
+        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        PasswordLabel.Location = New System.Drawing.Point(6, 119)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New System.Drawing.Size(72, 15)
+        PasswordLabel.TabIndex = 29
+        PasswordLabel.Text = "password:"
+        '
+        'Link_fbLabel
+        '
+        Link_fbLabel.AutoSize = True
+        Link_fbLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Link_fbLabel.Location = New System.Drawing.Point(6, 145)
+        Link_fbLabel.Name = "Link_fbLabel"
+        Link_fbLabel.Size = New System.Drawing.Size(50, 15)
+        Link_fbLabel.TabIndex = 31
+        Link_fbLabel.Text = "link fb:"
+        '
+        'WibsiteLabel
+        '
+        WibsiteLabel.AutoSize = True
+        WibsiteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        WibsiteLabel.Location = New System.Drawing.Point(6, 171)
+        WibsiteLabel.Name = "WibsiteLabel"
+        WibsiteLabel.Size = New System.Drawing.Size(56, 15)
+        WibsiteLabel.TabIndex = 33
+        WibsiteLabel.Text = "wibsite:"
         '
         'refresh_butt
         '
-        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(12, 157)
+        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.refresh_butt.Location = New System.Drawing.Point(25, 45)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 19
-        Me.refresh_butt.Text = "refresh"
+        Me.refresh_butt.Text = "Refresh"
         Me.refresh_butt.UseVisualStyleBackColor = True
         '
         'cancel_butt
         '
-        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cancel_butt.Location = New System.Drawing.Point(12, 128)
+        Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cancel_butt.Location = New System.Drawing.Point(17, 135)
         Me.cancel_butt.Name = "cancel_butt"
         Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
         Me.cancel_butt.TabIndex = 18
@@ -116,8 +181,8 @@ Partial Class Form_dosen
         '
         'save_butt
         '
-        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save_butt.Location = New System.Drawing.Point(12, 99)
+        Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.save_butt.Location = New System.Drawing.Point(17, 106)
         Me.save_butt.Name = "save_butt"
         Me.save_butt.Size = New System.Drawing.Size(75, 23)
         Me.save_butt.TabIndex = 17
@@ -126,8 +191,8 @@ Partial Class Form_dosen
         '
         'delete_butt
         '
-        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete_butt.Location = New System.Drawing.Point(12, 70)
+        Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.delete_butt.Location = New System.Drawing.Point(17, 77)
         Me.delete_butt.Name = "delete_butt"
         Me.delete_butt.Size = New System.Drawing.Size(75, 23)
         Me.delete_butt.TabIndex = 16
@@ -136,8 +201,8 @@ Partial Class Form_dosen
         '
         'edit_butt
         '
-        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit_butt.Location = New System.Drawing.Point(12, 41)
+        Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit_butt.Location = New System.Drawing.Point(17, 48)
         Me.edit_butt.Name = "edit_butt"
         Me.edit_butt.Size = New System.Drawing.Size(75, 23)
         Me.edit_butt.TabIndex = 15
@@ -146,8 +211,8 @@ Partial Class Form_dosen
         '
         'add_butt
         '
-        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_butt.Location = New System.Drawing.Point(12, 12)
+        Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add_butt.Location = New System.Drawing.Point(17, 19)
         Me.add_butt.Name = "add_butt"
         Me.add_butt.Size = New System.Drawing.Size(75, 23)
         Me.add_butt.TabIndex = 14
@@ -198,6 +263,31 @@ Partial Class Form_dosen
         Me.DosenBindingNavigator.Text = "BindingNavigator1"
         Me.DosenBindingNavigator.Visible = False
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -230,17 +320,10 @@ Partial Class Form_dosen
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -248,7 +331,7 @@ Partial Class Form_dosen
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -257,168 +340,88 @@ Partial Class Form_dosen
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'DosenBindingNavigatorSaveItem
         '
         Me.DosenBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.DosenBindingNavigatorSaveItem.Image = CType(resources.GetObject("DosenBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.DosenBindingNavigatorSaveItem.Name = "DosenBindingNavigatorSaveItem"
-        Me.DosenBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.DosenBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.DosenBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Id_dosenLabel
-        '
-        Id_dosenLabel.AutoSize = True
-        Id_dosenLabel.Location = New System.Drawing.Point(99, 15)
-        Id_dosenLabel.Name = "Id_dosenLabel"
-        Id_dosenLabel.Size = New System.Drawing.Size(50, 13)
-        Id_dosenLabel.TabIndex = 21
-        Id_dosenLabel.Text = "id dosen:"
         '
         'Id_dosenTextBox
         '
         Me.Id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "id_dosen", True))
-        Me.Id_dosenTextBox.Location = New System.Drawing.Point(173, 12)
+        Me.Id_dosenTextBox.Location = New System.Drawing.Point(162, 15)
         Me.Id_dosenTextBox.Name = "Id_dosenTextBox"
-        Me.Id_dosenTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Id_dosenTextBox.Size = New System.Drawing.Size(229, 20)
         Me.Id_dosenTextBox.TabIndex = 22
-        '
-        'Nama_dosenLabel
-        '
-        Nama_dosenLabel.AutoSize = True
-        Nama_dosenLabel.Location = New System.Drawing.Point(99, 41)
-        Nama_dosenLabel.Name = "Nama_dosenLabel"
-        Nama_dosenLabel.Size = New System.Drawing.Size(68, 13)
-        Nama_dosenLabel.TabIndex = 23
-        Nama_dosenLabel.Text = "nama dosen:"
         '
         'Nama_dosenTextBox
         '
         Me.Nama_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "nama_dosen", True))
-        Me.Nama_dosenTextBox.Location = New System.Drawing.Point(173, 38)
+        Me.Nama_dosenTextBox.Location = New System.Drawing.Point(162, 41)
         Me.Nama_dosenTextBox.Name = "Nama_dosenTextBox"
-        Me.Nama_dosenTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Nama_dosenTextBox.Size = New System.Drawing.Size(229, 20)
         Me.Nama_dosenTextBox.TabIndex = 24
-        '
-        'Email_dosenLabel
-        '
-        Email_dosenLabel.AutoSize = True
-        Email_dosenLabel.Location = New System.Drawing.Point(99, 67)
-        Email_dosenLabel.Name = "Email_dosenLabel"
-        Email_dosenLabel.Size = New System.Drawing.Size(66, 13)
-        Email_dosenLabel.TabIndex = 25
-        Email_dosenLabel.Text = "email dosen:"
         '
         'Email_dosenTextBox
         '
         Me.Email_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "email_dosen", True))
-        Me.Email_dosenTextBox.Location = New System.Drawing.Point(173, 64)
+        Me.Email_dosenTextBox.Location = New System.Drawing.Point(162, 67)
         Me.Email_dosenTextBox.Name = "Email_dosenTextBox"
-        Me.Email_dosenTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Email_dosenTextBox.Size = New System.Drawing.Size(229, 20)
         Me.Email_dosenTextBox.TabIndex = 26
-        '
-        'User_nameLabel
-        '
-        User_nameLabel.AutoSize = True
-        User_nameLabel.Location = New System.Drawing.Point(99, 93)
-        User_nameLabel.Name = "User_nameLabel"
-        User_nameLabel.Size = New System.Drawing.Size(61, 13)
-        User_nameLabel.TabIndex = 27
-        User_nameLabel.Text = "User name:"
         '
         'User_nameTextBox
         '
         Me.User_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "User_name", True))
-        Me.User_nameTextBox.Location = New System.Drawing.Point(173, 90)
+        Me.User_nameTextBox.Location = New System.Drawing.Point(162, 93)
         Me.User_nameTextBox.Name = "User_nameTextBox"
-        Me.User_nameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.User_nameTextBox.Size = New System.Drawing.Size(229, 20)
         Me.User_nameTextBox.TabIndex = 28
-        '
-        'PasswordLabel
-        '
-        PasswordLabel.AutoSize = True
-        PasswordLabel.Location = New System.Drawing.Point(99, 119)
-        PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(55, 13)
-        PasswordLabel.TabIndex = 29
-        PasswordLabel.Text = "password:"
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "password", True))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(173, 116)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(162, 119)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(229, 20)
         Me.PasswordTextBox.TabIndex = 30
-        '
-        'Link_fbLabel
-        '
-        Link_fbLabel.AutoSize = True
-        Link_fbLabel.Location = New System.Drawing.Point(99, 145)
-        Link_fbLabel.Name = "Link_fbLabel"
-        Link_fbLabel.Size = New System.Drawing.Size(38, 13)
-        Link_fbLabel.TabIndex = 31
-        Link_fbLabel.Text = "link fb:"
         '
         'Link_fbTextBox
         '
         Me.Link_fbTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "link_fb", True))
-        Me.Link_fbTextBox.Location = New System.Drawing.Point(173, 142)
+        Me.Link_fbTextBox.Location = New System.Drawing.Point(162, 145)
         Me.Link_fbTextBox.Name = "Link_fbTextBox"
-        Me.Link_fbTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Link_fbTextBox.Size = New System.Drawing.Size(229, 20)
         Me.Link_fbTextBox.TabIndex = 32
-        '
-        'WibsiteLabel
-        '
-        WibsiteLabel.AutoSize = True
-        WibsiteLabel.Location = New System.Drawing.Point(99, 171)
-        WibsiteLabel.Name = "WibsiteLabel"
-        WibsiteLabel.Size = New System.Drawing.Size(42, 13)
-        WibsiteLabel.TabIndex = 33
-        WibsiteLabel.Text = "wibsite:"
         '
         'WibsiteTextBox
         '
         Me.WibsiteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "wibsite", True))
-        Me.WibsiteTextBox.Location = New System.Drawing.Point(173, 168)
+        Me.WibsiteTextBox.Location = New System.Drawing.Point(162, 171)
         Me.WibsiteTextBox.Name = "WibsiteTextBox"
-        Me.WibsiteTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.WibsiteTextBox.Size = New System.Drawing.Size(229, 20)
         Me.WibsiteTextBox.TabIndex = 34
         '
         'DosenDataGridView
         '
         Me.DosenDataGridView.AutoGenerateColumns = False
+        Me.DosenDataGridView.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DosenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DosenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.DosenDataGridView.DataSource = Me.DosenBindingSource
-        Me.DosenDataGridView.Location = New System.Drawing.Point(279, 12)
+        Me.DosenDataGridView.Location = New System.Drawing.Point(12, 74)
         Me.DosenDataGridView.Name = "DosenDataGridView"
-        Me.DosenDataGridView.Size = New System.Drawing.Size(587, 220)
+        Me.DosenDataGridView.Size = New System.Drawing.Size(745, 220)
         Me.DosenDataGridView.TabIndex = 34
         '
         'DataGridViewTextBoxColumn1
@@ -463,47 +466,99 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn7.HeaderText = "wibsite"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.add_butt)
+        Me.GroupBox1.Controls.Add(Me.edit_butt)
+        Me.GroupBox1.Controls.Add(Me.delete_butt)
+        Me.GroupBox1.Controls.Add(Me.save_butt)
+        Me.GroupBox1.Controls.Add(Me.cancel_butt)
+        Me.GroupBox1.Location = New System.Drawing.Point(126, 317)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(108, 168)
+        Me.GroupBox1.TabIndex = 35
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Action"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Id_dosenTextBox)
+        Me.GroupBox2.Controls.Add(Me.WibsiteTextBox)
+        Me.GroupBox2.Controls.Add(WibsiteLabel)
+        Me.GroupBox2.Controls.Add(Id_dosenLabel)
+        Me.GroupBox2.Controls.Add(Me.Link_fbTextBox)
+        Me.GroupBox2.Controls.Add(Link_fbLabel)
+        Me.GroupBox2.Controls.Add(Nama_dosenLabel)
+        Me.GroupBox2.Controls.Add(Me.PasswordTextBox)
+        Me.GroupBox2.Controls.Add(PasswordLabel)
+        Me.GroupBox2.Controls.Add(Me.Nama_dosenTextBox)
+        Me.GroupBox2.Controls.Add(Me.User_nameTextBox)
+        Me.GroupBox2.Controls.Add(Email_dosenLabel)
+        Me.GroupBox2.Controls.Add(User_nameLabel)
+        Me.GroupBox2.Controls.Add(Me.Email_dosenTextBox)
+        Me.GroupBox2.Location = New System.Drawing.Point(265, 301)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(397, 205)
+        Me.GroupBox2.TabIndex = 36
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Details"
+        '
+        'exit_butt
+        '
+        Me.exit_butt.Cursor = System.Windows.Forms.Cursors.Default
+        Me.exit_butt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exit_butt.ForeColor = System.Drawing.Color.Red
+        Me.exit_butt.Location = New System.Drawing.Point(732, -4)
+        Me.exit_butt.Name = "exit_butt"
+        Me.exit_butt.Size = New System.Drawing.Size(43, 38)
+        Me.exit_butt.TabIndex = 35
+        Me.exit_butt.Text = "X"
+        Me.exit_butt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.exit_butt.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Rockwell", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(261, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(277, 42)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Penambahan dan Penggantian" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Data Dosen"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'Form_dosen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(896, 318)
-        Me.Controls.Add(Me.DosenDataGridView)
-        Me.Controls.Add(Id_dosenLabel)
-        Me.Controls.Add(Me.Id_dosenTextBox)
-        Me.Controls.Add(Nama_dosenLabel)
-        Me.Controls.Add(Me.Nama_dosenTextBox)
-        Me.Controls.Add(Email_dosenLabel)
-        Me.Controls.Add(Me.Email_dosenTextBox)
-        Me.Controls.Add(User_nameLabel)
-        Me.Controls.Add(Me.User_nameTextBox)
-        Me.Controls.Add(PasswordLabel)
-        Me.Controls.Add(Me.PasswordTextBox)
-        Me.Controls.Add(Link_fbLabel)
-        Me.Controls.Add(Me.Link_fbTextBox)
-        Me.Controls.Add(WibsiteLabel)
-        Me.Controls.Add(Me.WibsiteTextBox)
-        Me.Controls.Add(Me.DosenBindingNavigator)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(771, 522)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.exit_butt)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.DosenDataGridView)
         Me.Controls.Add(Me.refresh_butt)
-        Me.Controls.Add(Me.cancel_butt)
-        Me.Controls.Add(Me.save_butt)
-        Me.Controls.Add(Me.delete_butt)
-        Me.Controls.Add(Me.edit_butt)
-        Me.Controls.Add(Me.add_butt)
+        Me.Controls.Add(Me.DosenBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form_dosen"
-        Me.Text = "Form_dosen"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DosenBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DosenBindingNavigator.ResumeLayout(False)
         Me.DosenBindingNavigator.PerformLayout()
         CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents exit_butt As System.Windows.Forms.Button
     Friend WithEvents refresh_butt As System.Windows.Forms.Button
     Friend WithEvents cancel_butt As System.Windows.Forms.Button
     Friend WithEvents save_butt As System.Windows.Forms.Button
@@ -542,4 +597,8 @@ Partial Class Form_dosen
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents exit_butt As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

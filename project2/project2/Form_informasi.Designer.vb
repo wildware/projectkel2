@@ -71,6 +71,8 @@ Partial Class Form_informasi
         Me.InfoTextBox = New System.Windows.Forms.TextBox()
         Me.TanggalDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Id_informasiLabel = New System.Windows.Forms.Label()
         DOSEN_id_dosenLabel = New System.Windows.Forms.Label()
         MATA_KULIAH_id_matakuliahLabel = New System.Windows.Forms.Label()
@@ -83,6 +85,8 @@ Partial Class Form_informasi
         CType(Me.InformasiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.InformasiBindingNavigator.SuspendLayout()
         CType(Me.InformasiDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Id_informasiLabel
@@ -90,7 +94,7 @@ Partial Class Form_informasi
         Id_informasiLabel.AutoSize = True
         Id_informasiLabel.BackColor = System.Drawing.SystemColors.Window
         Id_informasiLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Id_informasiLabel.Location = New System.Drawing.Point(225, 345)
+        Id_informasiLabel.Location = New System.Drawing.Point(6, 16)
         Id_informasiLabel.Name = "Id_informasiLabel"
         Id_informasiLabel.Size = New System.Drawing.Size(87, 15)
         Id_informasiLabel.TabIndex = 28
@@ -101,7 +105,7 @@ Partial Class Form_informasi
         DOSEN_id_dosenLabel.AutoSize = True
         DOSEN_id_dosenLabel.BackColor = System.Drawing.SystemColors.Window
         DOSEN_id_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(225, 371)
+        DOSEN_id_dosenLabel.Location = New System.Drawing.Point(6, 42)
         DOSEN_id_dosenLabel.Name = "DOSEN_id_dosenLabel"
         DOSEN_id_dosenLabel.Size = New System.Drawing.Size(118, 15)
         DOSEN_id_dosenLabel.TabIndex = 30
@@ -112,7 +116,7 @@ Partial Class Form_informasi
         MATA_KULIAH_id_matakuliahLabel.AutoSize = True
         MATA_KULIAH_id_matakuliahLabel.BackColor = System.Drawing.SystemColors.Window
         MATA_KULIAH_id_matakuliahLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        MATA_KULIAH_id_matakuliahLabel.Location = New System.Drawing.Point(225, 397)
+        MATA_KULIAH_id_matakuliahLabel.Location = New System.Drawing.Point(6, 68)
         MATA_KULIAH_id_matakuliahLabel.Name = "MATA_KULIAH_id_matakuliahLabel"
         MATA_KULIAH_id_matakuliahLabel.Size = New System.Drawing.Size(191, 15)
         MATA_KULIAH_id_matakuliahLabel.TabIndex = 32
@@ -123,7 +127,7 @@ Partial Class Form_informasi
         MATA_KULIAH_DOSEN_id_dosenLabel.AutoSize = True
         MATA_KULIAH_DOSEN_id_dosenLabel.BackColor = System.Drawing.SystemColors.Window
         MATA_KULIAH_DOSEN_id_dosenLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        MATA_KULIAH_DOSEN_id_dosenLabel.Location = New System.Drawing.Point(225, 423)
+        MATA_KULIAH_DOSEN_id_dosenLabel.Location = New System.Drawing.Point(6, 94)
         MATA_KULIAH_DOSEN_id_dosenLabel.Name = "MATA_KULIAH_DOSEN_id_dosenLabel"
         MATA_KULIAH_DOSEN_id_dosenLabel.Size = New System.Drawing.Size(211, 15)
         MATA_KULIAH_DOSEN_id_dosenLabel.TabIndex = 34
@@ -134,7 +138,7 @@ Partial Class Form_informasi
         JudulLabel.AutoSize = True
         JudulLabel.BackColor = System.Drawing.SystemColors.Window
         JudulLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        JudulLabel.Location = New System.Drawing.Point(225, 449)
+        JudulLabel.Location = New System.Drawing.Point(6, 120)
         JudulLabel.Name = "JudulLabel"
         JudulLabel.Size = New System.Drawing.Size(43, 15)
         JudulLabel.TabIndex = 36
@@ -145,7 +149,7 @@ Partial Class Form_informasi
         InfoLabel.AutoSize = True
         InfoLabel.BackColor = System.Drawing.SystemColors.Window
         InfoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        InfoLabel.Location = New System.Drawing.Point(225, 475)
+        InfoLabel.Location = New System.Drawing.Point(6, 146)
         InfoLabel.Name = "InfoLabel"
         InfoLabel.Size = New System.Drawing.Size(35, 15)
         InfoLabel.TabIndex = 38
@@ -156,7 +160,7 @@ Partial Class Form_informasi
         TanggalLabel.AutoSize = True
         TanggalLabel.BackColor = System.Drawing.SystemColors.Window
         TanggalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TanggalLabel.Location = New System.Drawing.Point(225, 502)
+        TanggalLabel.Location = New System.Drawing.Point(6, 173)
         TanggalLabel.Name = "TanggalLabel"
         TanggalLabel.Size = New System.Drawing.Size(59, 15)
         TanggalLabel.TabIndex = 40
@@ -167,7 +171,7 @@ Partial Class Form_informasi
         Me.exit_butt.Cursor = System.Windows.Forms.Cursors.Default
         Me.exit_butt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exit_butt.ForeColor = System.Drawing.Color.Red
-        Me.exit_butt.Location = New System.Drawing.Point(818, -2)
+        Me.exit_butt.Location = New System.Drawing.Point(729, -2)
         Me.exit_butt.Name = "exit_butt"
         Me.exit_butt.Size = New System.Drawing.Size(43, 38)
         Me.exit_butt.TabIndex = 27
@@ -178,7 +182,7 @@ Partial Class Form_informasi
         'refresh_butt
         '
         Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(68, 77)
+        Me.refresh_butt.Location = New System.Drawing.Point(27, 50)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 26
@@ -188,7 +192,7 @@ Partial Class Form_informasi
         'cancel_butt
         '
         Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cancel_butt.Location = New System.Drawing.Point(123, 479)
+        Me.cancel_butt.Location = New System.Drawing.Point(16, 135)
         Me.cancel_butt.Name = "cancel_butt"
         Me.cancel_butt.Size = New System.Drawing.Size(75, 23)
         Me.cancel_butt.TabIndex = 25
@@ -198,7 +202,7 @@ Partial Class Form_informasi
         'save_butt
         '
         Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save_butt.Location = New System.Drawing.Point(123, 450)
+        Me.save_butt.Location = New System.Drawing.Point(16, 106)
         Me.save_butt.Name = "save_butt"
         Me.save_butt.Size = New System.Drawing.Size(75, 23)
         Me.save_butt.TabIndex = 24
@@ -208,7 +212,7 @@ Partial Class Form_informasi
         'delete_butt
         '
         Me.delete_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.delete_butt.Location = New System.Drawing.Point(123, 421)
+        Me.delete_butt.Location = New System.Drawing.Point(16, 77)
         Me.delete_butt.Name = "delete_butt"
         Me.delete_butt.Size = New System.Drawing.Size(75, 23)
         Me.delete_butt.TabIndex = 23
@@ -218,7 +222,7 @@ Partial Class Form_informasi
         'edit_butt
         '
         Me.edit_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit_butt.Location = New System.Drawing.Point(123, 392)
+        Me.edit_butt.Location = New System.Drawing.Point(16, 48)
         Me.edit_butt.Name = "edit_butt"
         Me.edit_butt.Size = New System.Drawing.Size(75, 23)
         Me.edit_butt.TabIndex = 22
@@ -228,7 +232,7 @@ Partial Class Form_informasi
         'add_butt
         '
         Me.add_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add_butt.Location = New System.Drawing.Point(123, 363)
+        Me.add_butt.Location = New System.Drawing.Point(16, 19)
         Me.add_butt.Name = "add_butt"
         Me.add_butt.Size = New System.Drawing.Size(75, 23)
         Me.add_butt.TabIndex = 21
@@ -380,7 +384,7 @@ Partial Class Form_informasi
         Me.InformasiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InformasiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.InformasiDataGridView.DataSource = Me.InformasiBindingSource
-        Me.InformasiDataGridView.Location = New System.Drawing.Point(55, 106)
+        Me.InformasiDataGridView.Location = New System.Drawing.Point(14, 79)
         Me.InformasiDataGridView.Name = "InformasiDataGridView"
         Me.InformasiDataGridView.Size = New System.Drawing.Size(743, 220)
         Me.InformasiDataGridView.TabIndex = 28
@@ -430,7 +434,7 @@ Partial Class Form_informasi
         'Id_informasiTextBox
         '
         Me.Id_informasiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "id_informasi", True))
-        Me.Id_informasiTextBox.Location = New System.Drawing.Point(465, 344)
+        Me.Id_informasiTextBox.Location = New System.Drawing.Point(224, 15)
         Me.Id_informasiTextBox.Name = "Id_informasiTextBox"
         Me.Id_informasiTextBox.Size = New System.Drawing.Size(266, 20)
         Me.Id_informasiTextBox.TabIndex = 29
@@ -438,7 +442,7 @@ Partial Class Form_informasi
         'DOSEN_id_dosenTextBox
         '
         Me.DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "DOSEN_id_dosen", True))
-        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(465, 371)
+        Me.DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(224, 42)
         Me.DOSEN_id_dosenTextBox.Name = "DOSEN_id_dosenTextBox"
         Me.DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(266, 20)
         Me.DOSEN_id_dosenTextBox.TabIndex = 31
@@ -446,7 +450,7 @@ Partial Class Form_informasi
         'MATA_KULIAH_id_matakuliahTextBox
         '
         Me.MATA_KULIAH_id_matakuliahTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "MATA_KULIAH_id_matakuliah", True))
-        Me.MATA_KULIAH_id_matakuliahTextBox.Location = New System.Drawing.Point(465, 397)
+        Me.MATA_KULIAH_id_matakuliahTextBox.Location = New System.Drawing.Point(224, 68)
         Me.MATA_KULIAH_id_matakuliahTextBox.Name = "MATA_KULIAH_id_matakuliahTextBox"
         Me.MATA_KULIAH_id_matakuliahTextBox.Size = New System.Drawing.Size(266, 20)
         Me.MATA_KULIAH_id_matakuliahTextBox.TabIndex = 33
@@ -454,7 +458,7 @@ Partial Class Form_informasi
         'MATA_KULIAH_DOSEN_id_dosenTextBox
         '
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "MATA_KULIAH_DOSEN_id_dosen", True))
-        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(465, 423)
+        Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Location = New System.Drawing.Point(224, 94)
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Name = "MATA_KULIAH_DOSEN_id_dosenTextBox"
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.Size = New System.Drawing.Size(266, 20)
         Me.MATA_KULIAH_DOSEN_id_dosenTextBox.TabIndex = 35
@@ -462,7 +466,7 @@ Partial Class Form_informasi
         'JudulTextBox
         '
         Me.JudulTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "judul", True))
-        Me.JudulTextBox.Location = New System.Drawing.Point(465, 449)
+        Me.JudulTextBox.Location = New System.Drawing.Point(224, 120)
         Me.JudulTextBox.Name = "JudulTextBox"
         Me.JudulTextBox.Size = New System.Drawing.Size(266, 20)
         Me.JudulTextBox.TabIndex = 37
@@ -470,7 +474,7 @@ Partial Class Form_informasi
         'InfoTextBox
         '
         Me.InfoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InformasiBindingSource, "info", True))
-        Me.InfoTextBox.Location = New System.Drawing.Point(465, 475)
+        Me.InfoTextBox.Location = New System.Drawing.Point(224, 146)
         Me.InfoTextBox.Name = "InfoTextBox"
         Me.InfoTextBox.Size = New System.Drawing.Size(266, 20)
         Me.InfoTextBox.TabIndex = 39
@@ -478,7 +482,7 @@ Partial Class Form_informasi
         'TanggalDateTimePicker
         '
         Me.TanggalDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.InformasiBindingSource, "tanggal", True))
-        Me.TanggalDateTimePicker.Location = New System.Drawing.Point(465, 501)
+        Me.TanggalDateTimePicker.Location = New System.Drawing.Point(224, 172)
         Me.TanggalDateTimePicker.Name = "TanggalDateTimePicker"
         Me.TanggalDateTimePicker.Size = New System.Drawing.Size(266, 20)
         Me.TanggalDateTimePicker.TabIndex = 41
@@ -486,48 +490,69 @@ Partial Class Form_informasi
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label1.Font = New System.Drawing.Font("Rockwell", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label1.Location = New System.Drawing.Point(294, 6)
+        Me.Label1.Location = New System.Drawing.Point(239, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(308, 44)
+        Me.Label1.Size = New System.Drawing.Size(277, 42)
         Me.Label1.TabIndex = 42
-        Me.Label1.Text = "Penambahan dan Penggantian Data " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Informasi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label1.Text = "Penambahan dan Penggantian" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Data Informasi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Id_informasiTextBox)
+        Me.GroupBox1.Controls.Add(Me.TanggalDateTimePicker)
+        Me.GroupBox1.Controls.Add(Id_informasiLabel)
+        Me.GroupBox1.Controls.Add(Me.InfoTextBox)
+        Me.GroupBox1.Controls.Add(DOSEN_id_dosenLabel)
+        Me.GroupBox1.Controls.Add(MATA_KULIAH_id_matakuliahLabel)
+        Me.GroupBox1.Controls.Add(Me.JudulTextBox)
+        Me.GroupBox1.Controls.Add(MATA_KULIAH_DOSEN_id_dosenLabel)
+        Me.GroupBox1.Controls.Add(Me.MATA_KULIAH_DOSEN_id_dosenTextBox)
+        Me.GroupBox1.Controls.Add(JudulLabel)
+        Me.GroupBox1.Controls.Add(Me.DOSEN_id_dosenTextBox)
+        Me.GroupBox1.Controls.Add(InfoLabel)
+        Me.GroupBox1.Controls.Add(Me.MATA_KULIAH_id_matakuliahTextBox)
+        Me.GroupBox1.Controls.Add(TanggalLabel)
+        Me.GroupBox1.Location = New System.Drawing.Point(208, 305)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(496, 201)
+        Me.GroupBox1.TabIndex = 43
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Details"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.add_butt)
+        Me.GroupBox2.Controls.Add(Me.edit_butt)
+        Me.GroupBox2.Controls.Add(Me.delete_butt)
+        Me.GroupBox2.Controls.Add(Me.save_butt)
+        Me.GroupBox2.Controls.Add(Me.cancel_butt)
+        Me.GroupBox2.Location = New System.Drawing.Point(85, 321)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(102, 170)
+        Me.GroupBox2.TabIndex = 44
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Action"
         '
         'Form_informasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.BackColor = System.Drawing.Color.Navy
-        Me.ClientSize = New System.Drawing.Size(858, 545)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(768, 515)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Id_informasiLabel)
-        Me.Controls.Add(Me.Id_informasiTextBox)
-        Me.Controls.Add(DOSEN_id_dosenLabel)
-        Me.Controls.Add(Me.DOSEN_id_dosenTextBox)
-        Me.Controls.Add(MATA_KULIAH_id_matakuliahLabel)
-        Me.Controls.Add(Me.MATA_KULIAH_id_matakuliahTextBox)
-        Me.Controls.Add(MATA_KULIAH_DOSEN_id_dosenLabel)
-        Me.Controls.Add(Me.MATA_KULIAH_DOSEN_id_dosenTextBox)
-        Me.Controls.Add(JudulLabel)
-        Me.Controls.Add(Me.JudulTextBox)
-        Me.Controls.Add(InfoLabel)
-        Me.Controls.Add(Me.InfoTextBox)
-        Me.Controls.Add(TanggalLabel)
-        Me.Controls.Add(Me.TanggalDateTimePicker)
         Me.Controls.Add(Me.InformasiDataGridView)
-        Me.Controls.Add(Me.InformasiBindingNavigator)
         Me.Controls.Add(Me.exit_butt)
         Me.Controls.Add(Me.refresh_butt)
-        Me.Controls.Add(Me.cancel_butt)
-        Me.Controls.Add(Me.save_butt)
-        Me.Controls.Add(Me.delete_butt)
-        Me.Controls.Add(Me.edit_butt)
-        Me.Controls.Add(Me.add_butt)
+        Me.Controls.Add(Me.InformasiBindingNavigator)
         Me.ForeColor = System.Drawing.Color.Black
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form_informasi"
@@ -542,6 +567,9 @@ Partial Class Form_informasi
         Me.InformasiBindingNavigator.ResumeLayout(False)
         Me.InformasiBindingNavigator.PerformLayout()
         CType(Me.InformasiDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -587,4 +615,6 @@ Partial Class Form_informasi
     Friend WithEvents InfoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TanggalDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
 End Class

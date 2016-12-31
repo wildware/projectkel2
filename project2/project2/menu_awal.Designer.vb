@@ -23,10 +23,12 @@ Partial Class menu_awal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Lab_dat = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MasterDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DosenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddAndEditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewAndSeacrhToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddAndAditDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,19 +45,29 @@ Partial Class menu_awal
         Me.box_pass = New System.Windows.Forms.TextBox()
         Me.box_user = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Picbox = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Lab_wel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.Picbox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'Lab_dat
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(437, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "DATA UNIVERSITAS INFORMATIKA"
+        Me.Lab_dat.AutoSize = True
+        Me.Lab_dat.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lab_dat.Location = New System.Drawing.Point(210, 57)
+        Me.Lab_dat.Name = "Lab_dat"
+        Me.Lab_dat.Size = New System.Drawing.Size(387, 25)
+        Me.Lab_dat.TabIndex = 0
+        Me.Lab_dat.Text = "DATA UNIVERSITAS INFORMATIKA"
+        Me.Lab_dat.Visible = False
         '
         'MenuStrip1
         '
@@ -76,9 +88,22 @@ Partial Class menu_awal
         '
         'DosenToolStripMenuItem
         '
+        Me.DosenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndEditToolStripMenuItem, Me.ViewAndSeacrhToolStripMenuItem})
         Me.DosenToolStripMenuItem.Name = "DosenToolStripMenuItem"
         Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.DosenToolStripMenuItem.Text = "dosen"
+        '
+        'AddAndEditToolStripMenuItem
+        '
+        Me.AddAndEditToolStripMenuItem.Name = "AddAndEditToolStripMenuItem"
+        Me.AddAndEditToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.AddAndEditToolStripMenuItem.Text = "Add and Edit "
+        '
+        'ViewAndSeacrhToolStripMenuItem
+        '
+        Me.ViewAndSeacrhToolStripMenuItem.Name = "ViewAndSeacrhToolStripMenuItem"
+        Me.ViewAndSeacrhToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.ViewAndSeacrhToolStripMenuItem.Text = "View and Seacrh"
         '
         'InformasiToolStripMenuItem
         '
@@ -90,14 +115,14 @@ Partial Class menu_awal
         'AddAndAditDataToolStripMenuItem
         '
         Me.AddAndAditDataToolStripMenuItem.Name = "AddAndAditDataToolStripMenuItem"
-        Me.AddAndAditDataToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.AddAndAditDataToolStripMenuItem.Text = "add and adit data"
+        Me.AddAndAditDataToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.AddAndAditDataToolStripMenuItem.Text = "Add and Edit"
         '
         'ViewDataToolStripMenuItem
         '
         Me.ViewDataToolStripMenuItem.Name = "ViewDataToolStripMenuItem"
-        Me.ViewDataToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.ViewDataToolStripMenuItem.Text = "view data"
+        Me.ViewDataToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.ViewDataToolStripMenuItem.Text = "View and Search"
         '
         'MahasiswaToolStripMenuItem
         '
@@ -132,12 +157,13 @@ Partial Class menu_awal
         Me.GroupBox1.Controls.Add(Me.but_log)
         Me.GroupBox1.Controls.Add(Me.box_pass)
         Me.GroupBox1.Controls.Add(Me.box_user)
-        Me.GroupBox1.Location = New System.Drawing.Point(112, 78)
+        Me.GroupBox1.Location = New System.Drawing.Point(289, 42)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(235, 164)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
+        Me.GroupBox1.Visible = False
         '
         'Label3
         '
@@ -203,26 +229,105 @@ Partial Class menu_awal
         'Timer1
         '
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.CheckBox1)
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.GroupBox1)
+        Me.GroupBox2.Controls.Add(Me.Picbox)
+        Me.GroupBox2.Location = New System.Drawing.Point(-1, 89)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(797, 313)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(656, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(650, 42)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 2
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.Visible = False
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
+        '
+        'Picbox
+        '
+        Me.Picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Picbox.Location = New System.Drawing.Point(72, 19)
+        Me.Picbox.Name = "Picbox"
+        Me.Picbox.Size = New System.Drawing.Size(659, 246)
+        Me.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Picbox.TabIndex = 0
+        Me.Picbox.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(716, 273)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Sign-up"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Lab_wel
+        '
+        Me.Lab_wel.AutoSize = True
+        Me.Lab_wel.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lab_wel.Location = New System.Drawing.Point(241, 7)
+        Me.Lab_wel.Name = "Lab_wel"
+        Me.Lab_wel.Size = New System.Drawing.Size(321, 50)
+        Me.Lab_wel.TabIndex = 4
+        Me.Lab_wel.Text = "Welcome to" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "UNIVERSITAS INFORMATIKA"
+        Me.Lab_wel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'menu_awal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(461, 271)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(797, 404)
+        Me.Controls.Add(Me.Lab_wel)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Lab_dat)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "menu_awal"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = " "
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.Picbox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Lab_dat As System.Windows.Forms.Label
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MasterDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -242,5 +347,14 @@ Partial Class menu_awal
     Friend WithEvents PesertaMKToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AddAndAditDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AddAndEditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ViewAndSeacrhToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Picbox As System.Windows.Forms.PictureBox
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Lab_wel As System.Windows.Forms.Label
 
 End Class

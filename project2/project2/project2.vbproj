@@ -113,6 +113,12 @@
     <Compile Include="Form_view_informasi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_view_dosen.Designer.vb">
+      <DependentUpon>Form_view_dosen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view_dosen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="menu_awal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -160,14 +166,17 @@
     <EmbeddedResource Include="Form_view_informasi.resx">
       <DependentUpon>Form_view_informasi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_view_dosen.resx">
+      <DependentUpon>Form_view_dosen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menu_awal.resx">
       <DependentUpon>menu_awal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +204,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Close Window Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2010Pic_00.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bF1Y9wOp76.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ccc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kampus-umn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perpustakaan-Sistem-Informasi-UMN-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\433538_orig.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

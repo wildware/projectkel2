@@ -466,7 +466,7 @@ Partial Class Form_nilai
         Me.picclose.ErrorImage = Global.project2.My.Resources.Resources.Close_Window_Filled_100
         Me.picclose.Image = Global.project2.My.Resources.Resources.Close_Window_Filled_100
         Me.picclose.InitialImage = Global.project2.My.Resources.Resources.Close_Window_Filled_100
-        Me.picclose.Location = New System.Drawing.Point(683, 38)
+        Me.picclose.Location = New System.Drawing.Point(729, 3)
         Me.picclose.Name = "picclose"
         Me.picclose.Size = New System.Drawing.Size(31, 31)
         Me.picclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

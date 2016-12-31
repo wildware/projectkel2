@@ -107,8 +107,8 @@
         Me.DosenTableAdapter.Fill(Me.Universitas_informatikaDataSet.dosen)
     End Sub
 
-    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
-        Me.Close()
+    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 
     Private Sub DosenBindingNavigatorSaveItem_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenBindingNavigatorSaveItem.Click
@@ -116,5 +116,9 @@
         Me.DosenBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
 
+    End Sub
+
+    Private Sub exit_butt_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
+        Me.Close()
     End Sub
 End Class
