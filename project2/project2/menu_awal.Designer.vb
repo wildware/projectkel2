@@ -53,6 +53,8 @@ Partial Class menu_awal
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Lab_wel = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.timer_text_berjalan = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -63,7 +65,7 @@ Partial Class menu_awal
         '
         Me.Lab_dat.AutoSize = True
         Me.Lab_dat.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lab_dat.Location = New System.Drawing.Point(210, 57)
+        Me.Lab_dat.Location = New System.Drawing.Point(209, 32)
         Me.Lab_dat.Name = "Lab_dat"
         Me.Lab_dat.Size = New System.Drawing.Size(387, 25)
         Me.Lab_dat.TabIndex = 0
@@ -232,7 +234,7 @@ Partial Class menu_awal
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.GroupBox1)
@@ -246,11 +248,11 @@ Partial Class menu_awal
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(716, 273)
+        Me.Button2.Location = New System.Drawing.Point(376, 60)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Sign-up"
+        Me.Button2.Text = "LOG IN"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'CheckBox1
@@ -294,7 +296,7 @@ Partial Class menu_awal
         '
         Me.Lab_wel.AutoSize = True
         Me.Lab_wel.Font = New System.Drawing.Font("Rockwell", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lab_wel.Location = New System.Drawing.Point(241, 7)
+        Me.Lab_wel.Location = New System.Drawing.Point(246, 7)
         Me.Lab_wel.Name = "Lab_wel"
         Me.Lab_wel.Size = New System.Drawing.Size(321, 50)
         Me.Lab_wel.TabIndex = 4
@@ -304,19 +306,33 @@ Partial Class menu_awal
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(721, 25)
+        Me.Button3.Location = New System.Drawing.Point(376, 60)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Log Out"
+        Me.Button3.Text = "LOG OUT"
         Me.Button3.UseVisualStyleBackColor = True
         Me.Button3.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 295)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 18)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "label1"
+        '
+        'timer_text_berjalan
+        '
         '
         'menu_awal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(797, 404)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Lab_wel)
         Me.Controls.Add(Me.GroupBox2)
@@ -371,5 +387,7 @@ Partial Class menu_awal
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Lab_wel As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents timer_text_berjalan As System.Windows.Forms.Timer
 
 End Class

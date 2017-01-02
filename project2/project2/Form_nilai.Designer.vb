@@ -66,7 +66,6 @@ Partial Class Form_nilai
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.picclose = New System.Windows.Forms.PictureBox()
         Id_nilaiLabel = New System.Windows.Forms.Label()
         PERSERTA_MK_id_pesertaLabel = New System.Windows.Forms.Label()
         TugasLabel = New System.Windows.Forms.Label()
@@ -79,7 +78,6 @@ Partial Class Form_nilai
         CType(Me.NilaiDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.picclose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_nilaiLabel
@@ -372,6 +370,7 @@ Partial Class Form_nilai
         'NilaiDataGridView
         '
         Me.NilaiDataGridView.AutoGenerateColumns = False
+        Me.NilaiDataGridView.BackgroundColor = System.Drawing.SystemColors.Window
         Me.NilaiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NilaiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.NilaiDataGridView.DataSource = Me.NilaiBindingSource
@@ -449,37 +448,19 @@ Partial Class Form_nilai
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(343, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 31)
         Me.Label1.TabIndex = 54
         Me.Label1.Text = "Nilai"
         '
-        'picclose
-        '
-        Me.picclose.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picclose.BackColor = System.Drawing.Color.White
-        Me.picclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.picclose.ErrorImage = Global.project2.My.Resources.Resources.Close_Window_Filled_100
-        Me.picclose.Image = Global.project2.My.Resources.Resources.Close_Window_Filled_100
-        Me.picclose.InitialImage = Global.project2.My.Resources.Resources.Close_Window_Filled_100
-        Me.picclose.Location = New System.Drawing.Point(729, 3)
-        Me.picclose.Name = "picclose"
-        Me.picclose.Size = New System.Drawing.Size(31, 31)
-        Me.picclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picclose.TabIndex = 55
-        Me.picclose.TabStop = False
-        '
         'Form_nilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.MediumBlue
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(763, 545)
-        Me.Controls.Add(Me.picclose)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -497,7 +478,6 @@ Partial Class Form_nilai
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.picclose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -539,5 +519,4 @@ Partial Class Form_nilai
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents picclose As System.Windows.Forms.PictureBox
 End Class

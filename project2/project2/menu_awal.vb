@@ -2,6 +2,9 @@
     Dim image(7) As Bitmap
     Dim ImageNum As Integer = 1
 
+    Dim tulisan(2) As String
+    Dim i, j As Integer
+
     Private Sub box_user_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles box_user.TextChanged
 
     End Sub
@@ -143,5 +146,31 @@
         MenuStrip1.Visible = False
         Button3.Visible = False
         Lab_dat.Visible = False
+    End Sub
+
+    Private Sub GroupBox2_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub menu_awal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        tulisan(0) = "Aplikasi ini dibuat untuk mempermudah pegawai kampus untuk menyimpan data Universitas                              "
+        tulisan(1) = "Created by : Arie Syarwani , Fazri Rahmad Risky , Hanafi Kambivi , Putri Yus Andayani                              "
+        tulisan(2) = "Ver.001                              "
+        Label1.Text = tulisan(j)
+        timer_text_berjalan.Start()
+    End Sub
+
+    Private Sub timer_text_berjalan_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles timer_text_berjalan.Tick
+        If i.Equals(tulisan(j).Length) Then
+            Me.Label1.Text = ""
+            If j < tulisan.Length - 1 Then
+                j = j + 1
+            Else
+                j = 0
+            End If
+            i = 0
+        End If
+        Label1.Text = tulisan(j).Substring(0, i)
+        i = i + 1
     End Sub
 End Class
