@@ -96,7 +96,7 @@
         InformasiBindingSource.CancelEdit()
     End Sub
 
-    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
+    Private Sub exit_butt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
 
@@ -145,5 +145,13 @@
 
     Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
 
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        InformasiTableAdapter.cariquery(Universitas_informatikaDataSet.informasi, "%" & TextBox1.Text & "%")
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        InformasiTableAdapter.cariquery(Universitas_informatikaDataSet.informasi, "%" & TextBox1.Text & "%")
     End Sub
 End Class

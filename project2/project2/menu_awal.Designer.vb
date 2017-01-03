@@ -27,14 +27,12 @@ Partial Class menu_awal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MasterDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DosenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddAndEditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewAndSeacrhToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddAndAditDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MahasiswaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MataKuliahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NilaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddAndEditToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewAndSearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesertaMKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -49,14 +47,12 @@ Partial Class menu_awal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Picbox = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Lab_wel = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.timer_text_berjalan = New System.Windows.Forms.Timer(Me.components)
-        Me.Picbox = New System.Windows.Forms.PictureBox()
-        Me.AddAndEditToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewAndSearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -93,41 +89,15 @@ Partial Class menu_awal
         '
         'DosenToolStripMenuItem
         '
-        Me.DosenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndEditToolStripMenuItem, Me.ViewAndSeacrhToolStripMenuItem})
         Me.DosenToolStripMenuItem.Name = "DosenToolStripMenuItem"
         Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DosenToolStripMenuItem.Text = "dosen"
         '
-        'AddAndEditToolStripMenuItem
-        '
-        Me.AddAndEditToolStripMenuItem.Name = "AddAndEditToolStripMenuItem"
-        Me.AddAndEditToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.AddAndEditToolStripMenuItem.Text = "Add and Edit "
-        '
-        'ViewAndSeacrhToolStripMenuItem
-        '
-        Me.ViewAndSeacrhToolStripMenuItem.Name = "ViewAndSeacrhToolStripMenuItem"
-        Me.ViewAndSeacrhToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.ViewAndSeacrhToolStripMenuItem.Text = "View and Seacrh"
-        '
         'InformasiToolStripMenuItem
         '
-        Me.InformasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndAditDataToolStripMenuItem, Me.ViewDataToolStripMenuItem})
         Me.InformasiToolStripMenuItem.Name = "InformasiToolStripMenuItem"
         Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InformasiToolStripMenuItem.Text = "informasi"
-        '
-        'AddAndAditDataToolStripMenuItem
-        '
-        Me.AddAndAditDataToolStripMenuItem.Name = "AddAndAditDataToolStripMenuItem"
-        Me.AddAndAditDataToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.AddAndAditDataToolStripMenuItem.Text = "Add and Edit"
-        '
-        'ViewDataToolStripMenuItem
-        '
-        Me.ViewDataToolStripMenuItem.Name = "ViewDataToolStripMenuItem"
-        Me.ViewDataToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.ViewDataToolStripMenuItem.Text = "View and Search"
         '
         'MahasiswaToolStripMenuItem
         '
@@ -147,6 +117,18 @@ Partial Class menu_awal
         Me.NilaiToolStripMenuItem.Name = "NilaiToolStripMenuItem"
         Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NilaiToolStripMenuItem.Text = "nilai"
+        '
+        'AddAndEditToolStripMenuItem1
+        '
+        Me.AddAndEditToolStripMenuItem1.Name = "AddAndEditToolStripMenuItem1"
+        Me.AddAndEditToolStripMenuItem1.Size = New System.Drawing.Size(160, 22)
+        Me.AddAndEditToolStripMenuItem1.Text = "Add and Edit"
+        '
+        'ViewAndSearchToolStripMenuItem
+        '
+        Me.ViewAndSearchToolStripMenuItem.Name = "ViewAndSearchToolStripMenuItem"
+        Me.ViewAndSearchToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.ViewAndSearchToolStripMenuItem.Text = "View and Search"
         '
         'PesertaMKToolStripMenuItem
         '
@@ -281,6 +263,16 @@ Partial Class menu_awal
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
+        'Picbox
+        '
+        Me.Picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Picbox.Location = New System.Drawing.Point(72, 19)
+        Me.Picbox.Name = "Picbox"
+        Me.Picbox.Size = New System.Drawing.Size(659, 246)
+        Me.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Picbox.TabIndex = 0
+        Me.Picbox.TabStop = False
+        '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -319,28 +311,6 @@ Partial Class menu_awal
         '
         'timer_text_berjalan
         '
-        '
-        'Picbox
-        '
-        Me.Picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Picbox.Location = New System.Drawing.Point(72, 19)
-        Me.Picbox.Name = "Picbox"
-        Me.Picbox.Size = New System.Drawing.Size(659, 246)
-        Me.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Picbox.TabIndex = 0
-        Me.Picbox.TabStop = False
-        '
-        'AddAndEditToolStripMenuItem1
-        '
-        Me.AddAndEditToolStripMenuItem1.Name = "AddAndEditToolStripMenuItem1"
-        Me.AddAndEditToolStripMenuItem1.Size = New System.Drawing.Size(160, 22)
-        Me.AddAndEditToolStripMenuItem1.Text = "Add and Edit"
-        '
-        'ViewAndSearchToolStripMenuItem
-        '
-        Me.ViewAndSearchToolStripMenuItem.Name = "ViewAndSearchToolStripMenuItem"
-        Me.ViewAndSearchToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.ViewAndSearchToolStripMenuItem.Text = "View and Search"
         '
         'menu_awal
         '
@@ -390,10 +360,6 @@ Partial Class menu_awal
     Friend WithEvents MataKuliahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NilaiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PesertaMKToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AddAndAditDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ViewDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AddAndEditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ViewAndSeacrhToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Button1 As System.Windows.Forms.Button

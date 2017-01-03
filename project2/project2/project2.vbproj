@@ -107,18 +107,6 @@
     <Compile Include="Form_nilai.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_view_informasi.Designer.vb">
-      <DependentUpon>Form_view_informasi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_view_informasi.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_view_dosen.Designer.vb">
-      <DependentUpon>Form_view_dosen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_view_dosen.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_view_nilai.Designer.vb">
       <DependentUpon>Form_view_nilai.vb</DependentUpon>
     </Compile>
@@ -168,12 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_nilai.resx">
       <DependentUpon>Form_nilai.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_view_informasi.resx">
-      <DependentUpon>Form_view_informasi.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_view_dosen.resx">
-      <DependentUpon>Form_view_dosen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_view_nilai.resx">
       <DependentUpon>Form_view_nilai.vb</DependentUpon>

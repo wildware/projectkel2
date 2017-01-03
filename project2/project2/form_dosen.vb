@@ -118,7 +118,19 @@
 
     End Sub
 
-    Private Sub exit_butt_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles exit_butt.Click
+    Private Sub exit_butt_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        DosenTableAdapter.caridosen(Universitas_informatikaDataSet.dosen, "%" & TextBox1.Text & "%")
+    End Sub
+
+    Private Sub TextBox1_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        DosenTableAdapter.caridosen(Universitas_informatikaDataSet.dosen, "%" & TextBox1.Text & "%")
     End Sub
 End Class

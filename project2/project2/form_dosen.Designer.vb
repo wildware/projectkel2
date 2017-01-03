@@ -37,10 +37,6 @@ Partial Class Form_dosen
         Me.delete_butt = New System.Windows.Forms.Button()
         Me.edit_butt = New System.Windows.Forms.Button()
         Me.add_butt = New System.Windows.Forms.Button()
-        Me.Universitas_informatikaDataSet = New project2.universitas_informatikaDataSet()
-        Me.DosenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DosenTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.dosenTableAdapter()
-        Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
         Me.DosenBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -62,6 +58,11 @@ Partial Class Form_dosen
         Me.Link_fbTextBox = New System.Windows.Forms.TextBox()
         Me.WibsiteTextBox = New System.Windows.Forms.TextBox()
         Me.DosenDataGridView = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DosenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Universitas_informatikaDataSet = New project2.universitas_informatikaDataSet()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -69,10 +70,10 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.exit_butt = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DosenTableAdapter = New project2.universitas_informatikaDataSetTableAdapters.dosenTableAdapter()
+        Me.TableAdapterManager = New project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Id_dosenLabel = New System.Windows.Forms.Label()
         Nama_dosenLabel = New System.Windows.Forms.Label()
         Email_dosenLabel = New System.Windows.Forms.Label()
@@ -80,13 +81,13 @@ Partial Class Form_dosen
         PasswordLabel = New System.Windows.Forms.Label()
         Link_fbLabel = New System.Windows.Forms.Label()
         WibsiteLabel = New System.Windows.Forms.Label()
-        CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DosenBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DosenBindingNavigator.SuspendLayout()
         CType(Me.DosenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_dosenLabel
@@ -162,7 +163,7 @@ Partial Class Form_dosen
         'refresh_butt
         '
         Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(25, 45)
+        Me.refresh_butt.Location = New System.Drawing.Point(334, 45)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 19
@@ -218,31 +219,6 @@ Partial Class Form_dosen
         Me.add_butt.TabIndex = 14
         Me.add_butt.Text = " Add"
         Me.add_butt.UseVisualStyleBackColor = True
-        '
-        'Universitas_informatikaDataSet
-        '
-        Me.Universitas_informatikaDataSet.DataSetName = "universitas_informatikaDataSet"
-        Me.Universitas_informatikaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DosenBindingSource
-        '
-        Me.DosenBindingSource.DataMember = "dosen"
-        Me.DosenBindingSource.DataSource = Me.Universitas_informatikaDataSet
-        '
-        'DosenTableAdapter
-        '
-        Me.DosenTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.dosenTableAdapter = Me.DosenTableAdapter
-        Me.TableAdapterManager.informasiTableAdapter = Nothing
-        Me.TableAdapterManager.mahasiswaTableAdapter = Nothing
-        Me.TableAdapterManager.mata_kuliahTableAdapter = Nothing
-        Me.TableAdapterManager.nilaiTableAdapter = Nothing
-        Me.TableAdapterManager.peserta_mkTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'DosenBindingNavigator
         '
@@ -359,6 +335,7 @@ Partial Class Form_dosen
         'Id_dosenTextBox
         '
         Me.Id_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "id_dosen", True))
+        Me.Id_dosenTextBox.Enabled = False
         Me.Id_dosenTextBox.Location = New System.Drawing.Point(162, 15)
         Me.Id_dosenTextBox.Name = "Id_dosenTextBox"
         Me.Id_dosenTextBox.Size = New System.Drawing.Size(229, 20)
@@ -367,6 +344,7 @@ Partial Class Form_dosen
         'Nama_dosenTextBox
         '
         Me.Nama_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "nama_dosen", True))
+        Me.Nama_dosenTextBox.Enabled = False
         Me.Nama_dosenTextBox.Location = New System.Drawing.Point(162, 41)
         Me.Nama_dosenTextBox.Name = "Nama_dosenTextBox"
         Me.Nama_dosenTextBox.Size = New System.Drawing.Size(229, 20)
@@ -375,6 +353,7 @@ Partial Class Form_dosen
         'Email_dosenTextBox
         '
         Me.Email_dosenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "email_dosen", True))
+        Me.Email_dosenTextBox.Enabled = False
         Me.Email_dosenTextBox.Location = New System.Drawing.Point(162, 67)
         Me.Email_dosenTextBox.Name = "Email_dosenTextBox"
         Me.Email_dosenTextBox.Size = New System.Drawing.Size(229, 20)
@@ -383,6 +362,7 @@ Partial Class Form_dosen
         'User_nameTextBox
         '
         Me.User_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "User_name", True))
+        Me.User_nameTextBox.Enabled = False
         Me.User_nameTextBox.Location = New System.Drawing.Point(162, 93)
         Me.User_nameTextBox.Name = "User_nameTextBox"
         Me.User_nameTextBox.Size = New System.Drawing.Size(229, 20)
@@ -391,6 +371,7 @@ Partial Class Form_dosen
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "password", True))
+        Me.PasswordTextBox.Enabled = False
         Me.PasswordTextBox.Location = New System.Drawing.Point(162, 119)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(229, 20)
@@ -399,6 +380,7 @@ Partial Class Form_dosen
         'Link_fbTextBox
         '
         Me.Link_fbTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "link_fb", True))
+        Me.Link_fbTextBox.Enabled = False
         Me.Link_fbTextBox.Location = New System.Drawing.Point(162, 145)
         Me.Link_fbTextBox.Name = "Link_fbTextBox"
         Me.Link_fbTextBox.Size = New System.Drawing.Size(229, 20)
@@ -407,6 +389,7 @@ Partial Class Form_dosen
         'WibsiteTextBox
         '
         Me.WibsiteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DosenBindingSource, "wibsite", True))
+        Me.WibsiteTextBox.Enabled = False
         Me.WibsiteTextBox.Location = New System.Drawing.Point(162, 171)
         Me.WibsiteTextBox.Name = "WibsiteTextBox"
         Me.WibsiteTextBox.Size = New System.Drawing.Size(229, 20)
@@ -419,10 +402,69 @@ Partial Class Form_dosen
         Me.DosenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DosenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.DosenDataGridView.DataSource = Me.DosenBindingSource
+        Me.DosenDataGridView.Enabled = False
         Me.DosenDataGridView.Location = New System.Drawing.Point(12, 74)
         Me.DosenDataGridView.Name = "DosenDataGridView"
         Me.DosenDataGridView.Size = New System.Drawing.Size(745, 220)
         Me.DosenDataGridView.TabIndex = 34
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.add_butt)
+        Me.GroupBox1.Controls.Add(Me.edit_butt)
+        Me.GroupBox1.Controls.Add(Me.delete_butt)
+        Me.GroupBox1.Controls.Add(Me.save_butt)
+        Me.GroupBox1.Controls.Add(Me.cancel_butt)
+        Me.GroupBox1.Location = New System.Drawing.Point(126, 317)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(108, 168)
+        Me.GroupBox1.TabIndex = 35
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Action"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Id_dosenTextBox)
+        Me.GroupBox2.Controls.Add(Me.WibsiteTextBox)
+        Me.GroupBox2.Controls.Add(WibsiteLabel)
+        Me.GroupBox2.Controls.Add(Id_dosenLabel)
+        Me.GroupBox2.Controls.Add(Me.Link_fbTextBox)
+        Me.GroupBox2.Controls.Add(Link_fbLabel)
+        Me.GroupBox2.Controls.Add(Nama_dosenLabel)
+        Me.GroupBox2.Controls.Add(Me.PasswordTextBox)
+        Me.GroupBox2.Controls.Add(PasswordLabel)
+        Me.GroupBox2.Controls.Add(Me.Nama_dosenTextBox)
+        Me.GroupBox2.Controls.Add(Me.User_nameTextBox)
+        Me.GroupBox2.Controls.Add(Email_dosenLabel)
+        Me.GroupBox2.Controls.Add(User_nameLabel)
+        Me.GroupBox2.Controls.Add(Me.Email_dosenTextBox)
+        Me.GroupBox2.Location = New System.Drawing.Point(265, 301)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(397, 205)
+        Me.GroupBox2.TabIndex = 36
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Details"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Rockwell", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(261, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(277, 42)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Penambahan dan Penggantian" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Data Dosen"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'DosenBindingSource
+        '
+        Me.DosenBindingSource.DataMember = "dosen"
+        Me.DosenBindingSource.DataSource = Me.Universitas_informatikaDataSet
+        '
+        'Universitas_informatikaDataSet
+        '
+        Me.Universitas_informatikaDataSet.DataSetName = "universitas_informatikaDataSet"
+        Me.Universitas_informatikaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataGridViewTextBoxColumn1
         '
@@ -466,66 +508,37 @@ Partial Class Form_dosen
         Me.DataGridViewTextBoxColumn7.HeaderText = "wibsite"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'GroupBox1
+        'DosenTableAdapter
         '
-        Me.GroupBox1.Controls.Add(Me.add_butt)
-        Me.GroupBox1.Controls.Add(Me.edit_butt)
-        Me.GroupBox1.Controls.Add(Me.delete_butt)
-        Me.GroupBox1.Controls.Add(Me.save_butt)
-        Me.GroupBox1.Controls.Add(Me.cancel_butt)
-        Me.GroupBox1.Location = New System.Drawing.Point(126, 317)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(108, 168)
-        Me.GroupBox1.TabIndex = 35
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Action"
+        Me.DosenTableAdapter.ClearBeforeFill = True
         '
-        'GroupBox2
+        'TableAdapterManager
         '
-        Me.GroupBox2.Controls.Add(Me.Id_dosenTextBox)
-        Me.GroupBox2.Controls.Add(Me.WibsiteTextBox)
-        Me.GroupBox2.Controls.Add(WibsiteLabel)
-        Me.GroupBox2.Controls.Add(Id_dosenLabel)
-        Me.GroupBox2.Controls.Add(Me.Link_fbTextBox)
-        Me.GroupBox2.Controls.Add(Link_fbLabel)
-        Me.GroupBox2.Controls.Add(Nama_dosenLabel)
-        Me.GroupBox2.Controls.Add(Me.PasswordTextBox)
-        Me.GroupBox2.Controls.Add(PasswordLabel)
-        Me.GroupBox2.Controls.Add(Me.Nama_dosenTextBox)
-        Me.GroupBox2.Controls.Add(Me.User_nameTextBox)
-        Me.GroupBox2.Controls.Add(Email_dosenLabel)
-        Me.GroupBox2.Controls.Add(User_nameLabel)
-        Me.GroupBox2.Controls.Add(Me.Email_dosenTextBox)
-        Me.GroupBox2.Location = New System.Drawing.Point(265, 301)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(397, 205)
-        Me.GroupBox2.TabIndex = 36
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Details"
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.dosenTableAdapter = Me.DosenTableAdapter
+        Me.TableAdapterManager.informasiTableAdapter = Nothing
+        Me.TableAdapterManager.mahasiswaTableAdapter = Nothing
+        Me.TableAdapterManager.mata_kuliahTableAdapter = Nothing
+        Me.TableAdapterManager.nilaiTableAdapter = Nothing
+        Me.TableAdapterManager.peserta_mkTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = project2.universitas_informatikaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'exit_butt
+        'TextBox1
         '
-        Me.exit_butt.Cursor = System.Windows.Forms.Cursors.Default
-        Me.exit_butt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.exit_butt.ForeColor = System.Drawing.Color.Red
-        Me.exit_butt.Location = New System.Drawing.Point(733, 0)
-        Me.exit_butt.Name = "exit_butt"
-        Me.exit_butt.Size = New System.Drawing.Size(43, 30)
-        Me.exit_butt.TabIndex = 35
-        Me.exit_butt.Text = "X"
-        Me.exit_butt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.exit_butt.UseVisualStyleBackColor = True
+        Me.TextBox1.Location = New System.Drawing.Point(25, 47)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(222, 20)
+        Me.TextBox1.TabIndex = 38
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Rockwell", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(261, 4)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(277, 42)
-        Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Penambahan dan Penggantian" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Data Dosen"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(253, 45)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 39
+        Me.Button1.Text = "Cari"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form_dosen
         '
@@ -533,8 +546,9 @@ Partial Class Form_dosen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(771, 522)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.exit_butt)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DosenDataGridView)
@@ -546,8 +560,6 @@ Partial Class Form_dosen
         Me.Name = "Form_dosen"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DosenBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DosenBindingNavigator.ResumeLayout(False)
         Me.DosenBindingNavigator.PerformLayout()
@@ -555,6 +567,8 @@ Partial Class Form_dosen
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.DosenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Universitas_informatikaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -599,6 +613,7 @@ Partial Class Form_dosen
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents exit_butt As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

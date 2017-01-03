@@ -45,7 +45,7 @@
     End Sub
 
     Private Sub DosenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DosenToolStripMenuItem.Click
-
+        Form_dosen.ShowDialog()
     End Sub
 
     Private Sub MahasiswaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MahasiswaToolStripMenuItem.Click
@@ -53,7 +53,7 @@
     End Sub
 
     Private Sub InformasiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InformasiToolStripMenuItem.Click
-
+        Form_informasi.ShowDialog()
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
@@ -77,24 +77,24 @@
         box_pass.Text = ""
     End Sub
 
-    Private Sub AddAndAditDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddAndAditDataToolStripMenuItem.Click
+    Private Sub AddAndAditDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Form_informasi.ShowDialog()
     End Sub
 
-    Private Sub ViewDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewDataToolStripMenuItem.Click
-        Form_view_informasi.ShowDialog()
+    Private Sub ViewDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 
     Private Sub MasterDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterDataToolStripMenuItem.Click
 
     End Sub
 
-    Private Sub AddAndEditToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddAndEditToolStripMenuItem.Click
+    Private Sub AddAndEditToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Form_dosen.ShowDialog()
     End Sub
 
-    Private Sub ViewAndSeacrhToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewAndSeacrhToolStripMenuItem.Click
-        Form_view_dosen.ShowDialog()
+    Private Sub ViewAndSeacrhToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged

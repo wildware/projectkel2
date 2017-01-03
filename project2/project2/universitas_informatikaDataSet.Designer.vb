@@ -4071,8 +4071,9 @@ Namespace universitas_informatikaDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT `id_dosen`, `nama_dosen`, `email_dosen`, `User_name`, `password`, `link_fb"& _ 
-                "`, `wibsite` FROM `dosen`"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_dosen like @cari or nama_dosen like @cari"
+            Me._commandCollection(1).CommandText = "SELECT        id_dosen, nama_dosen, email_dosen, User_name, password, link_fb, wi"& _ 
+                "bsite"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            dosen"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (id_dosen LIKE @cari) OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
+                "              (nama_dosen LIKE @cari)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@cari"
@@ -4124,22 +4125,6 @@ Namespace universitas_informatikaDataSetTableAdapters
             End If
             Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
             Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal cari As String) As universitas_informatikaDataSet.dosenDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (cari Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("cari")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(cari,String)
-            End If
-            Dim dataTable As universitas_informatikaDataSet.dosenDataTable = New universitas_informatikaDataSet.dosenDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
