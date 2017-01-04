@@ -173,4 +173,8 @@
         Label1.Text = tulisan(j).Substring(0, i)
         i = i + 1
     End Sub
+
+    Private Sub ViewAndSearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewAndSearchToolStripMenuItem.Click
+
+    End Sub
 End Class

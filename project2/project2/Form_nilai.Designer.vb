@@ -137,6 +137,7 @@ Partial Class Form_nilai
         '
         'cancel_butt
         '
+        Me.cancel_butt.Enabled = False
         Me.cancel_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancel_butt.Location = New System.Drawing.Point(15, 124)
         Me.cancel_butt.Name = "cancel_butt"
@@ -147,6 +148,7 @@ Partial Class Form_nilai
         '
         'save_butt
         '
+        Me.save_butt.Enabled = False
         Me.save_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save_butt.Location = New System.Drawing.Point(15, 67)
         Me.save_butt.Name = "save_butt"
@@ -449,7 +451,7 @@ Partial Class Form_nilai
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(343, 28)
+        Me.Label1.Location = New System.Drawing.Point(642, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 31)
         Me.Label1.TabIndex = 54

@@ -46,15 +46,17 @@ Partial Class menu_awal
         Me.box_user = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Picbox = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Lab_wel = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.timer_text_berjalan = New System.Windows.Forms.Timer(Me.components)
+        Me.Picbox = New System.Windows.Forms.PictureBox()
+        Me.AddAndEditToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewAndSearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -93,7 +95,7 @@ Partial Class menu_awal
         '
         Me.DosenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndEditToolStripMenuItem, Me.ViewAndSeacrhToolStripMenuItem})
         Me.DosenToolStripMenuItem.Name = "DosenToolStripMenuItem"
-        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.DosenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DosenToolStripMenuItem.Text = "dosen"
         '
         'AddAndEditToolStripMenuItem
@@ -112,7 +114,7 @@ Partial Class menu_awal
         '
         Me.InformasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndAditDataToolStripMenuItem, Me.ViewDataToolStripMenuItem})
         Me.InformasiToolStripMenuItem.Name = "InformasiToolStripMenuItem"
-        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.InformasiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InformasiToolStripMenuItem.Text = "informasi"
         '
         'AddAndAditDataToolStripMenuItem
@@ -130,25 +132,26 @@ Partial Class menu_awal
         'MahasiswaToolStripMenuItem
         '
         Me.MahasiswaToolStripMenuItem.Name = "MahasiswaToolStripMenuItem"
-        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.MahasiswaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MahasiswaToolStripMenuItem.Text = "mahasiswa"
         '
         'MataKuliahToolStripMenuItem
         '
         Me.MataKuliahToolStripMenuItem.Name = "MataKuliahToolStripMenuItem"
-        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MataKuliahToolStripMenuItem.Text = "mata kuliah"
         '
         'NilaiToolStripMenuItem
         '
+        Me.NilaiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndEditToolStripMenuItem1, Me.ViewAndSearchToolStripMenuItem})
         Me.NilaiToolStripMenuItem.Name = "NilaiToolStripMenuItem"
-        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NilaiToolStripMenuItem.Text = "nilai"
         '
         'PesertaMKToolStripMenuItem
         '
         Me.PesertaMKToolStripMenuItem.Name = "PesertaMKToolStripMenuItem"
-        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.PesertaMKToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PesertaMKToolStripMenuItem.Text = "peserta MK"
         '
         'GroupBox1
@@ -245,15 +248,15 @@ Partial Class menu_awal
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
-        'Button2
+        'Label1
         '
-        Me.Button2.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(376, 60)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 295)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 18)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "label1"
         '
         'CheckBox1
         '
@@ -278,15 +281,15 @@ Partial Class menu_awal
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
-        'Picbox
+        'Button2
         '
-        Me.Picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Picbox.Location = New System.Drawing.Point(72, 19)
-        Me.Picbox.Name = "Picbox"
-        Me.Picbox.Size = New System.Drawing.Size(659, 246)
-        Me.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Picbox.TabIndex = 0
-        Me.Picbox.TabStop = False
+        Me.Button2.Font = New System.Drawing.Font("Rockwell", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(376, 60)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "LOG IN"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Timer2
         '
@@ -314,18 +317,30 @@ Partial Class menu_awal
         Me.Button3.UseVisualStyleBackColor = True
         Me.Button3.Visible = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 295)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 18)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "label1"
-        '
         'timer_text_berjalan
         '
+        '
+        'Picbox
+        '
+        Me.Picbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Picbox.Location = New System.Drawing.Point(72, 19)
+        Me.Picbox.Name = "Picbox"
+        Me.Picbox.Size = New System.Drawing.Size(659, 246)
+        Me.Picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Picbox.TabIndex = 0
+        Me.Picbox.TabStop = False
+        '
+        'AddAndEditToolStripMenuItem1
+        '
+        Me.AddAndEditToolStripMenuItem1.Name = "AddAndEditToolStripMenuItem1"
+        Me.AddAndEditToolStripMenuItem1.Size = New System.Drawing.Size(160, 22)
+        Me.AddAndEditToolStripMenuItem1.Text = "Add and Edit"
+        '
+        'ViewAndSearchToolStripMenuItem
+        '
+        Me.ViewAndSearchToolStripMenuItem.Name = "ViewAndSearchToolStripMenuItem"
+        Me.ViewAndSearchToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.ViewAndSearchToolStripMenuItem.Text = "View and Search"
         '
         'menu_awal
         '
@@ -389,5 +404,7 @@ Partial Class menu_awal
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents timer_text_berjalan As System.Windows.Forms.Timer
+    Friend WithEvents AddAndEditToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ViewAndSearchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
