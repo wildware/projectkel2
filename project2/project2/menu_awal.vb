@@ -65,7 +65,7 @@
     End Sub
 
     Private Sub NilaiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NilaiToolStripMenuItem.Click
-        Form_nilai.ShowDialog()
+
     End Sub
 
     Private Sub PesertaMKToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PesertaMKToolStripMenuItem.Click
@@ -175,6 +175,10 @@
     End Sub
 
     Private Sub ViewAndSearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewAndSearchToolStripMenuItem.Click
+        Form_view_nilai.ShowDialog()
+    End Sub
 
+    Private Sub AddAndEditToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddAndEditToolStripMenuItem1.Click
+        Form_nilai.ShowDialog()
     End Sub
 End Class

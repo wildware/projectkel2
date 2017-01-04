@@ -12,4 +12,8 @@
         Me.TableAdapterManager.UpdateAll(Me.Universitas_informatikaDataSet)
 
     End Sub
+
+    Private Sub cari_but_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cari_but.Click
+        NilaiTableAdapter.carinilai(Universitas_informatikaDataSet.nilai, "%" & box_cari.Text & "%")
+    End Sub
 End Class

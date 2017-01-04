@@ -80,6 +80,12 @@
         refresh_butt.Enabled = True
         cancel_butt.Enabled = False
 
+        Id_nilaiTextBox.Enabled = False
+        PERSERTA_MK_id_pesertaTextBox.Enabled = False
+        TugasTextBox.Enabled = False
+        UtsTextBox.Enabled = False
+        UasTextBox.Enabled = False
+
         NilaiBindingSource.CancelEdit()
     End Sub
 
