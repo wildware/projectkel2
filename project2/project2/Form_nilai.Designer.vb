@@ -66,6 +66,8 @@ Partial Class Form_nilai
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Id_nilaiLabel = New System.Windows.Forms.Label()
         PERSERTA_MK_id_pesertaLabel = New System.Windows.Forms.Label()
         TugasLabel = New System.Windows.Forms.Label()
@@ -127,12 +129,12 @@ Partial Class Form_nilai
         '
         'refresh_butt
         '
-        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(40, 38)
+        Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.refresh_butt.Location = New System.Drawing.Point(347, 39)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 40
-        Me.refresh_butt.Text = "refresh"
+        Me.refresh_butt.Text = "Refresh"
         Me.refresh_butt.UseVisualStyleBackColor = True
         '
         'cancel_butt
@@ -457,12 +459,30 @@ Partial Class Form_nilai
         Me.Label1.TabIndex = 54
         Me.Label1.Text = "Nilai"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(40, 39)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox1.TabIndex = 56
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(266, 39)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 55
+        Me.Button1.Text = "Cari"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form_nilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(763, 545)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -521,4 +541,6 @@ Partial Class Form_nilai
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

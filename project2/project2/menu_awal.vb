@@ -38,6 +38,16 @@
             Lab_dat.Visible = True
             Lab_wel.Visible = False
             Button3.Visible = True
+        ElseIf box_user.Text = "fazri" And box_pass.Text = "0000" Then
+            Timer1.Stop()
+            MsgBox("Welcome fazri", MsgBoxStyle.Information)
+            GroupBox1.Visible = False
+            MenuStrip1.Visible = True
+            GroupBox2.Visible = True
+            Button2.Visible = False
+            Lab_dat.Visible = True
+            Lab_wel.Visible = False
+            Button3.Visible = True
         Else
             Timer1.Stop()
             MsgBox("Login Failed", MsgBoxStyle.Critical)
@@ -65,7 +75,7 @@
     End Sub
 
     Private Sub NilaiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NilaiToolStripMenuItem.Click
-
+        Form_nilai.ShowDialog()
     End Sub
 
     Private Sub PesertaMKToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PesertaMKToolStripMenuItem.Click
@@ -174,11 +184,11 @@
         i = i + 1
     End Sub
 
-    Private Sub ViewAndSearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewAndSearchToolStripMenuItem.Click
+    Private Sub ViewAndSearchToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Form_view_nilai.ShowDialog()
     End Sub
 
-    Private Sub AddAndEditToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddAndEditToolStripMenuItem1.Click
-        Form_nilai.ShowDialog()
+    Private Sub AddAndEditToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class

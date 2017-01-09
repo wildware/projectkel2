@@ -140,6 +140,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>universitas_informatikaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="universitas_informatikaDataSet.vb">
+      <DependentUpon>universitas_informatikaDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form_dosen.resx">

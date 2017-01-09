@@ -31,8 +31,6 @@ Partial Class menu_awal
         Me.MahasiswaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MataKuliahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NilaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddAndEditToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewAndSearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesertaMKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -113,22 +111,9 @@ Partial Class menu_awal
         '
         'NilaiToolStripMenuItem
         '
-        Me.NilaiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddAndEditToolStripMenuItem1, Me.ViewAndSearchToolStripMenuItem})
         Me.NilaiToolStripMenuItem.Name = "NilaiToolStripMenuItem"
         Me.NilaiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NilaiToolStripMenuItem.Text = "nilai"
-        '
-        'AddAndEditToolStripMenuItem1
-        '
-        Me.AddAndEditToolStripMenuItem1.Name = "AddAndEditToolStripMenuItem1"
-        Me.AddAndEditToolStripMenuItem1.Size = New System.Drawing.Size(160, 22)
-        Me.AddAndEditToolStripMenuItem1.Text = "Add and Edit"
-        '
-        'ViewAndSearchToolStripMenuItem
-        '
-        Me.ViewAndSearchToolStripMenuItem.Name = "ViewAndSearchToolStripMenuItem"
-        Me.ViewAndSearchToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.ViewAndSearchToolStripMenuItem.Text = "View and Search"
         '
         'PesertaMKToolStripMenuItem
         '
@@ -370,7 +355,5 @@ Partial Class menu_awal
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents timer_text_berjalan As System.Windows.Forms.Timer
-    Friend WithEvents AddAndEditToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ViewAndSearchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
