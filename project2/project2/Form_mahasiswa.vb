@@ -130,4 +130,8 @@
     Private Sub Notelp_mhsTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Notelp_mhsTextBox.TextChanged
 
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        MahasiswaTableAdapter.carimahasiswa(Universitas_informatikaDataSet.mahasiswa, "%" & TextBox1.Text & "%")
+    End Sub
 End Class

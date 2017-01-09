@@ -79,6 +79,8 @@ Partial Class Form_mahasiswa
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.exit_butt = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Id_mahasiswaLabel = New System.Windows.Forms.Label()
         UsernameLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
@@ -181,7 +183,7 @@ Partial Class Form_mahasiswa
         'refresh_butt
         '
         Me.refresh_butt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.refresh_butt.Location = New System.Drawing.Point(12, 24)
+        Me.refresh_butt.Location = New System.Drawing.Point(399, 33)
         Me.refresh_butt.Name = "refresh_butt"
         Me.refresh_butt.Size = New System.Drawing.Size(75, 23)
         Me.refresh_butt.TabIndex = 33
@@ -578,11 +580,30 @@ Partial Class Form_mahasiswa
         Me.exit_butt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.exit_butt.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(292, 33)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 57
+        Me.Button1.Text = "cari"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(37, 33)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(235, 20)
+        Me.TextBox1.TabIndex = 58
+        '
         'Form_mahasiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 484)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.exit_butt)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -651,4 +672,6 @@ Partial Class Form_mahasiswa
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents exit_butt As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

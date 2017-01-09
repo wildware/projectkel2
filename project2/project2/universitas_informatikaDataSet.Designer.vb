@@ -5729,12 +5729,26 @@ Namespace universitas_informatikaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
+            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(1) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT `id_mahasiswa`, `username`, `password`, `nama_mahasiswa`, `nim_mahasiswa`,"& _ 
                 " `tgl_lahir_mhs`, `email_mhs`, `alamat_mhs`, `notelp_mhs` FROM `mahasiswa`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.MySql.Data.MySqlClient.MySqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT `id_mahasiswa`, `username`, `password`, `nama_mahasiswa`, `nim_mahasiswa`,"& _ 
+                " `tgl_lahir_mhs`, `email_mhs`, `alamat_mhs`, `notelp_mhs` FROM `mahasiswa`"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"wher"& _ 
+                "e id_mahasiswa like @cari or username like @cari"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@cari"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.Size = 11
+            param.IsNullable = true
+            param.SourceColumn = "id_mahasiswa"
+            Me._commandCollection(1).Parameters.Add(param)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5759,6 +5773,24 @@ Namespace universitas_informatikaDataSetTableAdapters
             Dim dataTable As universitas_informatikaDataSet.mahasiswaDataTable = New universitas_informatikaDataSet.mahasiswaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function carimahasiswa(ByVal dataTable As universitas_informatikaDataSet.mahasiswaDataTable, ByVal cari As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (cari Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("cari")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(cari,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
